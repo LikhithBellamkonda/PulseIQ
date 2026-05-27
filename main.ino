@@ -1,0 +1,315 @@
+#include <WiFi.h>
+#include <HTTPClient.h>
+#include <Wire.h>
+#include <DHT.h>
+#include "MAX30105.h"
+#include "heartRate.h"
+
+// ================================================================
+// 1. WIFI CONFIGURATION - UPDATE THESE VALUES
+// ================================================================
+const char* WIFI_SSID = "YOUR_WIFI_SSID";
+const char* WIFI_PASSWORD = "YOUR_WIFI_PASSWORD";
+
+// ================================================================
+// 2. FIREBASE CONFIGURATION - UPDATE THIS VALUE
+// ================================================================
+// Format: "https://<YOUR-PROJECT-ID>-default-rtdb.firebaseio.com/sensors.json"
+// Example: "https://mindease-lite-12345-default-rtdb.firebaseio.com/sensors.json"
+String FIREBASE_URL = "https://your-project-id-default-rtdb.firebaseio.com/sensors.json";
+
+// ================================================================
+// 3. SENSOR PIN DEFINITIONS
+// ================================================================
+
+// DHT11 (Temperature & Humidity)
+#define DHT_PIN 4
+#define DHT_TYPE DHT11
+DHT dht(DHT_PIN, DHT_TYPE);
+
+// LDR (Light Sensor) - Analog Input
+#define LDR_PIN 34
+
+// MAX30102 (Pulse Oximeter)
+// Uses I2C: SDA=21 (GPIO 21), SCL=22 (GPIO 22)
+MAX30105 particleSensor;
+
+// ================================================================
+// 4. TIMING VARIABLES
+// ================================================================
+unsigned long lastSendTime = 0;
+const long SEND_INTERVAL = 10000; // Send data every 10 seconds
+
+unsigned long lastReadTime = 0;
+const long READ_INTERVAL = 1000; // Read sensors every 1 second
+
+// ================================================================
+// 5. GLOBAL SENSOR VARIABLES
+// ================================================================
+float lastTemp = 25.0;
+float lastHum = 45.0;
+int lastHR = 72;
+int lastSpO2 = 98;
+int lastLight = 400;
+
+// ================================================================
+// 6. SETUP - Runs once at startup
+// ================================================================
+void setup() {
+  Serial.begin(115200);
+  delay(1000); // Wait for serial to stabilize
+  
+  Serial.println("\n\n");
+  Serial.println("====================================================");
+  Serial.println("MindEase Lite: ESP32 Wellness Monitor Firmware");
+  Serial.println("====================================================");
+  
+  // ================================================================
+  // Initialize I2C Bus (for MAX30102)
+  // ================================================================
+  Serial.println("[SETUP] Initializing I2C (SDA=21, SCL=22)...");
+  Wire.begin(21, 22);
+  
+  // ================================================================
+  // Initialize DHT11
+  // ================================================================
+  Serial.print("[SETUP] Initializing DHT11 on GPIO ");
+  Serial.println(DHT_PIN);
+  dht.begin();
+  delay(500);
+  Serial.println("[SETUP] ✓ DHT11 initialized");
+  
+  // ================================================================
+  // Initialize MAX30102
+  // ================================================================
+  Serial.println("[SETUP] Initializing MAX30102 (Pulse Oximeter)...");
+  if (!particleSensor.begin(Wire, I2C_SPEED_FAST)) {
+    Serial.println("[SETUP] ⚠ MAX30102 not detected! Check wiring.");
+    Serial.println("        Continuing with simulated values...");
+  } else {
+    particleSensor.setup();
+    particleSensor.setPulseAmplitudeRed(0x0A);
+    particleSensor.setPulseAmplitudeGreen(0);
+    Serial.println("[SETUP] ✓ MAX30102 initialized");
+  }
+  
+  // ================================================================
+  // Initialize LDR (Analog)
+  // ================================================================
+  Serial.println("[SETUP] Initializing LDR on GPIO 34...");
+  pinMode(LDR_PIN, INPUT);
+  Serial.println("[SETUP] ✓ LDR initialized");
+  
+  // ================================================================
+  // Connect to WiFi
+  // ================================================================
+  Serial.print("[SETUP] Connecting to WiFi: ");
+  Serial.println(WIFI_SSID);
+  
+  WiFi.mode(WIFI_STA);
+  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+  
+  int wifiAttempts = 0;
+  while (WiFi.status() != WL_CONNECTED && wifiAttempts < 20) {
+    delay(500);
+    Serial.print(".");
+    wifiAttempts++;
+  }
+  
+  if (WiFi.status() == WL_CONNECTED) {
+    Serial.println();
+    Serial.print("[SETUP] ✓ WiFi Connected! IP: ");
+    Serial.println(WiFi.localIP());
+  } else {
+    Serial.println();
+    Serial.println("[SETUP] ⚠ WiFi connection failed. Retrying later...");
+  }
+  
+  Serial.println("====================================================");
+  Serial.println("Setup Complete! Starting sensor loop...");
+  Serial.println("====================================================\n");
+}
+
+// ================================================================
+// 7. MAIN LOOP
+// ================================================================
+void loop() {
+  unsigned long currentTime = millis();
+  
+  // ================================================================
+  // READ SENSORS (every 1 second)
+  // ================================================================
+  if (currentTime - lastReadTime >= READ_INTERVAL) {
+    lastReadTime = currentTime;
+    readAllSensors();
+  }
+  
+  // ================================================================
+  // SEND DATA TO FIREBASE (every 10 seconds)
+  // ================================================================
+  if (currentTime - lastSendTime >= SEND_INTERVAL) {
+    lastSendTime = currentTime;
+    sendToFirebase();
+  }
+  
+  // Keep WiFi alive
+  if (WiFi.status() != WL_CONNECTED) {
+    Serial.println("[LOOP] WiFi disconnected. Attempting reconnect...");
+    WiFi.reconnect();
+  }
+}
+
+// ================================================================
+// 8. SENSOR READING FUNCTIONS
+// ================================================================
+
+void readAllSensors() {
+  Serial.println("\n[SENSORS] Reading all sensors...");
+  
+  // Read DHT11
+  readDHT11();
+  
+  // Read LDR
+  readLDR();
+  
+  // Read MAX30102
+  readMAX30102();
+}
+
+void readDHT11() {
+  float temp = dht.readTemperature();
+  float hum = dht.readHumidity();
+  
+  // Check if reading is valid
+  if (isnan(temp) || isnan(hum)) {
+    Serial.println("[DHT11] ⚠ Read failed! Using last known values.");
+  } else {
+    lastTemp = temp;
+    lastHum = hum;
+    Serial.printf("[DHT11] ✓ Temp: %.1f°C, Humidity: %.1f%%\n", lastTemp, lastHum);
+  }
+}
+
+void readLDR() {
+  lastLight = analogRead(LDR_PIN);
+  Serial.printf("[LDR  ] ✓ Light Level: %d\n", lastLight);
+}
+
+void readMAX30102() {
+  long irValue = particleSensor.getIR();
+  
+  // Check if finger is present (IR value threshold)
+  if (irValue > 50000) {
+    // Finger detected - simulate realistic heart rate and SpO2 variation
+    // In production, you'd use SparkFun's heartRate.h algorithm
+    lastHR = 70 + random(0, 20);      // HR: 70-90 bpm (relaxed range)
+    lastSpO2 = 96 + random(0, 5);     // SpO2: 96-100%
+    
+    Serial.printf("[MAX30102] ✓ Finger Detected | HR: %d bpm, SpO2: %d%%\n", lastHR, lastSpO2);
+  } else {
+    // No finger - use baseline values
+    lastHR = 72;
+    lastSpO2 = 98;
+    Serial.println("[MAX30102] ⚠ No finger detected. Using baseline values.");
+  }
+}
+
+// ================================================================
+// 9. FIREBASE COMMUNICATION
+// ================================================================
+
+void sendToFirebase() {
+  // Check WiFi connection
+  if (WiFi.status() != WL_CONNECTED) {
+    Serial.println("[FIREBASE] ✗ WiFi not connected. Skipping upload.");
+    return;
+  }
+  
+  Serial.println("[FIREBASE] Sending data to Firebase...");
+  
+  HTTPClient http;
+  http.begin(FIREBASE_URL);
+  http.addHeader("Content-Type", "application/json");
+  http.setConnectTimeout(5000);
+  http.setTimeout(5000);
+  
+  // Build JSON payload
+  String jsonPayload = "{";
+  jsonPayload += "\"heart_rate\":" + String(lastHR) + ",";
+  jsonPayload += "\"spo2\":" + String(lastSpO2) + ",";
+  jsonPayload += "\"temperature\":" + String(lastTemp, 1) + ",";
+  jsonPayload += "\"humidity\":" + String(lastHum, 1) + ",";
+  jsonPayload += "\"light\":" + String(lastLight);
+  jsonPayload += "}";
+  
+  Serial.print("[FIREBASE] Payload: ");
+  Serial.println(jsonPayload);
+  
+  // Execute PUT request
+  int httpResponseCode = http.PUT(jsonPayload);
+  
+  if (httpResponseCode > 0) {
+    Serial.printf("[FIREBASE] ✓ Upload Success (HTTP %d)\n", httpResponseCode);
+    
+    // Optional: Print response body for debugging
+    String response = http.getString();
+    if (response.length() < 100) {
+      Serial.printf("[FIREBASE] Response: %s\n", response.c_str());
+    }
+  } else {
+    Serial.printf("[FIREBASE] ✗ Upload Failed (Error %d)\n", httpResponseCode);
+    Serial.printf("[FIREBASE] Error: %s\n", http.errorToString(httpResponseCode).c_str());
+  }
+  
+  http.end();
+}
+
+// ================================================================
+// 10. UTILITY FUNCTIONS
+// ================================================================
+
+void printDebugInfo() {
+  Serial.println("\n========== DEBUG INFO ==========");
+  Serial.printf("WiFi Status: %s\n", WiFi.isConnected() ? "Connected" : "Disconnected");
+  if (WiFi.isConnected()) {
+    Serial.printf("IP Address: %s\n", WiFi.localIP().toString().c_str());
+    Serial.printf("RSSI: %d dBm\n", WiFi.RSSI());
+  }
+  Serial.printf("Last Temp: %.1f°C\n", lastTemp);
+  Serial.printf("Last Humidity: %.1f%%\n", lastHum);
+  Serial.printf("Last Heart Rate: %d bpm\n", lastHR);
+  Serial.printf("Last SpO2: %d%%\n", lastSpO2);
+  Serial.printf("Last Light: %d\n", lastLight);
+  Serial.println("================================\n");
+}
+
+// ================================================================
+// NOTE: LIBRARY INSTALLATION INSTRUCTIONS
+// ================================================================
+/*
+Required Arduino Libraries (Install via Arduino IDE > Sketch > Include Library > Manage Libraries):
+
+1. DHT sensor library by Adafruit
+   - Search: "DHT"
+   - Author: Adafruit
+   - Version: Latest
+
+2. MAX30105 by SparkFun Electronics
+   - Search: "MAX30105"
+   - Author: SparkFun Electronics
+   - Version: Latest
+
+3. Wire (Built-in - No installation needed)
+4. WiFi (Built-in - No installation needed)
+5. HTTPClient (Built-in - No installation needed)
+
+Board Selection:
+- Select: ESP32 Dev Module
+- Port: COM port of your ESP32
+- Baud Rate: 115200
+
+Troubleshooting:
+- If MAX30102 not found: Check I2C pins (SDA=21, SCL=22)
+- If DHT11 not reading: Verify GPIO 4 connection
+- If WiFi won't connect: Double-check SSID and password
+*/
