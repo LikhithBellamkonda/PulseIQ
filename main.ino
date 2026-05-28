@@ -1,266 +1,329 @@
 /*****************************************************************
- *  Pulse‑LDR ESP32 Firmware
- *  - LDR (GPIO 34)  → analog light level
- *  - Pulse Sensor (GPIO 35) → analog heart‑beat signal
- *  - Wi‑Fi → Firebase Realtime Database
- *  - No DHT11, no MAX30102, no SpO₂
+ *  MindEase Lite - ESP32 Wellness Monitor
+ *
+ *  Sensors:
+ *   - LDR Module        → GPIO 34
+ *   - Pulse Sensor      → GPIO 35
+ *
+ *  Features:
+ *   - Real pulse detection (NO fake random BPM)
+ *   - Firebase Realtime Database upload
+ *   - Stable Wi-Fi reconnect logic
+ *   - Smoothed BPM calculation
+ *   - Clean sensor logging
+ *
+ *  Board:
+ *   ESP32 Dev Module
  *****************************************************************/
 
 #include <WiFi.h>
 #include <HTTPClient.h>
-// (Libraries removed for basic analog pulse sensor)
 
 // ================================================================
-// 1. WIFI CONFIGURATION - UPDATE THESE VALUES
+// WIFI CONFIGURATION
 // ================================================================
-const char* WIFI_SSID     = "AKSHITHA PG 3F";
-const char* WIFI_PASSWORD = "7349493773";
+const char* WIFI_SSID     = "esp32wifi";
+const char* WIFI_PASSWORD = "12345678";
 
 // ================================================================
-// 2. FIREBASE CONFIGURATION - UPDATE THIS VALUE
+// FIREBASE URL
 // ================================================================
- // Format: "https://<YOUR-PROJECT-ID>-default-rtdb.firebaseio.com/sensors.json"
- // Example: "https://iotpbl-d8b32-default-rtdb.firebaseio.com/sensors.json"
-String FIREBASE_URL = "https://iotpbl-d8b32-default-rtdb.firebaseio.com/sensors.json";
+String FIREBASE_URL =
+"https://iotpbl-d8b32-default-rtdb.firebaseio.com/sensors.json";
 
 // ================================================================
-// 3. SENSOR PIN DEFINITIONS
+// SENSOR PINS
 // ================================================================
- // LDR (Light Sensor) - Analog Input
-#define LDR_PIN 34
-
- // Analog Pulse Sensor
- // S (Signal) → GPIO 35
-#define PULSE_PIN 35
+#define LDR_PIN    34
+#define PULSE_PIN  35
 
 // ================================================================
-// 4. TIMING VARIABLES
+// TIMING
 // ================================================================
-unsigned long lastSendTime = 0;
-const long SEND_INTERVAL = 10000; // Send data every 10 seconds
-
 unsigned long lastReadTime = 0;
-const long READ_INTERVAL = 1000;  // Read sensors every 1 second
+unsigned long lastSendTime = 0;
+
+const long READ_INTERVAL = 1000;
+const long SEND_INTERVAL = 10000;
 
 // ================================================================
-// 5. GLOBAL SENSOR VARIABLES
+// SENSOR VARIABLES
 // ================================================================
+int lastLight = 0;
+int lastHR = 72;
+
 float lastTemp = 25.0;
-float lastHum = 45.0;
-int   lastHR = 72;
-int   lastLight = 400;
-
-// Forward declaration – needed because loop() calls this before its definition.
-void sendToFirebase();
+float lastHum  = 45.0;
 
 // ================================================================
-// 6. SETUP - Runs once at startup
+// PULSE DETECTION VARIABLES
 // ================================================================
-void setup() {
-  Serial.begin(115200);
-  delay(1000); // Wait for serial to stabilize
+int pulseSignal = 0;
 
-  Serial.println("\n\n");
-  Serial.println("====================================================");
-  Serial.println("MindEase Lite: ESP32 Wellness Monitor Firmware");
-  Serial.println("====================================================");
+bool pulseDetected = false;
 
-  // ---------------------------------------------------------------
-  // Initialize Pulse Sensor
-  // ---------------------------------------------------------------
-  Serial.println("[SETUP] Initializing Analog Pulse Sensor on GPIO 35...");
-  pinMode(PULSE_PIN, INPUT);
-  Serial.println("[SETUP] ✓ Pulse Sensor initialized");
+unsigned long lastBeatTime = 0;
 
-  // ---------------------------------------------------------------
-  // Initialize LDR (Analog)
-  // ---------------------------------------------------------------
-  Serial.println("[SETUP] Initializing LDR on GPIO 34...");
-  pinMode(LDR_PIN, INPUT);
-  Serial.println("[SETUP] ✓ LDR initialized");
+int bpm = 0;
+int smoothedBPM = 72;
 
-  // ---------------------------------------------------------------
-  // Connect to WiFi
-  // ---------------------------------------------------------------
-  Serial.print("[SETUP] Connecting to WiFi: ");
-  Serial.println(WIFI_SSID);
+// Threshold tuning
+const int PULSE_THRESHOLD = 1800;
+
+// ================================================================
+// WIFI CONNECT FUNCTION
+// ================================================================
+void connectWiFi() {
+
+  Serial.println("\n[WIFI] Connecting...");
+
+  WiFi.disconnect(true);
+  delay(1000);
 
   WiFi.mode(WIFI_STA);
+
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
 
-  int wifiAttempts = 0;
-  while (WiFi.status() != WL_CONNECTED && wifiAttempts < 20) {
+  int retry = 0;
+
+  while (WiFi.status() != WL_CONNECTED && retry < 30) {
+
     delay(500);
-    Serial.print('.');
-    wifiAttempts++;
+    Serial.print(".");
+
+    retry++;
   }
 
   if (WiFi.status() == WL_CONNECTED) {
-    Serial.println();
-    Serial.print("[SETUP] ✓ WiFi Connected! IP: ");
-    Serial.println(WiFi.localIP());
-  } else {
-    Serial.println();
-    Serial.println("[SETUP] ⚠ WiFi connection failed. Retrying later...");
-  }
 
-  Serial.println("====================================================");
-  Serial.println("Setup Complete! Starting sensor loop...");
-  Serial.println("====================================================\n");
+    Serial.println("\n[WIFI] Connected!");
+    Serial.print("[WIFI] IP Address: ");
+
+    Serial.println(WiFi.localIP());
+
+  } else {
+
+    Serial.println("\n[WIFI] Connection Failed!");
+  }
 }
 
 // ================================================================
-// 7. MAIN LOOP
+// SETUP
+// ================================================================
+void setup() {
+
+  Serial.begin(115200);
+
+  delay(1000);
+
+  Serial.println("\n==================================");
+  Serial.println("MindEase Lite Starting...");
+  Serial.println("==================================");
+
+  pinMode(LDR_PIN, INPUT);
+  pinMode(PULSE_PIN, INPUT);
+
+  connectWiFi();
+
+  Serial.println("\n[SETUP] Complete\n");
+}
+
+// ================================================================
+// MAIN LOOP
 // ================================================================
 void loop() {
-  unsigned long currentTime = millis();
 
-  // ---------------------------------------------------------------
-  // READ SENSORS (every 1 second)
-  // ---------------------------------------------------------------
-  if (currentTime - lastReadTime >= READ_INTERVAL) {
-    lastReadTime = currentTime;
-    readAllSensors();
+  unsigned long currentMillis = millis();
+
+  // ------------------------------------------------------------
+  // Maintain WiFi
+  // ------------------------------------------------------------
+  if (WiFi.status() != WL_CONNECTED) {
+
+    Serial.println("\n[WIFI] Connection Lost!");
+
+    connectWiFi();
   }
 
-  // ---------------------------------------------------------------
-  // SEND DATA TO FIREBASE (every 10 seconds)
-  // ---------------------------------------------------------------
-  if (currentTime - lastSendTime >= SEND_INTERVAL) {
-    lastSendTime = currentTime;
+  // ------------------------------------------------------------
+  // Read Sensors
+  // ------------------------------------------------------------
+  if (currentMillis - lastReadTime >= READ_INTERVAL) {
+
+    lastReadTime = currentMillis;
+
+    readSensors();
+  }
+
+  // ------------------------------------------------------------
+  // Upload to Firebase
+  // ------------------------------------------------------------
+  if (currentMillis - lastSendTime >= SEND_INTERVAL) {
+
+    lastSendTime = currentMillis;
+
     sendToFirebase();
   }
-
-  // Keep WiFi alive
-  if (WiFi.status() != WL_CONNECTED) {
-    Serial.println("[LOOP] WiFi disconnected. Attempting reconnect...");
-    WiFi.reconnect();
-  }
 }
 
 // ================================================================
-// 8. SENSOR READING FUNCTIONS
+// READ ALL SENSORS
 // ================================================================
-void readAllSensors() {
-  Serial.println("\n[SENSORS] Reading all sensors...");
+void readSensors() {
+
+  Serial.println("\n========== SENSOR DATA ==========");
+
   readLDR();
+
   readPulseSensor();
+
+  Serial.println("=================================");
 }
 
+// ================================================================
+// READ LDR
+// ================================================================
 void readLDR() {
+
   lastLight = analogRead(LDR_PIN);
-  Serial.printf("[LDR  ] ✓ Light Level: %d\n", lastLight);
+
+  Serial.print("[LDR] Light Level: ");
+  Serial.println(lastLight);
 }
 
-// ---------------------------------------------------------------
-// Pulse sensor – realistic random‑walk simulation
-// ---------------------------------------------------------------
+// ================================================================
+// READ PULSE SENSOR
+// ================================================================
 void readPulseSensor() {
-  int signal = analogRead(PULSE_PIN);
 
-  // If the analog signal indicates a pulse (above threshold)
-  if (signal > 2000) {
-    // Random walk: small +/- change each reading
-    int delta = random(-5, 6); // -5 … +5 bpm change
-    lastHR = constrain(lastHR + delta, 55, 110);
+  pulseSignal = analogRead(PULSE_PIN);
 
-    // Occasionally (10% chance) add a stress spike (+10‑30 bpm)
-    if (random(0, 100) < 10) {
-      int spike = random(10, 31);
-      lastHR = constrain(lastHR + spike, 55, 130);
+  Serial.print("[PULSE] Signal: ");
+  Serial.println(pulseSignal);
+
+  // ------------------------------------------------------------
+  // Detect Pulse Peak
+  // ------------------------------------------------------------
+  if (pulseSignal > PULSE_THRESHOLD && !pulseDetected) {
+
+    pulseDetected = true;
+
+    unsigned long currentBeatTime = millis();
+
+    if (lastBeatTime > 0) {
+
+      unsigned long beatInterval =
+        currentBeatTime - lastBeatTime;
+
+      bpm = 60000 / beatInterval;
+
+      // --------------------------------------------------------
+      // Filter unrealistic BPM
+      // --------------------------------------------------------
+      if (bpm >= 55 && bpm <= 130) {
+
+        // Smooth readings
+        smoothedBPM =
+          (smoothedBPM * 3 + bpm) / 4;
+
+        lastHR = smoothedBPM;
+
+        Serial.print("[PULSE] Beat Detected | BPM: ");
+        Serial.println(lastHR);
+      }
     }
-    // Occasionally (5% chance) simulate a brief dip (-10‑20 bpm)
-    if (random(0, 100) < 5) {
-      int dip = random(10, 21);
-      lastHR = constrain(lastHR - dip, 40, 110);
-    }
-    Serial.printf("[PULSE] ✓ Pulse Detected (Signal: %d) | HR: %d bpm\n", signal, lastHR);
-  } else {
-    // No reliable pulse; keep a baseline but still allow small drift
-    int delta = random(-2, 3); // -2 … +2 bpm drift
-    lastHR = constrain(lastHR + delta, 55, 110);
-    Serial.printf("[PULSE] ⚠ Low Signal (Signal: %d). Using baseline HR=%d bpm\n", signal, lastHR);
+
+    lastBeatTime = currentBeatTime;
+  }
+
+  // ------------------------------------------------------------
+  // Reset detector when signal drops
+  // ------------------------------------------------------------
+  if (pulseSignal < (PULSE_THRESHOLD - 200)) {
+
+    pulseDetected = false;
+  }
+
+  // ------------------------------------------------------------
+  // Weak Signal Handling
+  // ------------------------------------------------------------
+  if (pulseSignal < 1000) {
+
+    Serial.println("[PULSE] Weak signal / No finger");
+
+    // Keep previous valid BPM
+    lastHR = smoothedBPM;
   }
 }
 
 // ================================================================
-// 9. FIREBASE COMMUNICATION
+// SEND TO FIREBASE
 // ================================================================
 void sendToFirebase() {
-  // Check WiFi connection
+
   if (WiFi.status() != WL_CONNECTED) {
-    Serial.println("[FIREBASE] ✗ WiFi not connected. Skipping upload.");
+
+    Serial.println("[FIREBASE] No WiFi!");
+
     return;
   }
 
-  Serial.println("[FIREBASE] Sending data to Firebase...");
-
   HTTPClient http;
+
   http.begin(FIREBASE_URL);
-  http.addHeader("Content-Type", "application/json");
+
+  http.addHeader(
+    "Content-Type",
+    "application/json"
+  );
+
   http.setConnectTimeout(5000);
-  http.setTimeout(5000);
 
-  // Build JSON payload
-  String jsonPayload = "{";
-  jsonPayload += "\"heart_rate\":" + String(lastHR) + ",";
-  jsonPayload += "\"temperature\":" + String(lastTemp, 1) + ",";
-  jsonPayload += "\"humidity\":" + String(lastHum, 1) + ",";
-  jsonPayload += "\"light\":" + String(lastLight);
-  jsonPayload += "}";
+  // ------------------------------------------------------------
+  // JSON Payload
+  // ------------------------------------------------------------
+  String jsonData = "{";
 
-  Serial.print("[FIREBASE] Payload: ");
-  Serial.println(jsonPayload);
+  jsonData += "\"heart_rate\":";
+  jsonData += String(lastHR);
+  jsonData += ",";
 
-  // Execute PUT request
-  int httpResponseCode = http.PUT(jsonPayload);
+  jsonData += "\"temperature\":";
+  jsonData += String(lastTemp, 1);
+  jsonData += ",";
+
+  jsonData += "\"humidity\":";
+  jsonData += String(lastHum, 1);
+  jsonData += ",";
+
+  jsonData += "\"light\":";
+  jsonData += String(lastLight);
+
+  jsonData += "}";
+
+  Serial.println("\n[FIREBASE] Uploading...");
+  Serial.println(jsonData);
+
+  // ------------------------------------------------------------
+  // HTTP PUT
+  // ------------------------------------------------------------
+  int httpResponseCode =
+    http.PUT(jsonData);
 
   if (httpResponseCode > 0) {
-    Serial.printf("[FIREBASE] ✓ Upload Success (HTTP %d)\n", httpResponseCode);
-    String response = http.getString();
-    if (response.length() < 100) {
-      Serial.printf("[FIREBASE] Response: %s\n", response.c_str());
-    }
+
+    Serial.print("[FIREBASE] Success | HTTP ");
+
+    Serial.println(httpResponseCode);
+
   } else {
-    Serial.printf("[FIREBASE] ✗ Upload Failed (Error %d)\n", httpResponseCode);
-    Serial.printf("[FIREBASE] Error: %s\n", http.errorToString(httpResponseCode).c_str());
+
+    Serial.print("[FIREBASE] Failed: ");
+
+    Serial.println(
+      http.errorToString(httpResponseCode)
+    );
   }
 
   http.end();
 }
-
-// ================================================================
-// 10. UTILITY FUNCTIONS
-// ================================================================
-void printDebugInfo() {
-  Serial.println("\n========== DEBUG INFO ==========");
-  Serial.printf("WiFi Status: %s\n", WiFi.isConnected() ? "Connected" : "Disconnected");
-  if (WiFi.isConnected()) {
-    Serial.printf("IP Address: %s\n", WiFi.localIP().toString().c_str());
-    Serial.printf("RSSI: %d dBm\n", WiFi.RSSI());
-  }
-  Serial.printf("Last Temp: %.1f°C\n", lastTemp);
-  Serial.printf("Last Humidity: %.1f%%\n", lastHum);
-  Serial.printf("Last Heart Rate: %d bpm\n", lastHR);
-  Serial.printf("Last Light: %d\n", lastLight);
-  Serial.println("================================");
-}
-
-// ================================================================
-// NOTE: LIBRARY INSTALLATION INSTRUCTIONS
-// ================================================================
-/*
-Required Arduino Libraries (install via Arduino IDE > Sketch > Include Library > Manage Libraries):
-
-1. WiFi (built‑in – no installation needed)
-2. HTTPClient (built‑in – no installation needed)
-
-Board selection:
-- Board: ESP32 Dev Module
-- Port: COM port of your ESP32
-- Baud rate: 115200
-
-Troubleshooting:
-- If Pulse Sensor reading is flat: check GPIO 35 wiring and ensure finger is placed firmly.
-- If WiFi won’t connect: double‑check SSID / password.
-*/
