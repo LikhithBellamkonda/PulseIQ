@@ -177,7 +177,6 @@ void readPulseSensor() {
     Serial.printf("[PULSE] ⚠ Low Signal (Signal: %d). Using baseline HR=%d bpm\n", signal, lastHR);
   }
 }
-  int signal = analogRead(PULSE_PIN);
   
   // The 3-pin analog pulse sensor outputs a raw analog voltage.
   // When a pulse occurs, the voltage spikes.
