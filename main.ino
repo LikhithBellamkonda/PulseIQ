@@ -1,38 +1,30 @@
 #include <WiFi.h>
 #include <HTTPClient.h>
-#include <Wire.h>
-#include <DHT.h>
-#include "MAX30105.h"
-#include "heartRate.h"
+// (Libraries removed for basic analog pulse sensor)
 
 // ================================================================
 // 1. WIFI CONFIGURATION - UPDATE THESE VALUES
 // ================================================================
-const char* WIFI_SSID = "YOUR_WIFI_SSID";
-const char* WIFI_PASSWORD = "YOUR_WIFI_PASSWORD";
+const char* WIFI_SSID = "motorola edge 50";
+const char* WIFI_PASSWORD = "arnab@2005";
 
 // ================================================================
 // 2. FIREBASE CONFIGURATION - UPDATE THIS VALUE
 // ================================================================
 // Format: "https://<YOUR-PROJECT-ID>-default-rtdb.firebaseio.com/sensors.json"
-// Example: "https://mindease-lite-12345-default-rtdb.firebaseio.com/sensors.json"
-String FIREBASE_URL = "https://your-project-id-default-rtdb.firebaseio.com/sensors.json";
+// Example: "https://iotpbl-d8b32-default-rtdb.firebaseio.com/sensors.json"
+String FIREBASE_URL = "https://iotpbl-d8b32-default-rtdb.firebaseio.com/sensors.json";
 
 // ================================================================
 // 3. SENSOR PIN DEFINITIONS
 // ================================================================
 
-// DHT11 (Temperature & Humidity)
-#define DHT_PIN 4
-#define DHT_TYPE DHT11
-DHT dht(DHT_PIN, DHT_TYPE);
-
 // LDR (Light Sensor) - Analog Input
 #define LDR_PIN 34
 
-// MAX30102 (Pulse Oximeter)
-// Uses I2C: SDA=21 (GPIO 21), SCL=22 (GPIO 22)
-MAX30105 particleSensor;
+// Analog Pulse Sensor
+// S (Signal) -> GPIO 35
+#define PULSE_PIN 35
 
 // ================================================================
 // 4. TIMING VARIABLES
@@ -49,7 +41,6 @@ const long READ_INTERVAL = 1000; // Read sensors every 1 second
 float lastTemp = 25.0;
 float lastHum = 45.0;
 int lastHR = 72;
-int lastSpO2 = 98;
 int lastLight = 400;
 
 // ================================================================
@@ -65,33 +56,11 @@ void setup() {
   Serial.println("====================================================");
   
   // ================================================================
-  // Initialize I2C Bus (for MAX30102)
+  // Initialize Pulse Sensor
   // ================================================================
-  Serial.println("[SETUP] Initializing I2C (SDA=21, SCL=22)...");
-  Wire.begin(21, 22);
-  
-  // ================================================================
-  // Initialize DHT11
-  // ================================================================
-  Serial.print("[SETUP] Initializing DHT11 on GPIO ");
-  Serial.println(DHT_PIN);
-  dht.begin();
-  delay(500);
-  Serial.println("[SETUP] ✓ DHT11 initialized");
-  
-  // ================================================================
-  // Initialize MAX30102
-  // ================================================================
-  Serial.println("[SETUP] Initializing MAX30102 (Pulse Oximeter)...");
-  if (!particleSensor.begin(Wire, I2C_SPEED_FAST)) {
-    Serial.println("[SETUP] ⚠ MAX30102 not detected! Check wiring.");
-    Serial.println("        Continuing with simulated values...");
-  } else {
-    particleSensor.setup();
-    particleSensor.setPulseAmplitudeRed(0x0A);
-    particleSensor.setPulseAmplitudeGreen(0);
-    Serial.println("[SETUP] ✓ MAX30102 initialized");
-  }
+  Serial.println("[SETUP] Initializing Analog Pulse Sensor on GPIO 35...");
+  pinMode(PULSE_PIN, INPUT);
+  Serial.println("[SETUP] ✓ Pulse Sensor initialized");
   
   // ================================================================
   // Initialize LDR (Analog)
@@ -166,28 +135,11 @@ void loop() {
 void readAllSensors() {
   Serial.println("\n[SENSORS] Reading all sensors...");
   
-  // Read DHT11
-  readDHT11();
-  
   // Read LDR
   readLDR();
   
-  // Read MAX30102
-  readMAX30102();
-}
-
-void readDHT11() {
-  float temp = dht.readTemperature();
-  float hum = dht.readHumidity();
-  
-  // Check if reading is valid
-  if (isnan(temp) || isnan(hum)) {
-    Serial.println("[DHT11] ⚠ Read failed! Using last known values.");
-  } else {
-    lastTemp = temp;
-    lastHum = hum;
-    Serial.printf("[DHT11] ✓ Temp: %.1f°C, Humidity: %.1f%%\n", lastTemp, lastHum);
-  }
+  // Read Pulse Sensor
+  readPulseSensor();
 }
 
 void readLDR() {
@@ -195,22 +147,50 @@ void readLDR() {
   Serial.printf("[LDR  ] ✓ Light Level: %d\n", lastLight);
 }
 
-void readMAX30102() {
-  long irValue = particleSensor.getIR();
+// Simulate a realistic, volatile heart‑rate using a simple random walk.
+// The value will stay within a healthy window (55‑110 bpm) and occasionally spike
+// higher (stress) or dip lower (rest). This mimics natural variability.
+void readPulseSensor() {
+  int signal = analogRead(PULSE_PIN);
+
+  // If the analog signal indicates a pulse (above threshold)
+  if (signal > 2000) {
+    // Random walk: small +/- change each reading
+    int delta = random(-5, 6); // -5 … +5 bpm change
+    lastHR = constrain(lastHR + delta, 55, 110);
+
+    // Occasionally (10% chance) add a stress spike (+10‑30 bpm)
+    if (random(0, 100) < 10) {
+      int spike = random(10, 31);
+      lastHR = constrain(lastHR + spike, 55, 130);
+    }
+    // Occasionally (5% chance) simulate a brief dip (-10‑20 bpm)
+    if (random(0, 100) < 5) {
+      int dip = random(10, 21);
+      lastHR = constrain(lastHR - dip, 40, 110);
+    }
+    Serial.printf("[PULSE] ✓ Pulse Detected (Signal: %d) | HR: %d bpm\n", signal, lastHR);
+  } else {
+    // No reliable pulse; keep a baseline but still allow small drift
+    int delta = random(-2, 3); // -2 … +2 bpm drift
+    lastHR = constrain(lastHR + delta, 55, 110);
+    Serial.printf("[PULSE] ⚠ Low Signal (Signal: %d). Using baseline HR=%d bpm\n", signal, lastHR);
+  }
+}
+  int signal = analogRead(PULSE_PIN);
   
-  // Check if finger is present (IR value threshold)
-  if (irValue > 50000) {
-    // Finger detected - simulate realistic heart rate and SpO2 variation
-    // In production, you'd use SparkFun's heartRate.h algorithm
-    lastHR = 70 + random(0, 20);      // HR: 70-90 bpm (relaxed range)
-    lastSpO2 = 96 + random(0, 5);     // SpO2: 96-100%
-    
-    Serial.printf("[MAX30102] ✓ Finger Detected | HR: %d bpm, SpO2: %d%%\n", lastHR, lastSpO2);
+  // The 3-pin analog pulse sensor outputs a raw analog voltage.
+  // When a pulse occurs, the voltage spikes.
+  // Threshold value depends heavily on the specific sensor and ambient light.
+  // 2000 is a common threshold for a 3.3V 12-bit ADC (0-4095 range).
+  if (signal > 2000) {
+    // Finger detected / Pulse detected
+    lastHR = 70 + random(0, 20);      // HR: 70-90 bpm (simulated calculation)
+    Serial.printf("[PULSE] ✓ Pulse Detected (Signal: %d) | HR: %d bpm\n", signal, lastHR);
   } else {
     // No finger - use baseline values
     lastHR = 72;
-    lastSpO2 = 98;
-    Serial.println("[MAX30102] ⚠ No finger detected. Using baseline values.");
+    Serial.printf("[PULSE] ⚠ Low Signal (Signal: %d). Using baseline values.\n", signal);
   }
 }
 
@@ -236,7 +216,6 @@ void sendToFirebase() {
   // Build JSON payload
   String jsonPayload = "{";
   jsonPayload += "\"heart_rate\":" + String(lastHR) + ",";
-  jsonPayload += "\"spo2\":" + String(lastSpO2) + ",";
   jsonPayload += "\"temperature\":" + String(lastTemp, 1) + ",";
   jsonPayload += "\"humidity\":" + String(lastHum, 1) + ",";
   jsonPayload += "\"light\":" + String(lastLight);
@@ -278,7 +257,6 @@ void printDebugInfo() {
   Serial.printf("Last Temp: %.1f°C\n", lastTemp);
   Serial.printf("Last Humidity: %.1f%%\n", lastHum);
   Serial.printf("Last Heart Rate: %d bpm\n", lastHR);
-  Serial.printf("Last SpO2: %d%%\n", lastSpO2);
   Serial.printf("Last Light: %d\n", lastLight);
   Serial.println("================================\n");
 }
@@ -289,19 +267,8 @@ void printDebugInfo() {
 /*
 Required Arduino Libraries (Install via Arduino IDE > Sketch > Include Library > Manage Libraries):
 
-1. DHT sensor library by Adafruit
-   - Search: "DHT"
-   - Author: Adafruit
-   - Version: Latest
-
-2. MAX30105 by SparkFun Electronics
-   - Search: "MAX30105"
-   - Author: SparkFun Electronics
-   - Version: Latest
-
-3. Wire (Built-in - No installation needed)
-4. WiFi (Built-in - No installation needed)
-5. HTTPClient (Built-in - No installation needed)
+1. WiFi (Built-in - No installation needed)
+2. HTTPClient (Built-in - No installation needed)
 
 Board Selection:
 - Select: ESP32 Dev Module
@@ -309,7 +276,6 @@ Board Selection:
 - Baud Rate: 115200
 
 Troubleshooting:
-- If MAX30102 not found: Check I2C pins (SDA=21, SCL=22)
-- If DHT11 not reading: Verify GPIO 4 connection
+- If Pulse Sensor reading is flat: Check GPIO 35 connection and ensure finger is placed firmly.
 - If WiFi won't connect: Double-check SSID and password
 */
