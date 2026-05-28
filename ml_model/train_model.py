@@ -3,11 +3,13 @@ import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, confusion_matrix
+import matplotlib.pyplot as plt
+import seaborn as sns
 import pickle
 import os
 
 print("=" * 60)
-print("MindEase Lite: ML Model Training Script")
+print("MindEase Lite: ML Model Training Script (No SpO2)")
 print("=" * 60)
 
 print("\n[1/4] Generating synthetic wellness dataset...")
@@ -17,26 +19,22 @@ def generate_data(n, state):
     """Generate realistic vital signs for different stress states"""
     if state == "Relaxed":
         hr = np.random.randint(60, 85, n)
-        spo2 = np.random.randint(97, 101, n)
         temp = np.random.uniform(22.0, 26.0, n)
         hum = np.random.uniform(40.0, 55.0, n)
         light = np.random.randint(300, 600, n)
     elif state == "Mild Stress":
         hr = np.random.randint(85, 105, n)
-        spo2 = np.random.randint(95, 98, n)
         temp = np.random.uniform(26.0, 29.0, n)
         hum = np.random.uniform(55.0, 65.0, n)
         light = np.random.randint(200, 400, n)
     else:  # High Stress
         hr = np.random.randint(105, 140, n)
-        spo2 = np.random.randint(90, 95, n)
         temp = np.random.uniform(29.0, 35.0, n)
         hum = np.random.uniform(65.0, 85.0, n)
         light = np.random.randint(50, 200, n)
 
     return pd.DataFrame({
         "heart_rate": hr,
-        "spo2": spo2,
         "temperature": np.round(temp, 1),
         "humidity": np.round(hum, 1),
         "light": light,
@@ -58,7 +56,7 @@ print(f"  - High Stress: {len(df_high)}")
 print(f"✓ Saved to: dataset.csv")
 
 print("\n[2/4] Preparing training data...")
-X = df[["heart_rate", "spo2", "temperature", "humidity", "light"]]
+X = df[["heart_rate", "temperature", "humidity", "light"]]
 y = df["label"]
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -76,7 +74,19 @@ print(f"✓ Test Accuracy: {test_accuracy*100:.1f}%")
 
 print("\nClassification Report:")
 y_pred = clf.predict(X_test)
-print(classification_report(y_test, y_pred))
+report = classification_report(y_test, y_pred)
+print(report)
+
+# Generate Confusion Matrix Graph
+cm = confusion_matrix(y_test, y_pred, labels=clf.classes_)
+plt.figure(figsize=(8, 6))
+sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=clf.classes_, yticklabels=clf.classes_)
+plt.title('Confusion Matrix for Stress Prediction')
+plt.xlabel('Predicted')
+plt.ylabel('Actual')
+plt.tight_layout()
+plt.savefig('confusion_matrix.png')
+print("✓ Confusion matrix graph saved to: confusion_matrix.png")
 
 print("\n[4/4] Saving model...")
 with open("stress_model.pkl", "wb") as f:

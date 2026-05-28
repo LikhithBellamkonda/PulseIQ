@@ -30,26 +30,62 @@ else:
 # ================================================================
 # ⚠️ CRITICAL: Replace with your actual Firebase Realtime Database URL
 # Format: "https://<YOUR-PROJECT-ID>-default-rtdb.firebaseio.com/sensors.json"
-# Example: "https://mindease-lite-12345-default-rtdb.firebaseio.com/sensors.json"
-FIREBASE_URL = os.getenv("FIREBASE_URL", "https://your-project-id-default-rtdb.firebaseio.com/sensors.json")
+# Example: "https://iotpbl-d8b32-default-rtdb.firebaseio.com/sensors.json"
+FIREBASE_URL = os.getenv("FIREBASE_URL", "https://iotpbl-d8b32-default-rtdb.firebaseio.com/sensors.json")
 
 # Default fallback data when Firebase is unreachable
 DEFAULT_FALLBACK = {
     "heart_rate": 72,
-    "spo2": 98,
     "temperature": 24.5,
     "humidity": 45.0,
     "light": 400
 }
 
 # ================================================================
+# WEATHER API CACHE
+# ================================================================
+from datetime import timedelta
+
+weather_cache = {
+    "location": "London",
+    "lat": 51.50853,
+    "lon": -0.12574,
+    "temperature": 20.0,
+    "humidity": 50.0,
+    "last_fetched": datetime.min
+}
+
+# ================================================================
 # 3. ROUTES
 # ================================================================
+
+from flask import request
 
 @app.route("/")
 def index():
     """Serve the main dashboard"""
     return render_template("index.html")
+
+@app.route("/api/set_location", methods=["POST"])
+def set_location():
+    global weather_cache
+    data = request.json
+    city = data.get("city", "")
+    if city:
+        try:
+            geo_url = f"https://geocoding-api.open-meteo.com/v1/search?name={city}&count=1&format=json"
+            res = requests.get(geo_url, timeout=5).json()
+            if "results" in res and len(res["results"]) > 0:
+                weather_cache["lat"] = res["results"][0]["latitude"]
+                weather_cache["lon"] = res["results"][0]["longitude"]
+                weather_cache["location"] = res["results"][0]["name"]
+                weather_cache["last_fetched"] = datetime.min # Force refresh next time
+                return jsonify({"status": "success", "location": weather_cache["location"]})
+            else:
+                return jsonify({"status": "error", "message": "City not found"}), 404
+        except Exception as e:
+            return jsonify({"status": "error", "message": str(e)}), 500
+    return jsonify({"status": "error", "message": "No city provided"}), 400
 
 @app.route("/api/data")
 def get_data():
@@ -57,6 +93,7 @@ def get_data():
     Fetch sensor data from Firebase, run ML inference, and return results
     Includes comprehensive fallback logic for robustness
     """
+    global weather_cache
     
     # Start with fallback defaults
     sensor_data = DEFAULT_FALLBACK.copy()
@@ -75,9 +112,6 @@ def get_data():
             if fb_data and isinstance(fb_data, dict):
                 # Validate each field, fall back to default if missing
                 sensor_data["heart_rate"] = int(fb_data.get("heart_rate", DEFAULT_FALLBACK["heart_rate"]))
-                sensor_data["spo2"] = int(fb_data.get("spo2", DEFAULT_FALLBACK["spo2"]))
-                sensor_data["temperature"] = float(fb_data.get("temperature", DEFAULT_FALLBACK["temperature"]))
-                sensor_data["humidity"] = float(fb_data.get("humidity", DEFAULT_FALLBACK["humidity"]))
                 sensor_data["light"] = int(fb_data.get("light", DEFAULT_FALLBACK["light"]))
                 firebase_status = "connected"
                 print(f"[{datetime.now().strftime('%H:%M:%S')}] ✓ Data fetched from Firebase")
@@ -99,6 +133,24 @@ def get_data():
         print(f"[{datetime.now().strftime('%H:%M:%S')}] ⚠ Unexpected Firebase error: {type(e).__name__}: {e}")
 
     # ================================================================
+    # OVERRIDE WITH WEATHER API
+    # ================================================================
+    try:
+        if datetime.now() - weather_cache["last_fetched"] > timedelta(minutes=5):
+            w_url = f"https://api.open-meteo.com/v1/forecast?latitude={weather_cache['lat']}&longitude={weather_cache['lon']}&current=temperature_2m,relative_humidity_2m"
+            w_res = requests.get(w_url, timeout=5).json()
+            if "current" in w_res:
+                weather_cache["temperature"] = w_res["current"]["temperature_2m"]
+                weather_cache["humidity"] = w_res["current"]["relative_humidity_2m"]
+                weather_cache["last_fetched"] = datetime.now()
+                print(f"[{datetime.now().strftime('%H:%M:%S')}] ✓ Weather updated for {weather_cache['location']}")
+    except Exception as e:
+        print(f"[{datetime.now().strftime('%H:%M:%S')}] ⚠ Weather API Error: {e}")
+
+    sensor_data["temperature"] = weather_cache["temperature"]
+    sensor_data["humidity"] = weather_cache["humidity"]
+
+    # ================================================================
     # STEP 2: Run ML Inference
     # ================================================================
     stress_level = "Unknown"
@@ -109,7 +161,6 @@ def get_data():
             # Prepare feature vector
             features = pd.DataFrame([{
                 "heart_rate": sensor_data["heart_rate"],
-                "spo2": sensor_data["spo2"],
                 "temperature": sensor_data["temperature"],
                 "humidity": sensor_data["humidity"],
                 "light": sensor_data["light"]
@@ -136,10 +187,10 @@ def get_data():
     response_data = {
         "timestamp": datetime.now().isoformat(),
         "heart_rate": sensor_data["heart_rate"],
-        "spo2": sensor_data["spo2"],
         "temperature": round(sensor_data["temperature"], 1),
         "humidity": round(sensor_data["humidity"], 1),
         "light": sensor_data["light"],
+        "location": weather_cache["location"],
         "stress_level": stress_level,
         "confidence": round(confidence, 2),
         "firebase_status": firebase_status,

@@ -289,6 +289,22 @@
       <header>
         <h1>🧠 MindEase Lite</h1>
         <p>IoT-Based Wellness Monitoring System</p>
+        <div class="location-picker">
+          <input type="text" id="city-input" placeholder="Enter City Name..." list="city-list">
+          <datalist id="city-list">
+            <option value="New York">
+            <option value="London">
+            <option value="Tokyo">
+            <option value="Sydney">
+            <option value="Paris">
+            <option value="Mumbai">
+            <option value="Delhi">
+            <option value="Berlin">
+            <option value="Toronto">
+          </datalist>
+          <button onclick="setLocation()">Set Location</button>
+        </div>
+
       </header>
 
       <div id="stress-banner" class="stress-banner unknown">
@@ -304,14 +320,9 @@
             <div class="sensor-unit">beats/min</div>
           </div>
           <div class="sensor-card">
-            <h3>🫁 SpO₂ Level</h3>
-            <div class="sensor-value" id="spo2">--</div>
-            <div class="sensor-unit">% oxygen</div>
-          </div>
-          <div class="sensor-card">
             <h3>🌡️ Temperature</h3>
             <div class="sensor-value" id="temp">--</div>
-            <div class="sensor-unit">°C</div>
+            <div class="sensor-unit">°C (<span id="loc-display">Local</span>)</div>
           </div>
           <div class="sensor-card">
             <h3>💧 Humidity</h3>
@@ -436,11 +447,11 @@
       function updateSensorDisplay(data) {
         // Update numeric values with safe fallbacks
         document.getElementById("hr").textContent = data.heart_rate || "--";
-        document.getElementById("spo2").textContent = data.spo2 || "--";
         document.getElementById("temp").textContent =
           typeof data.temperature === "number"
             ? data.temperature.toFixed(1)
             : "--";
+        document.getElementById("loc-display").textContent = data.location || "Local";
         document.getElementById("hum").textContent =
           typeof data.humidity === "number" ? data.humidity.toFixed(1) : "--";
         document.getElementById("light").textContent = data.light || "--";
@@ -452,6 +463,33 @@
         const confidencePercent = (data.confidence || 0) * 100;
         document.getElementById("confidence-fill").style.width =
           confidencePercent + "%";
+      }
+
+      async function setLocation() {
+        const city = document.getElementById("city-input").value;
+        if (!city) return;
+        
+        document.getElementById("city-input").disabled = true;
+        
+        try {
+          const response = await fetch("/api/set_location", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ city })
+          });
+          
+          if (response.ok) {
+            // Trigger an immediate data fetch to get new weather
+            fetchData();
+          } else {
+            alert("City not found or API error!");
+          }
+        } catch (error) {
+          console.error("Error setting location:", error);
+        }
+        
+        document.getElementById("city-input").disabled = false;
+        document.getElementById("city-input").value = "";
       }
 
       function updateStressBanner(data) {
@@ -508,7 +546,6 @@
 
       function updateErrorState(errorMsg) {
         document.getElementById("hr").textContent = "ERROR";
-        document.getElementById("spo2").textContent = "ERROR";
         document.getElementById("temp").textContent = "ERROR";
         document.getElementById("hum").textContent = "ERROR";
         document.getElementById("light").textContent = "ERROR";
