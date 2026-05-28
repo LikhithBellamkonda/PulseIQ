@@ -5,8 +5,8 @@
 // ================================================================
 // 1. WIFI CONFIGURATION - UPDATE THESE VALUES
 // ================================================================
-const char* WIFI_SSID = "motorola edge 50";
-const char* WIFI_PASSWORD = "arnab@2005";
+const char* WIFI_SSID = "AKSHITHA PG 3F";
+const char* WIFI_PASSWORD = "7349493773";
 
 // ================================================================
 // 2. FIREBASE CONFIGURATION - UPDATE THIS VALUE
