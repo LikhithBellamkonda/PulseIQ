@@ -304,7 +304,15 @@
           </datalist>
           <button onclick="setLocation()">Set Location</button>
         </div>
-
+        
+        <div class="mode-picker" style="margin-top: 15px; color: #fff;">
+          <label style="margin-right: 15px; cursor: pointer;">
+            <input type="radio" name="mode" value="dev" checked> Dev Mode
+          </label>
+          <label style="cursor: pointer;">
+            <input type="radio" name="mode" value="test"> Test Mode
+          </label>
+        </div>
       </header>
 
       <div id="stress-banner" class="stress-banner unknown">
@@ -417,35 +425,63 @@
       // ================================================================
       // Data Fetching & Processing
       // ================================================================
-      async function fetchData() {
-        try {
-          const response = await fetch(API_ENDPOINT);
+      // ---------------------------------------------------------------
+// Data Fetching & Processing (Mode-aware)
+// ---------------------------------------------------------------
+async function fetchData() {
+  try {
+    const mode = document.querySelector('input[name="mode"]:checked').value;
+    let data;
+    if (mode === "test") {
+      // Testing mode – generate synthetic data locally
+      data = generateSyntheticData();
+    } else {
+      // Dev mode – fetch live data from backend
+      const response = await fetch(API_ENDPOINT);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      data = await response.json();
+    }
+    // Update UI with the obtained data
+    updateSensorDisplay(data);
+    updateStressBanner(data);
+    updateInfoSection(data);
+    updateFirebaseIndicator(data);
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    updateErrorState(error.message);
+  }
+}
 
-          if (!response.ok) {
-            throw new Error(`HTTP ${response.status}`);
-          }
-
-          const data = await response.json();
-
-          // Update sensor displays
-          updateSensorDisplay(data);
-
-          // Update stress banner
-          updateStressBanner(data);
-
-          // Update info section
-          updateInfoSection(data);
-
-          // Update Firebase indicator
-          updateFirebaseIndicator(data);
-        } catch (error) {
-          console.error("Error fetching data:", error);
-          updateErrorState(error.message);
-        }
-      }
+// ---------------------------------------------------------------
+// Synthetic data generator for Testing Mode
+// ---------------------------------------------------------------
+function generateSyntheticData() {
+  const baseHR = 72;
+  const spike = Math.random() < 0.1 ? Math.floor(Math.random() * 21) + 10 : 0; // +10‑30 bpm
+  const dip   = Math.random() < 0.05 ? -Math.floor(Math.random() * 11) - 10 : 0; // -10‑20 bpm
+  const heartRate = Math.min(110, Math.max(55, baseHR + Math.floor(Math.random() * 11) - 5 + spike + dip));
+  const temperature = (20 + Math.random() * 10).toFixed(1);
+  const humidity    = (30 + Math.random() * 40).toFixed(1);
+  const light       = Math.floor(Math.random() * 1024);
+  const stressLevels = ["Relaxed", "Mild Stress", "High Stress"];
+  const stress_level = stressLevels[Math.floor(Math.random() * stressLevels.length)];
+  const confidence = (Math.random() * 0.9 + 0.1).toFixed(2);
+  const now = new Date().toISOString();
+  return {
+    heart_rate: heartRate,
+    temperature: parseFloat(temperature),
+    humidity:    parseFloat(humidity),
+    light:       light,
+    stress_level: stress_level,
+    confidence: parseFloat(confidence),
+    timestamp: now,
+    firebase_status: "empty",
+    data_source: "fallback",
+    location: "Synthetic"
+  };
+}
 
       function updateSensorDisplay(data) {
-        // Update numeric values with safe fallbacks
         document.getElementById("hr").textContent = data.heart_rate || "--";
         document.getElementById("temp").textContent =
           typeof data.temperature === "number"
