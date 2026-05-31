@@ -1,0 +1,6 @@
+{
+  "name": "PulseIQ Dashboard",
+  "description": "Sleek dark-mode React dashboard for real-time PulseIQ sensor monitoring, featuring Recharts trend visualizations, live ECG waveforms, and Firebase Realtime Database integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

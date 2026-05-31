@@ -1,0 +1,5001 @@
+heart_rate,light,stress_score,stress_category
+74,2108,34.6,Normal
+100,1486,60.2,Mild Stress
+94,2018,43.7,Mild Stress
+73,2732,21.4,Normal
+65,3213,21.0,Relaxed
+70,3511,13.0,Relaxed
+58,3327,11.6,Relaxed
+95,1702,43.1,Mild Stress
+94,1990,45.6,Mild Stress
+73,2563,26.8,Normal
+85,2588,37.8,Mild Stress
+59,3634,1.9,Relaxed
+63,3107,24.1,Relaxed
+57,3372,10.8,Relaxed
+119,1331,58.1,Moderate Stress
+106,306,71.2,Moderate Stress
+85,2592,27.6,Normal
+112,692,69.2,Moderate Stress
+72,3291,12.8,Normal
+76,3174,27.0,Normal
+59,2411,20.9,Relaxed
+115,1280,71.6,Moderate Stress
+73,1893,31.7,Normal
+61,3269,10.7,Relaxed
+136,153,93.4,High Stress
+71,3104,25.0,Relaxed
+137,1199,78.4,High Stress
+59,3819,6.2,Relaxed
+127,774,71.5,High Stress
+59,2801,16.0,Relaxed
+77,2600,29.5,Normal
+70,3345,15.6,Relaxed
+137,636,86.8,High Stress
+137,779,83.9,High Stress
+67,2767,18.1,Normal
+88,2013,42.0,Mild Stress
+100,769,64.1,Moderate Stress
+141,672,82.5,High Stress
+138,848,79.8,High Stress
+88,1357,48.1,Mild Stress
+108,1257,58.9,Moderate Stress
+134,337,81.4,High Stress
+61,2939,15.3,Relaxed
+68,2905,19.1,Relaxed
+66,3285,25.5,Relaxed
+113,899,67.8,Moderate Stress
+108,1554,58.3,Moderate Stress
+146,693,85.4,High Stress
+109,1099,57.6,Moderate Stress
+94,1556,49.3,Mild Stress
+138,634,87.7,High Stress
+136,710,77.0,High Stress
+97,2016,47.8,Mild Stress
+93,1537,47.1,Mild Stress
+79,2042,39.5,Normal
+103,1257,51.9,Moderate Stress
+82,3004,28.4,Normal
+61,3505,10.8,Relaxed
+82,2910,39.0,Normal
+91,1469,45.1,Mild Stress
+92,2063,39.0,Mild Stress
+133,542,77.6,High Stress
+144,694,89.4,High Stress
+113,1146,65.7,Moderate Stress
+56,4047,0.0,Relaxed
+88,2096,44.8,Mild Stress
+104,1014,59.2,Moderate Stress
+83,2047,39.0,Mild Stress
+115,1096,72.6,Moderate Stress
+140,424,83.6,High Stress
+70,2188,17.9,Normal
+58,3431,8.6,Relaxed
+57,3246,9.7,Relaxed
+66,3619,15.1,Relaxed
+73,2637,25.0,Normal
+92,1665,40.2,Mild Stress
+62,3255,20.9,Relaxed
+87,1612,39.8,Mild Stress
+92,1708,47.1,Mild Stress
+103,475,60.6,Moderate Stress
+107,1329,60.9,Moderate Stress
+107,1217,57.4,Moderate Stress
+123,640,71.1,High Stress
+81,2526,22.0,Normal
+110,1379,59.8,Moderate Stress
+73,1650,39.9,Normal
+62,2736,17.3,Relaxed
+62,3194,18.8,Relaxed
+129,786,75.4,High Stress
+114,960,64.7,Moderate Stress
+126,926,70.4,High Stress
+60,2878,20.1,Relaxed
+64,4085,6.5,Relaxed
+72,2039,31.4,Normal
+61,3720,8.5,Relaxed
+122,581,75.8,High Stress
+90,1159,56.2,Mild Stress
+114,990,72.9,Moderate Stress
+66,2732,24.0,Relaxed
+53,3595,4.7,Relaxed
+90,2263,42.3,Normal
+79,2664,35.1,Normal
+89,1785,46.2,Mild Stress
+140,491,79.8,High Stress
+61,3503,15.3,Relaxed
+70,3379,17.1,Relaxed
+70,3471,15.2,Relaxed
+70,2391,25.6,Normal
+128,418,83.4,High Stress
+80,1824,37.2,Normal
+80,2603,24.8,Normal
+68,2210,20.9,Normal
+126,914,74.9,High Stress
+59,3322,12.6,Relaxed
+99,1935,54.4,Mild Stress
+117,950,69.2,Moderate Stress
+93,1834,45.5,Mild Stress
+92,2086,42.7,Mild Stress
+58,3164,13.9,Relaxed
+86,1894,38.9,Mild Stress
+77,1953,30.7,Normal
+78,2829,27.7,Normal
+135,621,72.9,High Stress
+57,3774,8.9,Relaxed
+93,1578,46.8,Mild Stress
+131,751,72.7,High Stress
+99,2237,38.3,Mild Stress
+140,105,91.5,High Stress
+89,1931,43.5,Mild Stress
+113,1160,62.7,Moderate Stress
+141,1063,82.6,High Stress
+112,1117,60.7,Moderate Stress
+77,1815,28.4,Normal
+72,2908,26.6,Normal
+110,1333,61.2,Moderate Stress
+130,716,73.2,High Stress
+150,936,81.6,High Stress
+114,1070,56.4,Moderate Stress
+62,3491,17.3,Relaxed
+74,2911,24.7,Relaxed
+117,1306,65.5,Moderate Stress
+112,1130,57.1,Moderate Stress
+141,675,82.6,High Stress
+115,1037,69.5,Moderate Stress
+145,608,92.0,High Stress
+104,698,63.3,Moderate Stress
+99,1877,51.7,Mild Stress
+118,823,68.5,Moderate Stress
+102,1270,55.4,Mild Stress
+98,1360,54.5,Mild Stress
+74,1762,31.2,Normal
+123,1250,60.4,Moderate Stress
+133,592,76.2,High Stress
+146,588,84.6,High Stress
+75,2459,34.6,Normal
+60,3664,12.3,Relaxed
+88,1172,44.8,Mild Stress
+95,1874,46.7,Mild Stress
+106,1353,57.7,Moderate Stress
+63,3236,14.6,Relaxed
+87,2071,35.3,Mild Stress
+107,902,67.7,Moderate Stress
+65,2638,16.3,Relaxed
+77,2355,32.3,Normal
+64,2543,29.4,Relaxed
+108,1038,56.9,Moderate Stress
+76,2834,27.9,Normal
+82,2404,31.8,Normal
+111,895,64.3,Moderate Stress
+89,1962,42.4,Mild Stress
+110,1406,57.8,Moderate Stress
+67,2910,19.4,Normal
+97,2211,53.4,Mild Stress
+109,1745,52.2,Moderate Stress
+55,3250,7.8,Relaxed
+115,924,74.2,Moderate Stress
+126,601,84.6,High Stress
+117,703,67.8,Moderate Stress
+60,3189,16.2,Relaxed
+80,2848,24.6,Normal
+116,452,64.1,High Stress
+84,2259,37.8,Mild Stress
+83,2567,36.0,Normal
+56,3646,9.2,Relaxed
+87,1793,44.3,Mild Stress
+107,595,69.3,Moderate Stress
+105,676,68.1,Moderate Stress
+111,1223,59.0,Moderate Stress
+65,3346,17.4,Relaxed
+66,2341,22.9,Normal
+57,3289,10.5,Relaxed
+106,1405,62.1,Moderate Stress
+108,1425,65.8,Moderate Stress
+136,1039,77.2,High Stress
+91,2301,48.4,Mild Stress
+82,2888,32.8,Normal
+61,3304,12.3,Relaxed
+91,1655,38.1,Mild Stress
+106,971,61.6,Moderate Stress
+153,906,86.3,High Stress
+115,1292,71.0,Moderate Stress
+67,3211,18.9,Relaxed
+94,1246,52.6,Mild Stress
+132,613,84.1,High Stress
+104,1068,54.1,Moderate Stress
+77,2111,34.5,Mild Stress
+84,1769,37.7,Mild Stress
+110,1302,58.5,Moderate Stress
+99,1264,63.3,Moderate Stress
+63,4078,8.7,Relaxed
+99,1485,55.8,Moderate Stress
+65,3036,17.9,Relaxed
+119,650,78.0,Moderate Stress
+90,1740,39.5,Mild Stress
+134,700,77.2,High Stress
+91,1923,42.0,Mild Stress
+138,562,83.8,High Stress
+57,3524,11.4,Relaxed
+106,1013,63.4,Moderate Stress
+83,3517,23.4,Normal
+78,2636,35.8,Normal
+54,3191,7.5,Relaxed
+134,0,86.8,High Stress
+106,921,64.4,Moderate Stress
+70,2468,25.5,Normal
+106,1007,55.3,Moderate Stress
+88,1781,43.9,Mild Stress
+92,1833,46.6,Mild Stress
+63,3195,21.5,Relaxed
+92,2273,40.0,Mild Stress
+57,3173,16.9,Relaxed
+108,1748,59.8,Moderate Stress
+78,3064,20.8,Normal
+135,491,83.6,High Stress
+59,3102,11.9,Relaxed
+107,1185,67.1,Moderate Stress
+109,1436,59.4,Moderate Stress
+67,3131,17.7,Relaxed
+81,1868,36.0,Mild Stress
+123,627,72.8,High Stress
+56,3694,8.3,Relaxed
+60,3657,11.0,Relaxed
+134,712,72.9,High Stress
+138,1063,79.9,High Stress
+72,2607,21.7,Normal
+74,2175,31.4,Normal
+101,1704,54.2,Mild Stress
+78,1870,29.1,Normal
+72,1973,34.6,Normal
+135,45,74.7,High Stress
+139,227,87.8,High Stress
+128,186,77.6,High Stress
+79,2668,29.2,Normal
+77,2871,26.8,Normal
+92,1603,48.8,Mild Stress
+63,3224,12.9,Relaxed
+105,1124,60.4,Moderate Stress
+104,1837,48.6,Mild Stress
+58,4017,7.4,Relaxed
+58,3140,19.3,Relaxed
+75,2218,38.1,Normal
+102,2941,41.4,Mild Stress
+85,2394,27.5,Mild Stress
+143,688,85.4,High Stress
+74,2012,36.4,Normal
+70,2930,22.7,Normal
+96,1771,46.5,Mild Stress
+101,2081,46.4,Mild Stress
+94,1495,45.1,Mild Stress
+63,3001,11.2,Relaxed
+57,3723,8.9,Relaxed
+77,2535,26.8,Normal
+132,238,89.8,High Stress
+63,4023,4.7,Relaxed
+70,2897,25.9,Normal
+117,1389,67.9,Moderate Stress
+76,2266,36.1,Normal
+91,1284,53.4,Mild Stress
+98,658,64.2,Moderate Stress
+68,2289,26.7,Normal
+137,798,88.1,High Stress
+128,477,70.7,High Stress
+58,3175,20.1,Relaxed
+67,3192,20.1,Normal
+79,2378,29.5,Normal
+111,1356,63.2,Moderate Stress
+83,2547,33.5,Normal
+120,1105,71.8,Moderate Stress
+77,2466,37.3,Normal
+63,3008,19.3,Relaxed
+69,4095,7.6,Relaxed
+95,1576,50.2,Mild Stress
+93,1684,46.5,Mild Stress
+91,1954,47.3,Mild Stress
+112,740,71.7,Moderate Stress
+62,3758,13.4,Relaxed
+91,2014,42.0,Mild Stress
+90,1457,45.7,Mild Stress
+122,889,71.9,High Stress
+72,2032,33.4,Normal
+57,3862,8.8,Relaxed
+52,3084,20.4,Relaxed
+111,1427,48.3,Moderate Stress
+64,2988,18.5,Normal
+95,1642,47.4,Mild Stress
+133,779,79.8,High Stress
+132,1049,70.2,High Stress
+84,1829,36.4,Mild Stress
+65,3475,13.2,Relaxed
+82,2441,32.1,Normal
+110,1065,61.9,Moderate Stress
+105,1064,52.3,Moderate Stress
+85,1928,41.2,Mild Stress
+114,1020,68.2,High Stress
+83,2643,33.7,Normal
+57,3420,6.6,Relaxed
+78,2366,39.4,Normal
+87,1695,48.2,Mild Stress
+133,1210,65.2,High Stress
+107,785,69.0,Moderate Stress
+129,668,73.9,High Stress
+115,1253,58.0,Moderate Stress
+87,1797,45.9,Mild Stress
+108,901,62.8,Moderate Stress
+69,3317,20.2,Relaxed
+51,3629,1.7,Relaxed
+100,1530,52.7,Mild Stress
+60,3138,11.5,Relaxed
+144,373,92.3,High Stress
+129,541,76.5,High Stress
+120,835,73.2,Moderate Stress
+63,3072,21.2,Relaxed
+132,455,83.2,High Stress
+75,2416,31.5,Normal
+56,3623,11.3,Relaxed
+67,3259,18.3,Relaxed
+61,2743,12.1,Relaxed
+60,3426,14.1,Relaxed
+100,1066,60.1,Moderate Stress
+68,2023,28.7,Normal
+141,494,88.2,High Stress
+134,561,88.9,High Stress
+79,2566,27.1,Normal
+92,1053,56.5,Mild Stress
+121,1156,74.9,Moderate Stress
+112,894,56.6,Moderate Stress
+139,779,77.8,High Stress
+108,1450,55.6,Moderate Stress
+87,2266,36.1,Mild Stress
+98,2592,43.4,Mild Stress
+110,1058,61.9,Moderate Stress
+108,842,65.7,Moderate Stress
+81,2106,31.5,Normal
+61,3433,19.4,Relaxed
+123,523,80.9,High Stress
+72,2599,20.8,Relaxed
+105,994,60.0,Moderate Stress
+63,2887,23.1,Relaxed
+81,2363,34.7,Normal
+86,2238,46.2,Normal
+61,3169,14.1,Relaxed
+62,3272,15.9,Relaxed
+112,817,68.0,Moderate Stress
+89,1760,47.7,Mild Stress
+68,3213,15.6,Relaxed
+111,1187,59.7,Moderate Stress
+57,3310,18.7,Relaxed
+54,3200,9.6,Relaxed
+64,3411,17.2,Relaxed
+133,323,81.6,High Stress
+99,1513,52.1,Moderate Stress
+123,1131,65.1,Moderate Stress
+84,3428,31.7,Normal
+90,1663,51.6,Mild Stress
+91,1935,35.3,Mild Stress
+142,678,72.8,High Stress
+102,1193,57.4,Moderate Stress
+55,3727,1.3,Relaxed
+77,2970,25.8,Normal
+145,713,82.7,High Stress
+115,979,65.9,Moderate Stress
+148,452,89.1,High Stress
+100,1675,53.3,Mild Stress
+95,1630,51.8,Mild Stress
+78,2219,34.4,Normal
+74,3207,17.9,Normal
+131,88,79.6,High Stress
+62,2838,20.5,Relaxed
+69,2414,29.8,Normal
+90,1689,38.3,Mild Stress
+73,2423,23.5,Normal
+138,946,87.7,High Stress
+119,1283,66.9,Moderate Stress
+59,3418,15.2,Relaxed
+65,3388,15.9,Relaxed
+94,1596,46.9,Mild Stress
+76,2804,27.4,Normal
+79,2550,30.2,Normal
+113,1105,65.3,Moderate Stress
+114,1318,64.1,Moderate Stress
+73,2471,29.2,Normal
+119,731,69.7,High Stress
+64,3034,12.8,Relaxed
+83,1594,47.0,Mild Stress
+122,1514,70.5,Moderate Stress
+93,1555,43.5,Mild Stress
+73,2406,34.1,Normal
+60,3348,10.2,Relaxed
+70,3844,9.7,Relaxed
+88,2299,42.2,Mild Stress
+73,2846,32.0,Normal
+118,1459,69.9,Moderate Stress
+92,1593,52.1,Mild Stress
+75,2668,29.1,Normal
+65,3762,14.7,Relaxed
+117,632,75.0,High Stress
+62,3967,10.2,Relaxed
+130,754,72.6,High Stress
+122,774,74.0,Moderate Stress
+85,1177,50.7,Mild Stress
+82,2356,34.1,Mild Stress
+97,2096,43.0,Mild Stress
+98,1712,50.5,Mild Stress
+78,2178,42.3,Normal
+92,2056,45.3,Mild Stress
+141,517,83.2,High Stress
+64,3042,16.0,Relaxed
+88,2428,39.8,Normal
+134,704,83.9,High Stress
+67,2888,16.1,Relaxed
+54,3206,8.8,Relaxed
+147,413,90.1,High Stress
+72,2152,32.4,Normal
+94,2362,38.0,Mild Stress
+97,1963,44.5,Mild Stress
+90,1752,38.6,Mild Stress
+90,2101,41.8,Mild Stress
+105,719,62.4,Moderate Stress
+69,3263,19.2,Relaxed
+98,1908,46.3,Mild Stress
+100,873,67.2,Moderate Stress
+61,3175,15.0,Relaxed
+99,1454,55.4,Mild Stress
+68,2528,22.7,Normal
+76,1514,38.1,Normal
+78,2931,23.1,Normal
+100,1368,54.1,Mild Stress
+147,419,89.0,High Stress
+54,3405,6.3,Relaxed
+61,3315,9.1,Relaxed
+93,1832,42.5,Mild Stress
+102,873,54.1,Moderate Stress
+133,844,73.6,High Stress
+84,2264,39.4,Normal
+115,826,65.5,High Stress
+83,2056,31.9,Normal
+101,1590,45.2,Mild Stress
+85,1750,41.4,Mild Stress
+104,1169,57.6,Moderate Stress
+69,3861,19.6,Relaxed
+83,2613,26.0,Normal
+67,3292,18.6,Relaxed
+71,2450,28.0,Normal
+108,1516,60.5,Moderate Stress
+100,1775,54.6,Mild Stress
+112,816,63.5,Moderate Stress
+90,2036,37.4,Mild Stress
+124,1038,65.6,High Stress
+132,613,81.5,High Stress
+136,604,76.8,High Stress
+93,1654,50.0,Mild Stress
+94,1967,44.5,Mild Stress
+71,3035,22.2,Relaxed
+97,1770,53.0,Mild Stress
+90,2191,41.7,Mild Stress
+84,1536,43.9,Mild Stress
+103,1357,56.3,Mild Stress
+78,2051,37.5,Normal
+63,2970,25.9,Relaxed
+62,4048,6.0,Relaxed
+142,563,86.1,High Stress
+103,1217,58.6,Moderate Stress
+83,2466,38.7,Normal
+114,1569,65.0,Moderate Stress
+104,1263,58.2,Moderate Stress
+124,687,79.1,High Stress
+61,3284,14.5,Relaxed
+116,1058,67.4,Moderate Stress
+65,2862,15.2,Relaxed
+70,3829,7.2,Relaxed
+62,3095,21.2,Relaxed
+77,2425,29.7,Normal
+63,3279,8.5,Relaxed
+87,1711,42.3,Mild Stress
+65,3705,16.0,Relaxed
+114,836,64.3,Moderate Stress
+51,3086,20.1,Relaxed
+62,2970,10.7,Relaxed
+76,3226,26.8,Normal
+112,943,69.6,Moderate Stress
+111,1163,63.4,Moderate Stress
+112,1172,59.0,Moderate Stress
+69,3634,12.6,Relaxed
+133,1127,70.8,High Stress
+71,2540,31.4,Normal
+67,2745,22.4,Relaxed
+71,2772,24.2,Normal
+67,3577,22.3,Relaxed
+87,2946,30.8,Normal
+91,2097,47.0,Mild Stress
+117,1066,63.9,Moderate Stress
+94,2084,48.2,Mild Stress
+79,2246,36.6,Normal
+70,3288,19.8,Relaxed
+61,2300,23.0,Relaxed
+79,2569,26.4,Normal
+99,2432,33.5,Mild Stress
+55,3269,10.5,Relaxed
+76,2986,19.7,Relaxed
+136,847,74.9,High Stress
+131,818,75.2,High Stress
+115,881,69.3,Moderate Stress
+81,2338,36.1,Normal
+87,2346,36.9,Mild Stress
+87,1680,41.6,Mild Stress
+58,3272,14.2,Relaxed
+121,545,80.9,High Stress
+111,965,58.5,Moderate Stress
+116,798,69.0,Moderate Stress
+134,453,80.3,High Stress
+81,1738,35.5,Mild Stress
+73,2747,27.0,Normal
+102,1071,61.5,Moderate Stress
+60,4095,9.4,Relaxed
+116,1101,58.6,Moderate Stress
+112,1397,57.7,Moderate Stress
+57,3245,8.4,Relaxed
+112,1117,63.8,Moderate Stress
+98,1500,52.5,Mild Stress
+146,1085,78.9,High Stress
+71,2591,27.7,Normal
+93,1788,46.1,Mild Stress
+80,2736,25.4,Normal
+129,709,75.2,High Stress
+118,453,77.5,High Stress
+118,1176,70.9,Moderate Stress
+117,1147,62.3,Moderate Stress
+136,378,81.2,High Stress
+111,1539,55.3,Moderate Stress
+60,3359,7.4,Relaxed
+104,1355,45.3,Moderate Stress
+90,1599,45.5,Mild Stress
+104,1337,66.6,Moderate Stress
+63,3447,17.8,Relaxed
+93,2210,38.4,Mild Stress
+73,2977,24.1,Normal
+140,776,86.9,High Stress
+125,825,72.3,High Stress
+147,627,86.0,High Stress
+114,1655,57.9,Moderate Stress
+131,619,83.8,High Stress
+110,991,76.6,Moderate Stress
+111,1544,54.5,Moderate Stress
+85,1907,32.7,Mild Stress
+72,2579,29.0,Normal
+139,385,83.5,High Stress
+105,1217,53.1,Moderate Stress
+85,2635,30.6,Normal
+96,2376,41.8,Mild Stress
+111,1203,61.3,Moderate Stress
+133,263,87.8,High Stress
+115,1266,61.7,Moderate Stress
+111,1531,62.4,Moderate Stress
+85,2123,38.1,Mild Stress
+64,3281,19.4,Relaxed
+137,311,85.1,High Stress
+67,2297,25.7,Normal
+142,633,76.7,High Stress
+105,982,65.5,Moderate Stress
+112,989,59.2,Moderate Stress
+83,2237,34.8,Normal
+128,881,67.8,High Stress
+85,2969,29.4,Normal
+111,741,67.3,Moderate Stress
+82,2196,38.6,Normal
+104,1067,57.8,Moderate Stress
+134,457,85.1,High Stress
+89,1772,34.4,Mild Stress
+60,3475,8.2,Relaxed
+132,289,84.4,High Stress
+107,1247,61.5,Moderate Stress
+68,2760,23.1,Normal
+89,2285,42.3,Mild Stress
+131,367,67.3,High Stress
+147,352,94.5,High Stress
+75,2522,24.1,Normal
+112,1544,53.4,Moderate Stress
+98,1507,47.6,Mild Stress
+78,2956,19.6,Normal
+82,2113,30.3,Normal
+60,3862,0.0,Relaxed
+140,224,96.5,High Stress
+88,3163,32.1,Normal
+137,706,78.7,High Stress
+128,540,74.1,High Stress
+111,1383,53.3,Moderate Stress
+69,3953,13.4,Relaxed
+100,1380,51.7,Mild Stress
+124,829,69.9,High Stress
+137,354,85.2,High Stress
+59,4095,8.5,Relaxed
+139,749,78.3,High Stress
+79,2423,32.2,Normal
+59,3622,10.6,Relaxed
+137,1256,81.3,High Stress
+85,2061,35.8,Mild Stress
+82,2187,33.6,Normal
+63,3638,12.5,Relaxed
+63,3128,8.5,Relaxed
+78,2747,27.1,Normal
+76,2462,32.6,Normal
+102,919,62.1,Moderate Stress
+61,3514,9.2,Relaxed
+107,951,72.7,Moderate Stress
+135,626,83.1,High Stress
+127,218,82.0,High Stress
+70,2801,26.9,Normal
+87,2226,35.4,Normal
+79,2555,31.4,Normal
+64,3896,7.4,Relaxed
+81,3026,23.1,Normal
+60,3304,18.0,Relaxed
+59,3496,9.1,Relaxed
+114,1131,63.2,Moderate Stress
+98,1777,52.5,Mild Stress
+61,3128,15.0,Relaxed
+73,3143,21.4,Normal
+142,741,71.7,High Stress
+144,1075,78.0,High Stress
+103,1480,54.5,Moderate Stress
+113,1069,77.1,Moderate Stress
+118,947,68.8,Moderate Stress
+91,2337,38.3,Mild Stress
+96,1703,52.6,Mild Stress
+137,470,81.6,High Stress
+101,1095,61.6,Moderate Stress
+108,935,57.2,Moderate Stress
+153,372,88.4,High Stress
+60,2767,14.4,Relaxed
+138,383,89.9,High Stress
+105,938,63.8,Moderate Stress
+56,3534,15.0,Relaxed
+137,921,78.8,High Stress
+95,2065,38.6,Mild Stress
+64,2794,23.5,Relaxed
+86,1479,46.7,Mild Stress
+113,984,61.5,Moderate Stress
+53,3320,5.2,Relaxed
+79,2494,31.7,Normal
+72,2694,35.2,Normal
+75,3775,16.7,Normal
+60,3436,8.4,Relaxed
+114,1220,61.8,Moderate Stress
+81,3022,30.7,Normal
+90,1724,46.2,Mild Stress
+82,1768,48.3,Mild Stress
+59,3134,12.6,Relaxed
+108,961,60.4,Moderate Stress
+107,755,67.8,Moderate Stress
+62,2843,21.5,Relaxed
+115,1204,61.5,Moderate Stress
+64,3451,11.3,Relaxed
+78,2500,32.9,Normal
+59,3002,18.9,Relaxed
+82,3066,30.8,Normal
+104,1339,56.0,Moderate Stress
+112,970,68.8,Moderate Stress
+80,2740,30.0,Normal
+137,641,75.6,High Stress
+110,1629,59.3,Moderate Stress
+94,1410,45.9,Mild Stress
+61,2925,13.1,Relaxed
+83,2807,29.8,Normal
+113,1128,65.8,Moderate Stress
+132,315,80.1,High Stress
+140,407,88.1,High Stress
+66,3684,22.4,Relaxed
+90,2217,38.5,Mild Stress
+124,719,77.4,High Stress
+135,454,87.1,High Stress
+116,850,64.0,High Stress
+136,427,83.4,High Stress
+58,3212,11.6,Relaxed
+90,1638,42.8,Mild Stress
+74,2780,28.1,Normal
+95,1446,46.0,Mild Stress
+61,2951,8.3,Relaxed
+77,2779,28.0,Normal
+97,1480,61.0,Mild Stress
+62,3229,17.2,Relaxed
+138,694,82.9,High Stress
+133,375,81.3,High Stress
+116,600,65.4,Moderate Stress
+96,1835,50.4,Mild Stress
+140,740,78.4,High Stress
+130,985,72.5,High Stress
+87,1722,44.7,Mild Stress
+66,3589,19.7,Relaxed
+102,981,59.9,Moderate Stress
+107,1559,51.4,Moderate Stress
+141,350,93.9,High Stress
+77,2756,17.7,Normal
+68,3521,15.3,Relaxed
+140,734,82.4,High Stress
+115,1104,69.1,Moderate Stress
+78,3194,24.9,Normal
+125,1470,72.5,Moderate Stress
+57,3478,12.4,Relaxed
+71,2431,23.2,Normal
+109,2024,48.2,Moderate Stress
+114,1104,62.2,Moderate Stress
+74,3234,24.3,Normal
+58,3784,4.5,Relaxed
+104,985,67.3,Moderate Stress
+87,2568,36.3,Mild Stress
+135,623,77.0,High Stress
+59,3083,13.8,Relaxed
+63,3477,20.9,Relaxed
+98,1966,46.5,Mild Stress
+89,2229,42.6,Mild Stress
+141,605,84.1,High Stress
+66,3071,16.2,Relaxed
+105,677,66.3,Moderate Stress
+76,2660,32.1,Normal
+135,507,77.6,High Stress
+125,625,75.7,High Stress
+63,3084,14.7,Relaxed
+60,3262,17.4,Relaxed
+105,1103,53.8,Moderate Stress
+58,3722,3.7,Relaxed
+88,2162,38.3,Mild Stress
+59,3726,16.9,Relaxed
+112,969,64.2,Moderate Stress
+129,1141,68.2,High Stress
+124,575,77.0,High Stress
+97,1783,50.7,Mild Stress
+70,2963,21.2,Relaxed
+61,3206,6.3,Relaxed
+62,3837,11.5,Relaxed
+141,889,77.2,High Stress
+99,1399,54.3,Mild Stress
+109,952,63.0,Moderate Stress
+147,647,83.1,High Stress
+136,888,80.0,High Stress
+99,1657,51.1,Moderate Stress
+66,3391,18.2,Relaxed
+90,2090,41.4,Mild Stress
+87,1698,46.1,Mild Stress
+138,626,82.5,High Stress
+111,1164,60.7,Moderate Stress
+108,937,59.7,Moderate Stress
+76,3049,29.4,Normal
+76,2434,30.3,Normal
+107,1301,63.3,Moderate Stress
+140,899,79.1,High Stress
+64,3249,16.7,Relaxed
+77,2659,35.1,Normal
+91,1875,39.4,Mild Stress
+94,1825,43.1,Mild Stress
+70,3880,10.5,Normal
+89,2081,43.9,Mild Stress
+81,2263,30.8,Normal
+82,2885,24.9,Normal
+66,3063,17.4,Relaxed
+106,1034,62.2,Moderate Stress
+116,1262,62.3,Moderate Stress
+62,3674,9.2,Relaxed
+72,3085,20.2,Relaxed
+84,2390,34.5,Normal
+116,1661,62.4,Moderate Stress
+97,1526,51.0,Mild Stress
+91,2090,42.8,Mild Stress
+129,813,71.5,High Stress
+97,1614,53.1,Mild Stress
+129,287,75.3,High Stress
+102,2605,41.5,Mild Stress
+108,999,63.1,Moderate Stress
+72,2641,32.7,Normal
+108,1140,56.2,Moderate Stress
+72,2388,27.4,Normal
+91,1065,50.7,Mild Stress
+86,2857,38.6,Normal
+132,51,80.7,High Stress
+66,3199,25.8,Relaxed
+128,579,70.4,High Stress
+73,2320,26.3,Normal
+59,3606,14.2,Relaxed
+118,1208,71.4,Moderate Stress
+122,546,72.3,High Stress
+86,2695,33.7,Normal
+90,1447,42.7,Mild Stress
+74,2564,26.1,Normal
+92,1509,47.1,Mild Stress
+80,3119,25.7,Normal
+95,1843,44.3,Mild Stress
+107,1649,55.3,Moderate Stress
+110,1029,64.9,Moderate Stress
+122,423,71.4,High Stress
+56,3632,3.9,Relaxed
+128,793,74.6,High Stress
+57,3105,19.4,Relaxed
+68,2275,28.6,Normal
+77,3044,21.9,Normal
+89,2868,30.2,Normal
+112,770,68.7,Moderate Stress
+109,1300,60.2,Moderate Stress
+89,2287,34.9,Mild Stress
+104,1279,58.3,Moderate Stress
+136,368,84.6,High Stress
+97,784,61.2,Mild Stress
+56,2980,16.0,Relaxed
+128,0,79.6,High Stress
+107,821,63.1,Moderate Stress
+123,726,71.4,High Stress
+93,2165,43.6,Mild Stress
+69,2650,22.9,Normal
+64,3197,17.3,Relaxed
+79,2199,34.6,Normal
+113,1297,58.4,Moderate Stress
+109,1284,64.8,Moderate Stress
+142,288,88.2,High Stress
+78,2772,28.8,Normal
+69,2666,26.8,Relaxed
+125,605,74.5,High Stress
+109,1042,52.4,Moderate Stress
+98,2353,44.0,Mild Stress
+134,457,80.1,High Stress
+60,3545,8.5,Relaxed
+80,1620,34.8,Mild Stress
+94,1907,46.5,Mild Stress
+133,642,72.5,High Stress
+64,3677,13.9,Relaxed
+77,2264,32.7,Normal
+59,3397,10.6,Relaxed
+63,3287,12.8,Relaxed
+134,820,78.5,High Stress
+85,2045,40.6,Mild Stress
+148,775,89.3,High Stress
+149,592,90.9,High Stress
+120,650,74.9,High Stress
+66,2705,20.8,Normal
+56,3445,4.7,Relaxed
+69,3138,24.0,Normal
+113,1346,60.2,Moderate Stress
+92,1294,51.1,Mild Stress
+60,3005,24.5,Relaxed
+80,2418,34.5,Normal
+54,3469,6.5,Relaxed
+119,763,63.8,High Stress
+97,1857,51.0,Mild Stress
+110,973,60.1,Moderate Stress
+106,1135,59.2,Moderate Stress
+94,1573,44.4,Mild Stress
+145,694,90.0,High Stress
+109,1513,56.2,Moderate Stress
+101,2062,50.0,Mild Stress
+62,3049,18.2,Relaxed
+89,1557,52.4,Mild Stress
+97,1906,46.0,Mild Stress
+142,874,85.2,High Stress
+87,2570,39.6,Mild Stress
+65,2941,19.2,Relaxed
+67,3487,10.0,Relaxed
+136,596,78.4,High Stress
+110,1720,50.8,Moderate Stress
+86,1330,47.2,Mild Stress
+107,1202,59.2,Moderate Stress
+75,2442,30.4,Normal
+71,2963,24.1,Normal
+79,2189,37.4,Normal
+76,2939,27.7,Normal
+77,2045,37.4,Normal
+92,879,47.2,Mild Stress
+111,1192,56.3,Moderate Stress
+58,3518,1.1,Relaxed
+78,2215,34.4,Normal
+147,935,74.2,High Stress
+117,994,70.6,Moderate Stress
+50,3591,7.1,Relaxed
+137,704,76.6,High Stress
+107,1223,60.0,Moderate Stress
+142,411,85.8,High Stress
+112,1121,60.8,Moderate Stress
+93,2236,37.3,Mild Stress
+130,620,80.8,High Stress
+113,1473,58.9,Moderate Stress
+100,2319,43.3,Mild Stress
+103,1322,49.3,Moderate Stress
+108,1476,59.3,Moderate Stress
+117,1171,65.0,Moderate Stress
+65,3757,14.0,Relaxed
+110,1106,62.2,Moderate Stress
+137,918,83.5,High Stress
+90,2205,39.0,Mild Stress
+135,628,76.8,High Stress
+65,2903,15.3,Relaxed
+92,2389,42.9,Mild Stress
+61,3194,12.9,Relaxed
+108,990,63.3,Moderate Stress
+120,787,72.3,High Stress
+65,2826,20.0,Relaxed
+77,2815,21.7,Normal
+94,2651,35.8,Mild Stress
+95,1555,48.4,Mild Stress
+113,1448,58.7,Moderate Stress
+91,1436,50.2,Mild Stress
+101,815,60.6,Moderate Stress
+125,67,89.4,High Stress
+139,687,79.0,High Stress
+58,3290,13.9,Relaxed
+132,986,83.8,High Stress
+72,2410,27.7,Normal
+82,2922,26.8,Normal
+67,3015,19.1,Relaxed
+128,791,78.0,High Stress
+117,1550,63.1,Moderate Stress
+109,1049,60.4,Moderate Stress
+133,277,88.0,High Stress
+60,3445,17.4,Relaxed
+85,2660,39.8,Normal
+64,3133,22.7,Relaxed
+123,828,71.1,High Stress
+68,2550,27.6,Normal
+54,2750,18.8,Relaxed
+91,1810,47.6,Mild Stress
+63,3325,17.3,Relaxed
+137,319,90.7,High Stress
+111,891,70.0,Moderate Stress
+56,3542,2.8,Relaxed
+143,456,88.3,High Stress
+97,2019,56.3,Mild Stress
+144,1186,83.8,High Stress
+140,565,87.1,High Stress
+73,2511,22.9,Normal
+74,2820,27.0,Normal
+76,2956,29.1,Normal
+81,2573,38.6,Normal
+95,2090,40.2,Mild Stress
+63,2999,12.8,Relaxed
+99,2880,37.7,Mild Stress
+99,1187,59.4,Moderate Stress
+131,855,76.0,High Stress
+67,2470,28.5,Relaxed
+109,1012,64.9,Moderate Stress
+60,3675,6.1,Relaxed
+62,3405,9.6,Relaxed
+75,2172,38.8,Normal
+85,1531,48.2,Mild Stress
+127,486,79.0,High Stress
+85,1933,39.3,Mild Stress
+82,2655,27.5,Normal
+77,2326,34.9,Normal
+108,681,68.4,Moderate Stress
+78,2794,32.2,Normal
+102,1509,62.3,Moderate Stress
+132,715,81.1,High Stress
+63,2950,17.6,Relaxed
+74,3197,22.0,Normal
+94,1861,47.5,Mild Stress
+89,1675,40.4,Mild Stress
+79,2942,26.7,Normal
+60,3206,12.3,Relaxed
+57,3430,11.3,Relaxed
+82,2010,42.1,Normal
+85,2060,41.5,Mild Stress
+118,1039,74.4,Moderate Stress
+106,1176,65.1,Moderate Stress
+87,2727,35.3,Normal
+107,975,59.2,Moderate Stress
+113,1739,62.0,Moderate Stress
+58,3379,7.7,Relaxed
+66,3867,13.7,Relaxed
+136,691,82.5,High Stress
+103,1558,56.7,Moderate Stress
+106,630,59.3,Moderate Stress
+80,2354,31.0,Normal
+97,2060,40.0,Mild Stress
+63,3087,25.0,Relaxed
+126,884,73.0,High Stress
+145,661,85.1,High Stress
+70,3515,17.9,Relaxed
+78,2201,28.4,Normal
+139,642,81.5,High Stress
+97,2352,50.3,Mild Stress
+132,856,74.7,High Stress
+141,337,84.1,High Stress
+95,1168,49.7,Mild Stress
+106,575,67.0,Moderate Stress
+93,1708,47.9,Mild Stress
+82,2470,36.0,Normal
+134,272,82.2,High Stress
+140,511,82.5,High Stress
+66,3962,10.8,Relaxed
+112,1131,62.8,Moderate Stress
+141,153,92.6,High Stress
+92,1708,48.4,Mild Stress
+132,652,72.3,High Stress
+140,552,89.5,High Stress
+97,2214,42.6,Mild Stress
+86,2409,34.5,Mild Stress
+110,911,54.9,Moderate Stress
+78,2815,21.9,Normal
+108,923,59.3,Moderate Stress
+123,1237,65.7,Moderate Stress
+90,2248,27.3,Mild Stress
+90,2352,34.3,Mild Stress
+61,3418,15.9,Relaxed
+138,680,72.5,High Stress
+107,924,68.1,Moderate Stress
+158,400,96.4,High Stress
+136,395,85.5,High Stress
+135,0,90.3,High Stress
+66,2830,22.9,Relaxed
+146,778,85.9,High Stress
+79,3752,18.6,Normal
+76,2850,31.6,Normal
+94,1926,48.0,Mild Stress
+128,1396,67.3,High Stress
+137,500,77.6,High Stress
+79,2818,28.7,Normal
+77,1379,44.0,Normal
+129,587,75.2,High Stress
+93,1592,47.3,Mild Stress
+106,1068,60.0,Moderate Stress
+106,1224,53.1,Moderate Stress
+86,1521,37.1,Moderate Stress
+66,3781,8.6,Relaxed
+79,2547,26.0,Normal
+84,3071,32.9,Normal
+68,2378,35.7,Normal
+78,1813,30.6,Normal
+89,1798,34.8,Mild Stress
+79,2296,31.0,Mild Stress
+77,2311,27.7,Normal
+72,1693,42.6,Normal
+81,2393,36.3,Normal
+98,1629,52.1,Mild Stress
+59,3073,15.0,Relaxed
+88,1664,49.5,Mild Stress
+144,432,91.9,High Stress
+80,2805,29.9,Normal
+76,2804,27.3,Normal
+96,2453,41.0,Mild Stress
+88,1926,42.9,Mild Stress
+97,2005,47.4,Mild Stress
+85,1524,43.0,Mild Stress
+136,590,84.4,High Stress
+105,1287,54.4,Moderate Stress
+78,2990,30.4,Normal
+70,2713,20.5,Relaxed
+65,3461,13.5,Relaxed
+86,2873,33.6,Normal
+70,3141,13.9,Normal
+75,3312,21.7,Normal
+61,3463,15.7,Relaxed
+134,543,81.6,High Stress
+91,2229,37.6,Mild Stress
+108,1176,58.6,Moderate Stress
+64,3999,11.8,Relaxed
+58,3311,13.9,Relaxed
+93,1748,51.2,Mild Stress
+114,552,72.0,Moderate Stress
+103,1580,51.3,Moderate Stress
+63,2983,30.4,Relaxed
+104,1282,57.0,Moderate Stress
+86,1872,46.3,Mild Stress
+75,2761,30.9,Normal
+64,3329,10.4,Relaxed
+108,1356,60.0,Moderate Stress
+90,1592,42.0,Mild Stress
+67,3054,21.9,Relaxed
+105,1503,58.7,Moderate Stress
+68,3146,18.0,Relaxed
+60,3199,12.6,Relaxed
+105,850,64.6,Moderate Stress
+142,789,80.0,High Stress
+65,3438,17.3,Relaxed
+65,3360,14.6,Relaxed
+125,605,76.1,High Stress
+94,1674,50.6,Mild Stress
+105,1525,54.4,Mild Stress
+125,623,66.5,High Stress
+62,3364,16.4,Relaxed
+105,1383,56.8,Moderate Stress
+130,510,70.0,High Stress
+61,3598,10.8,Relaxed
+59,2543,25.8,Relaxed
+79,2546,29.2,Normal
+62,2739,18.6,Relaxed
+109,1181,59.3,Moderate Stress
+58,3490,8.6,Relaxed
+94,2331,39.3,Mild Stress
+111,1144,63.1,Moderate Stress
+77,2375,30.2,Normal
+68,3679,15.3,Relaxed
+71,3287,19.9,Normal
+138,440,81.7,High Stress
+87,1578,40.6,Mild Stress
+104,1705,61.5,Moderate Stress
+62,3373,12.9,Relaxed
+94,1762,47.3,Mild Stress
+72,2881,22.4,Relaxed
+61,3745,12.2,Relaxed
+80,2446,30.7,Normal
+103,1434,54.8,Moderate Stress
+99,1453,50.1,Mild Stress
+64,2641,24.2,Relaxed
+143,238,90.4,High Stress
+62,2868,21.5,Relaxed
+133,587,83.0,High Stress
+61,3226,7.0,Relaxed
+115,805,71.5,Moderate Stress
+80,1875,41.1,Normal
+62,3375,11.0,Relaxed
+93,1909,44.0,Mild Stress
+62,3712,8.1,Relaxed
+112,1190,66.5,Moderate Stress
+127,596,72.5,High Stress
+135,538,79.2,High Stress
+96,1249,63.4,Mild Stress
+97,1329,52.2,Mild Stress
+127,774,75.0,High Stress
+70,3500,13.1,Relaxed
+53,3251,8.5,Relaxed
+75,2172,40.3,Normal
+147,568,85.6,High Stress
+107,1134,58.7,Moderate Stress
+96,1207,56.9,Mild Stress
+74,2968,17.6,Normal
+68,3301,20.2,Relaxed
+104,1280,60.2,Moderate Stress
+135,930,74.0,High Stress
+73,3470,14.6,Relaxed
+65,3278,12.9,Relaxed
+80,1967,33.6,Mild Stress
+120,1463,66.2,Moderate Stress
+77,2958,27.7,Normal
+110,1461,59.0,Moderate Stress
+125,626,74.2,High Stress
+75,2901,20.3,Normal
+103,1049,57.3,Moderate Stress
+115,915,63.6,Moderate Stress
+102,1151,57.3,Moderate Stress
+141,1045,84.8,High Stress
+81,2201,39.7,Normal
+82,3190,28.9,Normal
+76,2597,34.0,Normal
+119,549,78.2,High Stress
+127,704,76.3,High Stress
+136,1093,77.6,High Stress
+140,908,79.8,High Stress
+117,1513,69.0,Moderate Stress
+77,2328,28.6,Normal
+88,1735,47.1,Mild Stress
+115,942,71.3,Moderate Stress
+133,497,77.4,High Stress
+92,1861,38.9,Mild Stress
+73,2383,30.6,Normal
+55,3766,6.7,Relaxed
+111,1467,56.3,Moderate Stress
+75,2619,25.8,Normal
+98,1493,56.7,Mild Stress
+58,3222,14.7,Relaxed
+117,1032,64.5,Moderate Stress
+107,1074,54.2,Moderate Stress
+69,2848,23.3,Relaxed
+83,2555,38.6,Normal
+77,2215,28.3,Normal
+133,959,79.6,High Stress
+135,462,85.7,High Stress
+140,560,79.1,High Stress
+126,563,76.7,High Stress
+108,1302,62.4,Moderate Stress
+89,2094,38.0,Mild Stress
+109,1212,58.0,Moderate Stress
+87,2375,33.6,Mild Stress
+69,3837,7.9,Relaxed
+117,1247,58.1,Moderate Stress
+141,393,83.9,High Stress
+133,418,76.7,High Stress
+71,2476,30.4,Normal
+118,854,65.7,Moderate Stress
+81,2174,35.1,Normal
+136,671,77.4,High Stress
+90,1811,46.6,Mild Stress
+108,1154,56.0,Moderate Stress
+64,3148,18.7,Relaxed
+79,3159,22.0,Normal
+116,1400,67.5,Moderate Stress
+76,3074,26.6,Normal
+81,2987,27.8,Normal
+94,2262,38.7,Mild Stress
+109,1150,58.4,Moderate Stress
+71,3153,25.6,Relaxed
+102,1745,53.4,Mild Stress
+74,2003,32.8,Normal
+69,2320,28.2,Normal
+62,3106,14.7,Relaxed
+75,2542,28.4,Normal
+94,1839,44.2,Mild Stress
+107,1308,54.9,Moderate Stress
+71,2513,28.3,Normal
+107,794,63.7,Moderate Stress
+135,753,77.9,High Stress
+158,908,90.3,High Stress
+108,1141,62.9,Moderate Stress
+82,2213,29.9,Normal
+100,1343,56.8,Moderate Stress
+62,3222,9.0,Relaxed
+108,1355,56.4,Moderate Stress
+122,1006,71.7,Moderate Stress
+86,1980,41.9,Mild Stress
+107,1424,55.0,Moderate Stress
+80,2032,33.6,Normal
+76,2552,35.9,Normal
+70,2841,20.9,Normal
+107,1452,58.6,Moderate Stress
+113,727,57.4,Moderate Stress
+114,1270,68.0,Moderate Stress
+71,2586,20.4,Normal
+65,3069,19.3,Relaxed
+95,1629,43.2,Mild Stress
+58,3381,11.1,Relaxed
+69,2985,22.8,Normal
+128,283,80.5,High Stress
+87,2323,36.4,Mild Stress
+54,3905,7.4,Relaxed
+104,1429,65.5,Moderate Stress
+57,3168,8.3,Relaxed
+59,3028,10.0,Relaxed
+133,827,74.1,High Stress
+64,3292,11.4,Relaxed
+145,1113,81.8,High Stress
+80,2672,28.2,Normal
+98,1968,47.5,Mild Stress
+126,872,70.7,High Stress
+111,840,64.6,Moderate Stress
+91,2521,46.6,Mild Stress
+144,460,89.6,High Stress
+135,661,80.7,High Stress
+136,945,80.1,High Stress
+116,1119,74.5,Moderate Stress
+62,3104,16.2,Relaxed
+69,3575,11.0,Relaxed
+73,2857,26.0,Normal
+136,609,81.9,High Stress
+134,651,80.5,High Stress
+89,1680,53.7,Mild Stress
+137,198,87.7,High Stress
+59,3541,22.1,Relaxed
+87,589,56.2,Mild Stress
+90,2623,36.6,Mild Stress
+74,2683,26.9,Normal
+84,2647,31.8,Normal
+71,2037,25.9,Normal
+75,3021,22.6,Normal
+110,1146,60.2,Moderate Stress
+78,2822,29.2,Normal
+132,1217,74.8,High Stress
+65,3093,17.3,Relaxed
+100,2213,49.2,Mild Stress
+108,1173,56.0,Moderate Stress
+86,1561,44.3,Mild Stress
+91,1338,48.9,Mild Stress
+112,1426,60.7,Moderate Stress
+114,1234,55.1,Moderate Stress
+98,1520,50.7,Mild Stress
+117,1139,68.5,Moderate Stress
+86,1753,49.6,Mild Stress
+85,3190,28.9,Normal
+75,2842,27.2,Normal
+82,3052,25.9,Normal
+142,1272,83.1,High Stress
+106,901,64.8,Moderate Stress
+70,3056,19.6,Relaxed
+101,1879,52.0,Mild Stress
+73,2657,23.2,Normal
+63,4095,9.8,Relaxed
+55,3455,6.4,Relaxed
+79,2867,29.6,Normal
+137,539,77.9,High Stress
+78,2174,34.0,Normal
+131,387,77.7,High Stress
+140,175,89.7,High Stress
+131,663,78.0,High Stress
+138,766,83.9,High Stress
+62,3833,7.9,Relaxed
+98,1840,47.1,Mild Stress
+95,1194,44.1,Mild Stress
+86,1861,39.8,Mild Stress
+70,3619,15.9,Relaxed
+83,2713,24.5,Normal
+85,1850,42.8,Mild Stress
+129,1018,77.8,High Stress
+119,946,61.6,Moderate Stress
+77,3167,19.4,Normal
+130,727,84.1,High Stress
+131,350,76.5,High Stress
+74,3778,14.4,Relaxed
+62,2939,16.9,Relaxed
+103,1163,55.8,Moderate Stress
+62,3437,14.9,Relaxed
+89,2696,43.9,Mild Stress
+78,2459,42.9,Normal
+64,2972,8.5,Relaxed
+77,3080,22.0,Normal
+108,1653,54.0,Moderate Stress
+116,1148,69.7,Moderate Stress
+86,2062,32.9,Mild Stress
+65,3563,9.2,Relaxed
+112,944,69.8,Moderate Stress
+96,1853,49.2,Mild Stress
+65,4071,12.4,Relaxed
+64,3209,15.4,Relaxed
+92,2155,45.2,Mild Stress
+136,633,86.8,High Stress
+63,3184,19.2,Relaxed
+58,3563,13.5,Relaxed
+66,3287,13.8,Relaxed
+97,2678,42.0,Mild Stress
+81,2009,40.6,Mild Stress
+91,1421,50.6,Mild Stress
+57,3270,11.9,Relaxed
+93,1805,43.1,Mild Stress
+80,3220,35.7,Normal
+114,1634,60.4,Moderate Stress
+79,2841,19.8,Normal
+145,1457,84.4,High Stress
+118,813,73.0,Moderate Stress
+111,1033,64.3,Moderate Stress
+77,2677,31.2,Normal
+81,3263,25.4,Normal
+116,1073,59.9,Moderate Stress
+67,3555,11.0,Relaxed
+106,993,59.8,Moderate Stress
+129,557,76.6,High Stress
+97,2003,43.7,Mild Stress
+77,3163,25.4,Normal
+83,2225,31.0,Mild Stress
+75,2687,25.7,Normal
+123,930,64.1,High Stress
+110,797,70.6,Moderate Stress
+71,2298,29.8,Normal
+115,919,56.0,High Stress
+96,1731,56.1,Mild Stress
+139,607,82.1,High Stress
+70,2456,25.3,Normal
+84,2312,35.9,Normal
+57,2606,21.0,Relaxed
+73,2722,27.4,Normal
+103,1768,48.4,Moderate Stress
+133,433,85.0,High Stress
+110,1134,61.0,Moderate Stress
+94,1552,50.5,Mild Stress
+75,2103,30.6,Normal
+81,3088,30.9,Normal
+58,3337,14.6,Relaxed
+69,3047,22.3,Normal
+83,1989,36.0,Mild Stress
+86,2624,40.9,Normal
+65,2874,22.9,Relaxed
+61,3713,9.8,Relaxed
+63,3857,16.3,Relaxed
+102,1005,57.2,Moderate Stress
+75,2733,26.7,Normal
+80,2162,38.1,Normal
+143,273,86.0,High Stress
+148,710,85.9,High Stress
+135,741,76.6,High Stress
+133,927,78.4,High Stress
+70,1781,35.0,Normal
+116,979,63.0,Moderate Stress
+88,1506,50.7,Mild Stress
+79,2883,21.0,Normal
+132,551,78.8,High Stress
+83,2963,22.7,Normal
+71,2617,25.9,Normal
+131,365,84.0,High Stress
+82,2682,32.8,Normal
+89,3123,29.7,Normal
+66,2952,19.8,Normal
+58,3610,6.9,Relaxed
+86,2550,42.2,Mild Stress
+55,3026,15.3,Relaxed
+133,872,74.3,High Stress
+142,741,85.3,High Stress
+80,2235,32.3,Normal
+131,961,77.3,High Stress
+79,2578,35.4,Normal
+95,1579,54.5,Mild Stress
+94,1281,49.2,Mild Stress
+139,790,84.3,High Stress
+84,2548,33.3,Normal
+63,3033,14.1,Relaxed
+68,2618,24.0,Normal
+131,729,75.5,High Stress
+75,2311,31.4,Normal
+152,650,91.3,High Stress
+61,3395,12.6,Relaxed
+113,909,61.1,Moderate Stress
+108,1092,60.1,Moderate Stress
+60,3502,7.2,Relaxed
+86,1839,37.7,Mild Stress
+78,2104,32.4,Mild Stress
+88,1523,52.3,Mild Stress
+71,2532,22.6,Normal
+84,2581,33.7,Normal
+109,1220,63.6,Moderate Stress
+85,1579,44.3,Mild Stress
+62,2750,15.1,Relaxed
+109,1571,53.3,Moderate Stress
+114,1784,57.7,Moderate Stress
+63,2732,26.3,Relaxed
+105,1890,55.5,Mild Stress
+133,891,85.1,High Stress
+82,2761,31.4,Normal
+65,3131,16.1,Relaxed
+113,1199,59.8,Moderate Stress
+67,2231,31.6,Normal
+77,2081,41.1,Mild Stress
+66,3045,20.5,Relaxed
+112,1267,61.5,Moderate Stress
+76,2593,26.3,Normal
+64,2806,19.0,Relaxed
+66,3590,10.4,Relaxed
+85,2234,40.5,Normal
+85,1707,38.5,Mild Stress
+75,2314,31.2,Normal
+80,2626,35.5,Normal
+63,3577,18.2,Relaxed
+136,754,77.8,High Stress
+72,3108,21.0,Normal
+61,3563,5.7,Relaxed
+134,424,86.9,High Stress
+106,1655,47.1,Mild Stress
+112,996,61.8,Moderate Stress
+84,1942,40.3,Mild Stress
+108,1287,58.3,Moderate Stress
+81,2760,32.4,Normal
+65,3277,17.0,Relaxed
+66,2290,20.3,Normal
+71,3130,19.5,Normal
+142,132,85.6,High Stress
+82,2656,39.1,Normal
+133,834,79.6,High Stress
+59,3470,8.4,Relaxed
+106,864,61.5,Moderate Stress
+122,816,76.2,High Stress
+129,704,74.0,High Stress
+93,2262,41.2,Mild Stress
+86,1626,42.6,Mild Stress
+92,1692,38.4,Mild Stress
+72,1514,39.4,Normal
+80,2414,28.3,Normal
+68,3137,17.9,Relaxed
+83,2930,21.1,Normal
+75,2224,33.7,Normal
+136,492,79.8,High Stress
+59,3207,16.8,Relaxed
+61,3677,10.1,Relaxed
+143,690,83.5,High Stress
+150,601,87.7,High Stress
+109,1314,55.4,Moderate Stress
+78,2790,31.9,Normal
+99,2593,46.2,Mild Stress
+69,3210,18.5,Relaxed
+92,2181,41.3,Mild Stress
+63,3520,9.8,Relaxed
+142,824,85.8,High Stress
+116,827,70.1,High Stress
+132,165,79.3,High Stress
+123,684,78.0,High Stress
+96,2216,39.3,Mild Stress
+141,783,85.4,High Stress
+78,3231,24.4,Normal
+68,3426,17.7,Relaxed
+112,1023,62.6,Moderate Stress
+113,790,64.3,Moderate Stress
+97,2040,38.5,Mild Stress
+58,3631,13.9,Relaxed
+108,1090,59.9,Moderate Stress
+64,2747,26.3,Relaxed
+82,2966,28.6,Normal
+91,1583,53.9,Mild Stress
+65,3482,17.3,Relaxed
+118,1104,72.7,Moderate Stress
+77,2562,24.8,Normal
+79,2346,38.7,Normal
+103,2176,48.1,Mild Stress
+82,2980,33.4,Normal
+74,2327,31.8,Normal
+86,1698,42.4,Mild Stress
+133,808,74.5,High Stress
+73,2805,24.6,Normal
+91,2280,41.8,Mild Stress
+55,3237,7.8,Relaxed
+96,1715,52.0,Mild Stress
+76,2094,38.2,Normal
+120,664,72.2,High Stress
+80,2768,31.8,Normal
+77,2749,26.6,Normal
+94,755,56.1,Moderate Stress
+68,4055,6.5,Relaxed
+133,500,78.9,High Stress
+78,2496,35.5,Normal
+78,2748,33.9,Normal
+60,3276,24.2,Relaxed
+74,3253,18.9,Normal
+82,2105,36.9,Mild Stress
+87,1988,38.0,Mild Stress
+92,1471,44.6,Mild Stress
+97,1974,43.1,Mild Stress
+68,3882,15.4,Relaxed
+129,700,81.7,High Stress
+65,2657,22.0,Normal
+75,3101,19.9,Normal
+132,450,75.1,High Stress
+62,3642,5.3,Relaxed
+87,2120,41.7,Mild Stress
+72,2916,23.7,Normal
+78,3199,29.6,Normal
+114,1388,61.4,Moderate Stress
+79,3052,25.0,Normal
+95,1558,52.5,Mild Stress
+79,2274,37.0,Normal
+96,1548,48.4,Mild Stress
+113,919,56.1,Moderate Stress
+74,1835,37.6,Normal
+105,443,62.5,Moderate Stress
+62,3602,11.5,Relaxed
+111,1067,67.5,Moderate Stress
+57,2975,10.5,Relaxed
+77,2436,31.5,Normal
+69,2377,23.9,Normal
+71,3589,14.9,Normal
+106,815,56.1,Moderate Stress
+58,3288,10.3,Relaxed
+77,2464,26.7,Normal
+61,3976,12.9,Relaxed
+84,1755,37.6,Mild Stress
+79,2734,20.3,Normal
+93,2436,43.0,Mild Stress
+108,1328,60.5,Moderate Stress
+61,3232,10.0,Relaxed
+139,413,80.0,High Stress
+60,2981,15.0,Relaxed
+118,812,65.3,Moderate Stress
+113,1116,65.8,Moderate Stress
+87,2100,39.0,Mild Stress
+138,520,82.8,High Stress
+117,798,68.0,High Stress
+61,2654,23.2,Relaxed
+78,2740,19.4,Normal
+90,1241,44.3,Mild Stress
+90,2194,39.5,Mild Stress
+91,1826,47.7,Mild Stress
+100,2068,43.3,Mild Stress
+119,1190,64.3,Moderate Stress
+134,609,86.7,High Stress
+93,1621,50.7,Mild Stress
+63,2928,17.1,Relaxed
+126,166,82.8,High Stress
+58,3082,16.3,Relaxed
+89,1299,46.8,Mild Stress
+92,1778,51.8,Mild Stress
+113,1326,63.5,Moderate Stress
+116,378,69.6,High Stress
+86,2368,35.6,Normal
+91,816,54.0,Mild Stress
+71,2842,21.1,Normal
+134,413,79.3,High Stress
+142,467,95.0,High Stress
+139,558,81.1,High Stress
+128,1113,68.3,High Stress
+108,845,61.6,Moderate Stress
+72,3002,19.8,Normal
+58,3655,11.8,Relaxed
+129,731,82.6,High Stress
+116,1267,58.7,Moderate Stress
+93,2083,40.6,Mild Stress
+110,667,67.5,Moderate Stress
+89,2259,40.8,Mild Stress
+120,478,81.3,High Stress
+87,2180,39.9,Mild Stress
+136,896,80.5,High Stress
+137,375,80.3,High Stress
+84,2411,33.7,Mild Stress
+75,1909,34.2,Normal
+97,2538,44.1,Mild Stress
+137,813,78.9,High Stress
+136,253,90.2,High Stress
+105,1684,57.6,Moderate Stress
+121,866,75.1,High Stress
+62,3289,8.9,Relaxed
+113,800,65.0,Moderate Stress
+90,2352,40.9,Mild Stress
+117,1126,66.6,Moderate Stress
+136,881,76.8,High Stress
+101,1004,58.2,Moderate Stress
+63,2928,26.7,Normal
+60,3016,16.0,Relaxed
+84,2327,35.7,Mild Stress
+81,1508,40.2,Normal
+97,2121,47.2,Mild Stress
+85,2381,34.4,Mild Stress
+86,2030,39.3,Mild Stress
+83,2175,37.3,Normal
+75,2333,33.2,Normal
+60,2869,17.8,Relaxed
+74,1915,34.4,Normal
+109,1223,56.8,Moderate Stress
+69,3258,11.4,Relaxed
+91,2454,40.7,Mild Stress
+79,3301,23.0,Normal
+57,2688,17.1,Relaxed
+100,1585,59.5,Mild Stress
+86,1829,44.5,Mild Stress
+95,2661,39.7,Mild Stress
+102,1405,54.1,Moderate Stress
+107,952,59.6,Moderate Stress
+92,2428,36.5,Mild Stress
+93,1902,45.1,Mild Stress
+90,2708,36.4,Mild Stress
+143,988,78.5,High Stress
+103,1149,63.1,Moderate Stress
+71,2511,31.7,Normal
+58,3248,17.1,Relaxed
+88,1852,43.4,Mild Stress
+67,2915,18.1,Relaxed
+62,3328,8.6,Relaxed
+84,1829,38.9,Mild Stress
+134,526,88.4,High Stress
+91,2827,40.3,Mild Stress
+60,2715,17.7,Relaxed
+105,1191,58.9,Moderate Stress
+65,2879,18.3,Relaxed
+91,2221,37.1,Mild Stress
+107,696,63.0,Moderate Stress
+81,2356,37.7,Normal
+89,1534,45.1,Mild Stress
+72,2848,27.2,Normal
+63,3424,12.4,Relaxed
+63,2779,12.8,Relaxed
+66,3506,9.5,Relaxed
+65,3410,8.9,Relaxed
+80,2247,34.7,Normal
+86,2839,30.6,Normal
+52,4052,2.9,Relaxed
+66,3160,16.0,Relaxed
+128,775,74.8,High Stress
+125,562,77.2,High Stress
+63,3557,9.1,Relaxed
+79,2598,22.1,Normal
+70,2743,20.5,Normal
+92,1969,38.4,Mild Stress
+90,1898,35.3,Mild Stress
+89,1813,51.9,Mild Stress
+67,3493,14.0,Relaxed
+113,1064,60.2,Moderate Stress
+112,1238,61.9,Moderate Stress
+78,2298,35.0,Normal
+118,1332,60.6,Moderate Stress
+111,1424,60.3,Moderate Stress
+132,554,75.9,High Stress
+82,2584,36.4,Mild Stress
+86,2414,38.6,Normal
+81,2483,29.0,Normal
+92,2053,41.1,Mild Stress
+101,1970,45.8,Mild Stress
+141,582,95.2,High Stress
+109,1045,67.1,Moderate Stress
+63,3079,15.7,Relaxed
+123,359,80.7,High Stress
+92,1772,46.9,Mild Stress
+128,775,65.3,High Stress
+63,3487,14.1,Relaxed
+62,2752,22.1,Relaxed
+62,3185,17.7,Relaxed
+62,3142,11.4,Relaxed
+120,76,82.0,High Stress
+67,2787,20.6,Relaxed
+93,1868,47.0,Mild Stress
+98,1458,55.4,Mild Stress
+105,1049,58.9,Moderate Stress
+119,593,67.5,Moderate Stress
+141,681,81.1,High Stress
+85,2239,36.6,Normal
+73,2881,22.0,Normal
+58,3712,11.2,Relaxed
+85,3116,31.5,Normal
+90,1673,46.4,Mild Stress
+107,462,64.6,Moderate Stress
+61,3903,5.7,Relaxed
+65,3869,10.5,Relaxed
+104,1625,55.2,Mild Stress
+74,3058,20.6,Normal
+73,3219,18.1,Normal
+108,987,59.1,Moderate Stress
+113,1481,60.0,Moderate Stress
+135,463,86.4,High Stress
+82,3375,24.0,Normal
+111,896,58.5,Moderate Stress
+109,1434,58.7,Moderate Stress
+98,1497,52.0,Moderate Stress
+94,1745,39.5,Mild Stress
+53,3360,3.6,Relaxed
+94,1832,54.8,Mild Stress
+130,90,75.8,High Stress
+55,2975,14.7,Relaxed
+130,560,76.9,High Stress
+91,2016,42.6,Mild Stress
+145,675,83.6,High Stress
+75,2625,25.9,Normal
+118,904,67.0,Moderate Stress
+93,1369,47.6,Mild Stress
+74,2622,26.9,Normal
+83,2817,32.1,Normal
+137,774,76.1,High Stress
+93,1562,50.4,Mild Stress
+133,805,76.7,High Stress
+98,2192,39.9,Mild Stress
+103,1474,57.6,Moderate Stress
+57,3320,11.4,Relaxed
+104,973,54.3,Moderate Stress
+100,1094,54.4,Moderate Stress
+93,1717,49.2,Mild Stress
+110,1475,57.1,Moderate Stress
+112,1001,60.1,Moderate Stress
+76,1782,28.0,Normal
+77,2016,35.7,Normal
+79,1568,44.7,Normal
+138,658,79.6,High Stress
+110,1010,59.8,Moderate Stress
+121,811,69.6,Moderate Stress
+78,2817,28.8,Normal
+72,2857,19.8,Normal
+104,1184,61.7,Moderate Stress
+97,1877,43.0,Mild Stress
+97,957,60.6,Moderate Stress
+69,3392,18.4,Normal
+120,1375,65.6,Moderate Stress
+129,780,71.5,High Stress
+71,3485,21.6,Relaxed
+111,1154,61.1,Moderate Stress
+69,3610,15.1,Relaxed
+55,3134,8.6,Relaxed
+81,2747,23.1,Normal
+62,3554,5.4,Relaxed
+72,2803,25.4,Normal
+66,3646,13.5,Relaxed
+65,2358,19.0,Normal
+136,617,89.7,High Stress
+99,860,49.6,Moderate Stress
+97,1914,43.9,Mild Stress
+127,593,74.1,High Stress
+145,857,80.6,High Stress
+77,1017,42.3,Mild Stress
+95,2070,46.4,Mild Stress
+116,442,70.1,High Stress
+67,2600,17.8,Normal
+147,599,89.8,High Stress
+126,270,75.5,High Stress
+86,1126,55.1,Mild Stress
+63,2739,21.1,Relaxed
+73,2988,22.7,Normal
+148,690,84.2,High Stress
+71,2434,23.4,Normal
+95,1320,51.6,Mild Stress
+67,2273,26.9,Normal
+99,2162,52.0,Mild Stress
+109,1232,62.3,Moderate Stress
+86,1745,45.2,Mild Stress
+124,628,81.4,High Stress
+102,2080,47.8,Mild Stress
+97,1690,46.2,Mild Stress
+77,2552,31.5,Normal
+86,3389,29.2,Normal
+63,4095,9.8,Relaxed
+92,1778,47.7,Mild Stress
+85,2103,43.1,Mild Stress
+119,942,75.5,High Stress
+78,2260,36.6,Normal
+93,1763,51.4,Mild Stress
+65,3519,16.8,Relaxed
+97,1300,46.7,Mild Stress
+76,2828,19.5,Normal
+61,2822,18.2,Relaxed
+82,3224,20.4,Normal
+118,1069,67.4,Moderate Stress
+92,1884,51.8,Mild Stress
+84,2839,27.7,Normal
+97,2115,45.1,Mild Stress
+67,3832,13.4,Relaxed
+132,623,82.8,High Stress
+73,2624,28.5,Normal
+59,3444,9.6,Relaxed
+59,3262,15.1,Relaxed
+98,2082,46.9,Mild Stress
+64,3753,10.1,Relaxed
+111,1103,60.5,Moderate Stress
+141,1081,74.9,High Stress
+90,2440,30.6,Mild Stress
+90,2149,44.6,Mild Stress
+124,916,75.8,High Stress
+101,1439,59.9,Moderate Stress
+75,2388,27.9,Normal
+131,205,88.0,High Stress
+83,2737,34.3,Normal
+87,1991,46.1,Mild Stress
+79,2844,23.3,Normal
+60,2537,22.7,Relaxed
+86,1700,44.2,Mild Stress
+91,1987,49.3,Mild Stress
+79,3909,17.6,Relaxed
+125,383,77.0,High Stress
+76,2892,29.6,Normal
+57,3304,8.8,Relaxed
+124,638,73.0,High Stress
+99,1645,43.8,Mild Stress
+75,2586,28.5,Normal
+65,3667,16.9,Relaxed
+76,2755,27.8,Normal
+136,7,87.7,High Stress
+74,3415,17.1,Relaxed
+94,2094,36.7,Mild Stress
+114,1088,69.2,Moderate Stress
+77,2630,29.7,Normal
+79,2142,35.0,Normal
+81,2308,43.1,Mild Stress
+90,1800,50.3,Mild Stress
+105,2373,49.7,Mild Stress
+57,3492,15.9,Relaxed
+68,1721,34.2,Normal
+103,1476,55.9,Moderate Stress
+94,1127,55.2,Mild Stress
+92,1988,44.4,Mild Stress
+108,1237,55.6,Moderate Stress
+138,826,77.4,High Stress
+133,559,83.8,High Stress
+113,1023,57.7,Moderate Stress
+115,1699,55.0,Moderate Stress
+139,314,87.2,High Stress
+106,1119,60.1,Moderate Stress
+138,917,75.9,High Stress
+114,1176,60.8,Moderate Stress
+108,1429,60.6,Moderate Stress
+57,3405,12.8,Relaxed
+126,434,78.5,High Stress
+92,1808,40.0,Mild Stress
+74,2439,34.7,Normal
+67,2604,19.8,Normal
+88,1742,40.7,Mild Stress
+70,2646,19.9,Normal
+111,1489,61.1,Moderate Stress
+82,2465,32.6,Normal
+105,1441,55.9,Moderate Stress
+90,1655,48.8,Mild Stress
+60,4028,2.6,Relaxed
+136,411,82.0,High Stress
+97,2423,41.3,Mild Stress
+83,2533,34.9,Normal
+92,1766,44.2,Mild Stress
+106,1455,54.2,Moderate Stress
+111,1287,60.0,Moderate Stress
+108,1166,59.8,Moderate Stress
+137,392,86.6,High Stress
+103,1283,54.6,Moderate Stress
+116,248,74.5,High Stress
+105,691,64.7,Moderate Stress
+77,3205,28.9,Normal
+144,937,80.8,High Stress
+64,3787,7.9,Relaxed
+88,2733,41.6,Normal
+125,444,75.5,High Stress
+136,1036,79.0,High Stress
+77,2740,21.4,Normal
+148,965,84.8,High Stress
+141,626,81.6,High Stress
+102,988,57.9,Moderate Stress
+93,1989,43.5,Mild Stress
+91,1459,47.2,Mild Stress
+54,2826,10.9,Relaxed
+138,375,84.8,High Stress
+69,2253,31.3,Normal
+109,1704,59.1,Moderate Stress
+87,2081,33.8,Mild Stress
+62,3223,16.6,Relaxed
+73,2913,25.0,Normal
+94,1316,53.3,Mild Stress
+79,2999,25.8,Normal
+137,708,80.4,High Stress
+63,2544,24.2,Relaxed
+79,2973,25.4,Normal
+139,468,90.6,High Stress
+70,2852,24.2,Normal
+123,664,74.4,High Stress
+59,3126,10.5,Relaxed
+85,2838,33.2,Mild Stress
+134,454,74.1,High Stress
+134,441,79.8,High Stress
+103,1172,62.5,Moderate Stress
+99,1585,62.0,Mild Stress
+76,2761,22.3,Normal
+88,1400,59.7,Mild Stress
+90,1829,44.7,Mild Stress
+90,2338,41.8,Mild Stress
+59,3754,9.9,Relaxed
+106,1011,59.8,Moderate Stress
+115,406,80.6,Moderate Stress
+64,3218,12.7,Relaxed
+79,2683,25.1,Normal
+85,1906,42.1,Normal
+101,1430,54.1,Moderate Stress
+144,223,88.5,High Stress
+64,3814,9.1,Relaxed
+79,1685,40.9,Mild Stress
+60,3420,13.6,Relaxed
+61,3365,15.2,Relaxed
+105,1180,62.1,Moderate Stress
+120,714,75.8,High Stress
+104,993,55.5,Moderate Stress
+59,3363,13.6,Relaxed
+87,2765,38.8,Normal
+139,229,85.4,High Stress
+96,2141,39.2,Mild Stress
+104,938,65.3,Moderate Stress
+63,3658,8.0,Relaxed
+58,3068,12.5,Relaxed
+73,2904,27.2,Normal
+59,3552,12.7,Relaxed
+130,1112,78.2,High Stress
+116,1210,60.2,Moderate Stress
+84,2011,36.4,Mild Stress
+94,1988,41.8,Mild Stress
+75,2808,24.6,Normal
+89,1657,53.3,Mild Stress
+85,1512,50.4,Mild Stress
+58,3940,3.9,Relaxed
+132,574,80.0,High Stress
+90,1742,51.0,Mild Stress
+99,1551,50.9,Mild Stress
+83,2651,37.0,Normal
+76,2535,30.9,Normal
+150,5,97.3,High Stress
+127,616,84.0,High Stress
+109,1175,61.4,Moderate Stress
+71,3108,19.2,Normal
+108,1637,52.7,Moderate Stress
+134,641,83.9,High Stress
+126,94,79.1,High Stress
+140,1071,81.6,High Stress
+55,2403,17.3,Relaxed
+84,2793,23.4,Normal
+139,396,84.3,High Stress
+79,2284,27.4,Normal
+122,983,66.1,High Stress
+55,3040,14.2,Relaxed
+74,2387,35.2,Normal
+66,3124,16.9,Relaxed
+83,2456,26.9,Normal
+102,720,65.9,Moderate Stress
+145,435,81.0,High Stress
+88,1960,43.7,Mild Stress
+151,1045,87.7,High Stress
+82,1778,51.8,Normal
+62,3445,13.0,Relaxed
+61,2951,25.3,Relaxed
+84,1680,44.6,Mild Stress
+132,743,84.6,High Stress
+140,349,81.2,High Stress
+90,1911,41.2,Mild Stress
+82,2924,22.9,Normal
+93,1542,50.1,Mild Stress
+117,1819,54.0,Moderate Stress
+99,1181,45.4,Mild Stress
+64,3128,14.6,Relaxed
+100,2022,51.4,Mild Stress
+62,3450,13.6,Relaxed
+63,2945,19.0,Relaxed
+125,683,75.7,High Stress
+104,649,64.7,Moderate Stress
+112,936,66.0,Moderate Stress
+64,3275,16.3,Relaxed
+78,1842,44.3,Normal
+56,3860,8.9,Relaxed
+58,3724,7.7,Relaxed
+107,1571,57.2,Moderate Stress
+62,3157,19.6,Normal
+63,3450,15.4,Relaxed
+115,943,73.0,Moderate Stress
+147,1018,82.1,High Stress
+67,3105,19.3,Normal
+67,3144,21.3,Relaxed
+64,3580,18.0,Relaxed
+111,1392,57.9,Moderate Stress
+60,3690,14.5,Relaxed
+100,1624,46.9,Moderate Stress
+98,2103,45.4,Mild Stress
+71,2133,35.3,Normal
+75,2692,26.0,Normal
+78,2100,46.5,Normal
+93,1427,50.3,Mild Stress
+88,2965,28.9,Normal
+142,724,85.6,High Stress
+139,707,86.3,High Stress
+73,2422,23.3,Normal
+83,2332,36.3,Normal
+95,2273,48.7,Mild Stress
+138,678,83.2,High Stress
+59,3758,3.5,Relaxed
+134,724,79.7,High Stress
+122,715,73.4,High Stress
+96,1917,41.5,Mild Stress
+140,403,85.1,High Stress
+106,1234,58.5,Moderate Stress
+81,2304,38.8,Mild Stress
+140,887,76.7,High Stress
+56,2981,15.4,Relaxed
+129,615,81.6,High Stress
+124,609,75.5,High Stress
+106,1249,59.3,Moderate Stress
+107,1300,61.9,Moderate Stress
+149,1183,85.7,High Stress
+110,1157,60.0,Moderate Stress
+102,1186,53.7,Moderate Stress
+77,2622,26.0,Normal
+123,526,82.9,High Stress
+106,991,64.2,Moderate Stress
+88,1604,46.8,Mild Stress
+79,3340,16.1,Normal
+143,243,86.7,High Stress
+90,1539,47.3,Mild Stress
+84,1974,33.0,Normal
+110,1160,59.4,Moderate Stress
+108,1396,61.8,Moderate Stress
+136,833,77.6,High Stress
+67,3703,12.6,Relaxed
+104,2011,44.0,Mild Stress
+90,2266,40.4,Mild Stress
+103,927,52.5,Moderate Stress
+114,1072,58.2,Moderate Stress
+60,3251,12.6,Relaxed
+73,3397,17.6,Normal
+97,1841,51.2,Mild Stress
+111,893,66.0,Moderate Stress
+84,2059,42.0,Mild Stress
+132,606,82.8,High Stress
+128,608,73.3,High Stress
+108,1085,62.0,Moderate Stress
+74,2774,24.4,Normal
+68,2957,16.9,Relaxed
+86,1879,44.2,Mild Stress
+134,617,76.8,High Stress
+93,1395,55.7,Mild Stress
+88,3082,23.1,Normal
+88,2329,35.3,Normal
+65,3439,15.4,Relaxed
+71,2256,32.2,Normal
+122,695,74.5,Moderate Stress
+69,3184,13.5,Relaxed
+131,559,76.4,High Stress
+88,1634,41.3,Mild Stress
+112,713,67.4,Moderate Stress
+116,660,67.1,Moderate Stress
+100,2152,43.7,Mild Stress
+66,3003,19.2,Relaxed
+138,477,88.1,High Stress
+85,2907,27.1,Normal
+126,348,72.1,High Stress
+103,1109,64.3,Moderate Stress
+114,519,66.0,Moderate Stress
+77,2421,33.8,Normal
+112,1921,60.7,Moderate Stress
+61,3224,13.9,Relaxed
+66,3569,16.1,Relaxed
+68,3778,13.1,Relaxed
+72,3466,9.1,Normal
+113,1794,51.9,Moderate Stress
+95,1958,49.8,Mild Stress
+79,3006,23.7,Normal
+86,1899,39.9,Mild Stress
+73,2389,37.0,Normal
+101,1320,52.6,Moderate Stress
+62,3262,8.3,Relaxed
+134,567,82.3,High Stress
+97,1869,51.3,Mild Stress
+62,3691,9.7,Relaxed
+85,1804,39.9,Mild Stress
+62,3410,15.5,Relaxed
+79,2229,39.5,Normal
+106,1689,52.0,Mild Stress
+145,640,89.4,High Stress
+102,1234,55.5,Moderate Stress
+87,3304,27.1,Normal
+56,2923,16.3,Relaxed
+133,605,81.4,High Stress
+70,3244,16.9,Relaxed
+128,830,73.4,High Stress
+98,1356,47.3,Mild Stress
+83,2370,35.0,Normal
+146,788,88.5,High Stress
+91,2148,51.7,Mild Stress
+59,3650,6.8,Relaxed
+84,2011,35.0,Mild Stress
+133,500,81.3,High Stress
+78,2495,28.0,Normal
+102,1733,46.7,Mild Stress
+126,167,78.0,High Stress
+63,2911,16.3,Relaxed
+60,2867,20.9,Relaxed
+97,1473,54.1,Mild Stress
+123,453,78.4,High Stress
+109,1082,54.4,Moderate Stress
+134,683,88.1,High Stress
+112,732,70.4,Moderate Stress
+65,3391,17.6,Relaxed
+122,989,69.7,Moderate Stress
+127,989,71.2,High Stress
+82,2700,30.7,Normal
+161,305,100.0,High Stress
+119,1237,69.2,Moderate Stress
+134,613,87.4,High Stress
+118,485,71.3,High Stress
+57,3477,6.0,Relaxed
+107,1489,56.3,Moderate Stress
+88,2133,36.5,Mild Stress
+124,506,81.4,High Stress
+145,464,83.2,High Stress
+64,2814,25.2,Relaxed
+97,1639,49.2,Mild Stress
+111,1166,68.2,Moderate Stress
+106,1033,66.3,Moderate Stress
+99,1344,53.0,Mild Stress
+112,866,66.9,Moderate Stress
+108,1087,60.6,Moderate Stress
+75,2116,31.9,Normal
+70,2106,33.6,Normal
+61,3356,15.9,Relaxed
+136,759,77.0,High Stress
+62,3982,11.6,Relaxed
+135,648,83.5,High Stress
+91,2372,41.3,Mild Stress
+60,3309,9.5,Relaxed
+114,1038,60.9,Moderate Stress
+78,2383,29.9,Normal
+137,979,77.4,High Stress
+94,2051,44.5,Mild Stress
+59,3381,11.6,Relaxed
+93,1387,41.3,Mild Stress
+60,3040,13.7,Relaxed
+67,3488,17.7,Relaxed
+146,700,87.5,High Stress
+70,2442,29.1,Normal
+89,1555,52.8,Mild Stress
+62,2684,22.4,Normal
+139,402,81.6,High Stress
+105,1002,62.7,Moderate Stress
+135,405,81.7,High Stress
+144,791,81.6,High Stress
+90,1791,45.4,Mild Stress
+134,221,85.3,High Stress
+77,2734,24.4,Normal
+63,3606,11.1,Relaxed
+92,1718,54.3,Mild Stress
+141,269,85.9,High Stress
+79,2918,27.5,Normal
+75,2558,32.4,Normal
+93,1626,54.6,Mild Stress
+64,3050,7.4,Relaxed
+73,2994,20.0,Relaxed
+124,624,74.8,High Stress
+87,2851,31.3,Normal
+84,3369,25.6,Normal
+68,3097,24.5,Normal
+64,3819,11.6,Relaxed
+102,638,72.5,Moderate Stress
+59,3376,9.7,Relaxed
+78,2642,30.4,Normal
+113,1023,65.9,Moderate Stress
+65,3519,10.5,Relaxed
+108,1506,53.0,Moderate Stress
+119,1785,53.3,Moderate Stress
+75,2452,27.9,Normal
+107,447,61.4,Moderate Stress
+71,2772,14.6,Normal
+66,3365,9.7,Relaxed
+84,2087,41.1,Normal
+92,1692,48.3,Mild Stress
+98,1321,56.4,Moderate Stress
+75,2923,26.3,Normal
+78,2263,28.1,Normal
+71,2258,37.8,Normal
+107,986,54.0,Moderate Stress
+64,3112,18.4,Relaxed
+73,3635,8.1,Relaxed
+134,586,77.5,High Stress
+56,3268,8.8,Relaxed
+70,2689,20.7,Normal
+116,1693,61.9,Moderate Stress
+117,379,76.8,High Stress
+67,3090,20.9,Relaxed
+82,1994,34.0,Mild Stress
+81,3218,22.7,Normal
+129,587,79.4,High Stress
+55,2678,12.9,Relaxed
+139,555,79.6,High Stress
+122,664,69.2,High Stress
+140,624,82.7,High Stress
+82,2454,32.6,Normal
+65,3195,19.6,Relaxed
+62,3575,11.8,Relaxed
+88,1144,55.8,Mild Stress
+113,1598,55.4,Moderate Stress
+60,3714,7.1,Relaxed
+114,946,61.0,Moderate Stress
+114,761,66.7,Moderate Stress
+69,3239,19.6,Relaxed
+72,2500,31.8,Normal
+114,1429,61.2,Moderate Stress
+126,496,81.5,High Stress
+89,1121,48.9,Mild Stress
+73,2528,26.4,Normal
+107,2219,41.9,Mild Stress
+90,1562,45.1,Mild Stress
+79,2787,31.1,Normal
+68,3328,16.3,Relaxed
+141,223,89.0,High Stress
+63,3126,24.8,Relaxed
+62,2704,13.7,Relaxed
+101,748,59.0,Moderate Stress
+91,2322,39.6,Mild Stress
+124,500,73.4,High Stress
+63,3400,12.7,Relaxed
+89,2242,43.5,Mild Stress
+107,1297,63.2,Moderate Stress
+93,1378,56.4,Mild Stress
+112,948,61.6,Moderate Stress
+131,223,80.0,High Stress
+92,1405,44.9,Mild Stress
+124,902,75.1,High Stress
+79,1893,42.4,Mild Stress
+60,3085,15.1,Relaxed
+59,2879,12.4,Relaxed
+79,3047,16.4,Normal
+62,3236,14.3,Relaxed
+97,2050,48.9,Mild Stress
+131,604,77.3,High Stress
+79,2747,29.8,Normal
+107,991,62.4,Moderate Stress
+95,956,57.5,Moderate Stress
+70,1985,29.5,Normal
+99,1141,59.4,Mild Stress
+146,609,78.9,High Stress
+91,1216,48.5,Mild Stress
+142,888,88.1,High Stress
+103,1502,62.2,Moderate Stress
+122,636,78.2,High Stress
+80,2585,26.0,Normal
+137,978,77.1,High Stress
+95,2066,44.2,Mild Stress
+79,3152,28.7,Normal
+91,1994,42.8,Mild Stress
+90,1715,47.3,Mild Stress
+127,796,72.8,High Stress
+78,2417,23.8,Normal
+62,3756,9.7,Relaxed
+110,811,66.9,Moderate Stress
+131,86,89.2,High Stress
+78,2734,26.4,Normal
+86,1534,47.0,Mild Stress
+62,3252,16.0,Relaxed
+121,448,71.8,High Stress
+60,3699,10.9,Relaxed
+56,3314,7.1,Relaxed
+76,2701,25.6,Normal
+95,1741,46.0,Mild Stress
+62,3454,15.8,Relaxed
+69,3001,22.9,Relaxed
+116,866,66.6,Moderate Stress
+79,2061,37.5,Normal
+67,2811,23.8,Relaxed
+113,1342,56.5,Moderate Stress
+107,1564,57.7,Moderate Stress
+137,816,87.0,High Stress
+65,3034,18.9,Relaxed
+138,351,80.6,High Stress
+84,1757,38.9,Normal
+61,3403,10.5,Relaxed
+113,1210,56.8,Moderate Stress
+133,329,84.1,High Stress
+138,559,84.7,High Stress
+84,1960,40.9,Mild Stress
+142,96,88.5,High Stress
+117,1222,59.9,Moderate Stress
+136,1019,79.3,High Stress
+73,2319,34.8,Normal
+60,3305,20.4,Relaxed
+103,695,53.0,Moderate Stress
+62,3445,16.7,Relaxed
+143,519,87.5,High Stress
+111,1127,63.3,Moderate Stress
+84,1927,37.0,Mild Stress
+86,2798,36.9,Mild Stress
+148,395,90.1,High Stress
+119,1056,68.1,Moderate Stress
+113,706,59.2,Moderate Stress
+89,1693,47.6,Mild Stress
+57,3559,12.0,Relaxed
+65,2948,13.9,Relaxed
+109,1405,61.8,Moderate Stress
+74,2493,28.5,Normal
+81,1445,36.3,Mild Stress
+84,1669,40.3,Mild Stress
+80,2460,39.0,Normal
+72,2559,15.7,Normal
+114,810,71.2,Moderate Stress
+136,838,77.1,High Stress
+92,1827,49.7,Mild Stress
+135,413,83.5,High Stress
+100,627,67.6,Moderate Stress
+135,669,83.2,High Stress
+128,784,85.7,High Stress
+69,2897,29.7,Relaxed
+58,3778,9.9,Relaxed
+92,1865,44.9,Mild Stress
+109,1591,52.1,Moderate Stress
+81,1953,37.7,Mild Stress
+143,190,87.8,High Stress
+87,2647,40.9,Normal
+130,539,80.6,High Stress
+99,1695,55.7,Mild Stress
+99,1349,52.0,Mild Stress
+71,2878,18.6,Normal
+79,2963,21.7,Normal
+131,996,71.5,High Stress
+81,3039,29.6,Normal
+112,618,73.6,Moderate Stress
+136,622,74.8,High Stress
+83,2462,26.3,Normal
+140,308,79.1,High Stress
+80,2614,32.4,Normal
+137,599,77.5,High Stress
+77,2411,29.1,Normal
+61,3524,14.5,Relaxed
+136,554,85.3,High Stress
+80,2900,28.4,Normal
+112,1387,59.9,Moderate Stress
+138,614,82.1,High Stress
+96,1932,44.4,Mild Stress
+98,1064,56.4,Mild Stress
+84,2327,38.3,Mild Stress
+86,2704,33.0,Normal
+67,3896,14.6,Relaxed
+116,1534,61.9,Moderate Stress
+82,2467,30.2,Mild Stress
+64,3691,8.0,Relaxed
+81,2897,26.3,Normal
+65,2988,14.0,Relaxed
+76,2851,23.1,Normal
+57,3917,0.5,Relaxed
+80,2678,30.5,Normal
+68,3078,21.3,Normal
+140,616,82.9,High Stress
+95,2083,46.5,Mild Stress
+86,1645,42.3,Mild Stress
+123,549,79.1,High Stress
+66,3167,18.6,Relaxed
+91,1830,42.9,Mild Stress
+75,3043,28.9,Normal
+89,1096,50.6,Mild Stress
+142,340,87.7,High Stress
+78,2494,32.2,Normal
+99,1151,54.5,Moderate Stress
+105,333,62.4,Moderate Stress
+94,1937,47.4,Mild Stress
+56,3405,14.0,Relaxed
+83,2903,25.7,Normal
+62,3218,14.0,Relaxed
+88,2498,31.9,Mild Stress
+90,1113,51.9,Mild Stress
+98,1335,55.8,Mild Stress
+142,776,79.8,High Stress
+90,1861,39.8,Mild Stress
+108,1710,60.4,Moderate Stress
+143,588,81.9,High Stress
+93,1288,47.7,Moderate Stress
+62,3312,19.9,Relaxed
+125,965,72.8,High Stress
+78,2592,31.6,Normal
+105,1280,54.5,Moderate Stress
+142,450,78.0,High Stress
+79,2599,27.0,Normal
+97,1596,49.0,Mild Stress
+56,3060,8.1,Relaxed
+76,2773,29.9,Normal
+118,930,65.6,Moderate Stress
+138,720,83.2,High Stress
+67,2211,27.8,Normal
+89,852,46.5,Mild Stress
+78,2561,27.5,Normal
+141,385,87.8,High Stress
+100,1820,54.0,Mild Stress
+66,3492,16.6,Relaxed
+93,2328,46.2,Mild Stress
+81,2754,28.5,Normal
+75,2856,34.5,Normal
+83,1708,38.3,Mild Stress
+135,757,85.5,High Stress
+74,2436,28.5,Normal
+116,948,66.9,Moderate Stress
+80,1710,42.4,Mild Stress
+86,2005,39.6,Mild Stress
+98,697,57.0,Moderate Stress
+129,356,84.4,High Stress
+105,1458,57.1,Moderate Stress
+79,2926,23.0,Normal
+69,3215,19.3,Normal
+60,3730,5.9,Relaxed
+144,267,89.8,High Stress
+92,1330,54.0,Mild Stress
+136,347,86.1,High Stress
+96,2244,40.3,Mild Stress
+69,3500,10.8,Relaxed
+103,1524,54.6,Mild Stress
+77,2605,23.0,Normal
+110,894,64.3,Moderate Stress
+94,1125,51.5,Mild Stress
+76,2997,24.0,Normal
+73,2727,24.8,Normal
+62,3288,19.9,Relaxed
+87,1715,48.1,Mild Stress
+73,2899,28.7,Normal
+91,2136,32.9,Mild Stress
+101,1056,61.5,Moderate Stress
+145,464,93.2,High Stress
+132,1065,79.2,High Stress
+84,2097,44.7,Mild Stress
+71,3249,20.0,Relaxed
+77,2768,34.1,Normal
+63,3381,13.5,Relaxed
+79,1937,34.2,Normal
+87,2565,34.2,Mild Stress
+69,3545,20.5,Relaxed
+59,3224,15.3,Relaxed
+66,3046,22.5,Relaxed
+90,1787,48.6,Mild Stress
+79,2381,30.6,Normal
+72,3016,17.7,Relaxed
+92,2161,40.3,Mild Stress
+58,4017,6.0,Relaxed
+127,372,78.9,High Stress
+89,1967,40.4,Mild Stress
+125,456,78.5,High Stress
+98,1836,36.5,Mild Stress
+62,2554,24.0,Relaxed
+147,620,86.7,High Stress
+89,1480,50.6,Mild Stress
+134,836,76.8,High Stress
+112,1144,60.2,Moderate Stress
+84,1884,39.1,Mild Stress
+141,356,83.1,High Stress
+65,3055,20.3,Relaxed
+136,536,81.1,High Stress
+104,1137,45.1,Moderate Stress
+140,478,79.8,High Stress
+119,1231,58.0,Moderate Stress
+126,1008,71.1,High Stress
+65,3713,13.2,Relaxed
+112,996,63.6,Moderate Stress
+104,918,70.2,Moderate Stress
+119,1225,59.0,Moderate Stress
+93,1763,51.3,Mild Stress
+111,998,68.8,Moderate Stress
+74,1600,38.4,Normal
+57,2681,17.4,Relaxed
+83,2072,32.7,Normal
+94,1486,49.5,Mild Stress
+104,1379,57.2,Moderate Stress
+99,2072,38.4,Mild Stress
+64,2770,15.8,Relaxed
+64,3501,25.4,Relaxed
+59,3218,14.9,Relaxed
+82,1822,34.3,Mild Stress
+129,508,73.1,High Stress
+97,1983,49.0,Mild Stress
+93,2371,34.1,Mild Stress
+119,1495,63.5,Moderate Stress
+113,760,71.6,Moderate Stress
+139,481,78.8,High Stress
+87,1677,44.9,Mild Stress
+73,3073,25.4,Normal
+68,2309,30.0,Normal
+67,3411,22.0,Relaxed
+129,645,86.5,High Stress
+106,1601,61.3,Moderate Stress
+59,2987,20.7,Relaxed
+130,503,84.0,High Stress
+67,3367,6.1,Relaxed
+107,1225,60.6,Moderate Stress
+109,556,63.2,Moderate Stress
+92,1643,52.8,Mild Stress
+114,1170,64.6,Moderate Stress
+79,2445,32.3,Normal
+111,893,62.9,Moderate Stress
+63,3479,11.0,Relaxed
+101,2460,43.8,Mild Stress
+105,1235,55.5,Moderate Stress
+95,1949,42.9,Mild Stress
+141,556,85.4,High Stress
+112,1301,54.4,Moderate Stress
+88,1232,49.9,Mild Stress
+136,718,66.9,High Stress
+153,59,97.0,High Stress
+88,2090,35.0,Mild Stress
+111,969,57.1,Moderate Stress
+83,1523,37.5,Mild Stress
+139,393,81.5,High Stress
+65,3079,17.4,Relaxed
+69,2338,34.0,Normal
+132,936,77.6,High Stress
+155,399,96.0,High Stress
+74,2730,23.6,Normal
+71,2024,32.9,Normal
+87,2147,34.5,Mild Stress
+62,3396,11.9,Relaxed
+77,2979,20.4,Normal
+60,3242,19.9,Relaxed
+93,1479,44.5,Mild Stress
+63,2818,22.7,Relaxed
+140,791,84.8,High Stress
+134,478,78.8,High Stress
+130,893,75.9,High Stress
+61,3822,12.0,Relaxed
+96,1683,44.4,Mild Stress
+66,3658,11.0,Relaxed
+63,3353,15.2,Relaxed
+74,2083,37.8,Normal
+101,1550,50.0,Mild Stress
+132,353,72.4,High Stress
+149,670,93.3,High Stress
+108,1307,57.8,Moderate Stress
+91,2115,42.0,Mild Stress
+59,3062,12.9,Relaxed
+62,3822,8.7,Relaxed
+96,1855,45.4,Mild Stress
+126,526,75.4,High Stress
+113,1580,64.8,Moderate Stress
+132,663,77.3,High Stress
+107,1098,62.7,Moderate Stress
+92,2119,46.8,Mild Stress
+82,2198,31.7,Mild Stress
+136,888,75.9,High Stress
+110,1539,64.4,Moderate Stress
+98,1481,51.4,Moderate Stress
+91,2265,46.6,Mild Stress
+65,2931,13.4,Relaxed
+56,4002,0.0,Relaxed
+141,740,83.9,High Stress
+108,1123,58.8,Moderate Stress
+61,3685,5.2,Relaxed
+117,756,71.0,Moderate Stress
+136,741,76.2,High Stress
+76,2495,23.1,Normal
+71,2914,22.2,Normal
+103,1071,58.5,Moderate Stress
+101,1917,51.6,Mild Stress
+90,2401,39.2,Mild Stress
+142,526,85.1,High Stress
+72,3017,11.6,Normal
+110,796,63.2,Moderate Stress
+73,2630,27.0,Normal
+136,609,88.1,High Stress
+130,861,70.7,High Stress
+101,1178,55.2,Moderate Stress
+75,2490,19.3,Normal
+91,2152,45.2,Mild Stress
+79,2884,22.4,Normal
+59,3519,18.6,Relaxed
+84,1881,39.2,Mild Stress
+135,703,82.6,High Stress
+57,4019,3.4,Relaxed
+61,3094,19.3,Relaxed
+141,714,81.8,High Stress
+140,1196,73.1,High Stress
+62,3333,12.7,Relaxed
+145,469,82.1,High Stress
+127,499,81.1,High Stress
+94,2063,42.6,Mild Stress
+113,1327,61.2,Moderate Stress
+138,176,83.5,High Stress
+100,2544,40.3,Mild Stress
+95,2309,35.0,Mild Stress
+64,3541,12.9,Relaxed
+76,2298,26.3,Normal
+93,1273,51.1,Moderate Stress
+56,3238,13.5,Relaxed
+94,1507,58.0,Mild Stress
+86,1477,41.7,Mild Stress
+94,1568,47.5,Mild Stress
+148,854,82.9,High Stress
+73,2847,29.4,Normal
+58,3814,1.8,Relaxed
+79,1569,37.3,Mild Stress
+79,1571,42.5,Mild Stress
+109,1393,53.3,Moderate Stress
+77,2557,35.1,Normal
+134,506,79.9,High Stress
+105,2134,47.0,Mild Stress
+100,1724,55.4,Mild Stress
+107,1141,56.3,Moderate Stress
+93,2129,46.5,Mild Stress
+70,3235,21.1,Relaxed
+136,964,77.9,High Stress
+115,1026,60.5,Moderate Stress
+70,3672,19.7,Relaxed
+56,2897,13.9,Relaxed
+136,646,81.0,High Stress
+89,1287,51.3,Mild Stress
+67,2951,12.7,Relaxed
+77,2789,27.8,Normal
+78,2383,28.4,Normal
+84,2328,36.9,Mild Stress
+78,2561,22.4,Normal
+76,1843,34.8,Normal
+75,2144,32.3,Normal
+130,339,84.2,High Stress
+68,3067,20.1,Relaxed
+91,1692,42.2,Mild Stress
+60,2865,15.0,Relaxed
+136,439,81.5,High Stress
+86,1807,43.2,Mild Stress
+79,2550,31.6,Normal
+83,1629,42.6,Mild Stress
+139,797,77.5,High Stress
+94,1823,45.1,Mild Stress
+58,3078,17.2,Relaxed
+62,3561,9.4,Relaxed
+128,720,72.0,High Stress
+76,2527,35.4,Normal
+80,2746,30.1,Normal
+131,770,79.9,High Stress
+64,3206,18.8,Relaxed
+89,1305,46.4,Mild Stress
+70,3791,13.0,Relaxed
+83,1392,50.7,Mild Stress
+80,3037,29.9,Normal
+89,2105,32.9,Mild Stress
+124,322,76.3,High Stress
+101,1203,51.2,Moderate Stress
+118,903,69.2,Moderate Stress
+135,408,83.0,High Stress
+100,917,55.3,Moderate Stress
+77,2902,20.5,Normal
+59,3033,19.4,Relaxed
+86,1479,41.2,Mild Stress
+103,748,62.8,Moderate Stress
+104,1246,56.3,Moderate Stress
+64,2937,14.6,Relaxed
+64,3878,8.9,Relaxed
+66,3284,17.9,Relaxed
+103,1344,52.9,Moderate Stress
+72,1761,36.7,Normal
+87,1904,41.9,Mild Stress
+128,472,79.3,High Stress
+94,1986,40.7,Mild Stress
+88,1132,47.9,Mild Stress
+77,2927,26.9,Normal
+79,2608,34.8,Normal
+73,2522,24.7,Normal
+95,2291,38.6,Mild Stress
+113,971,63.3,Moderate Stress
+63,3103,13.0,Relaxed
+102,1241,57.0,Moderate Stress
+107,854,60.2,Moderate Stress
+84,3158,29.5,Normal
+80,2011,37.3,Normal
+138,700,83.5,High Stress
+58,2721,22.3,Relaxed
+107,823,64.0,Moderate Stress
+141,757,82.2,High Stress
+150,412,87.7,High Stress
+111,1505,54.4,Moderate Stress
+107,1242,58.8,Moderate Stress
+109,1243,63.9,Moderate Stress
+98,1347,59.7,Moderate Stress
+79,1884,43.2,Normal
+111,691,70.5,Moderate Stress
+131,490,75.6,High Stress
+79,2690,26.5,Normal
+98,945,53.3,Moderate Stress
+122,839,72.7,Moderate Stress
+113,1008,65.0,Moderate Stress
+122,502,69.8,High Stress
+146,752,84.9,High Stress
+103,2059,50.3,Mild Stress
+76,3109,30.6,Normal
+64,3613,12.6,Relaxed
+63,3136,14.8,Relaxed
+63,3290,10.9,Relaxed
+116,1431,65.2,Moderate Stress
+108,1636,60.8,Moderate Stress
+66,2942,13.7,Relaxed
+86,2523,38.1,Normal
+99,1714,47.0,Mild Stress
+112,825,68.0,Moderate Stress
+102,1516,47.6,Moderate Stress
+78,2870,23.8,Normal
+62,3324,15.7,Relaxed
+80,2363,33.0,Mild Stress
+76,2456,29.5,Normal
+80,1381,38.0,Normal
+148,826,85.5,High Stress
+62,3083,15.5,Relaxed
+79,2726,26.6,Normal
+97,1669,51.5,Mild Stress
+92,1951,42.7,Mild Stress
+58,3353,14.4,Relaxed
+92,1963,49.8,Mild Stress
+73,3024,22.6,Normal
+109,565,60.6,Moderate Stress
+129,387,81.6,High Stress
+61,3550,8.9,Relaxed
+89,2257,33.8,Mild Stress
+134,708,76.0,High Stress
+111,731,63.6,Moderate Stress
+139,1019,75.9,High Stress
+117,1285,69.8,Moderate Stress
+118,1120,64.1,Moderate Stress
+72,2176,33.3,Normal
+136,851,77.9,High Stress
+89,2207,37.2,Mild Stress
+88,1964,36.6,Mild Stress
+111,1048,65.9,Moderate Stress
+139,164,90.6,High Stress
+138,621,78.7,High Stress
+109,1391,54.8,Moderate Stress
+73,2440,39.1,Normal
+103,826,56.6,Moderate Stress
+126,659,75.1,High Stress
+117,1115,63.3,Moderate Stress
+138,542,77.1,High Stress
+56,3624,4.4,Relaxed
+108,931,61.2,Moderate Stress
+134,784,74.9,High Stress
+91,2190,44.7,Mild Stress
+125,369,72.0,High Stress
+79,3028,25.9,Normal
+62,3356,9.4,Relaxed
+86,1885,39.3,Mild Stress
+61,3072,16.8,Relaxed
+85,1432,41.4,Mild Stress
+96,1850,44.8,Mild Stress
+87,2074,43.4,Mild Stress
+130,272,80.7,High Stress
+107,1434,63.3,Moderate Stress
+112,1265,56.9,Moderate Stress
+102,1351,49.9,Moderate Stress
+110,1064,60.3,Moderate Stress
+99,2453,52.8,Mild Stress
+70,2187,29.5,Normal
+93,1755,50.1,Mild Stress
+63,3425,11.6,Relaxed
+78,2576,31.2,Normal
+80,2992,28.9,Normal
+88,2050,45.4,Mild Stress
+72,2405,24.3,Normal
+89,1899,37.1,Mild Stress
+121,665,63.6,High Stress
+121,362,70.4,High Stress
+75,2351,28.6,Normal
+105,1065,50.5,Moderate Stress
+61,3707,13.3,Relaxed
+138,689,78.3,High Stress
+132,434,79.7,High Stress
+141,687,89.8,High Stress
+76,3033,23.4,Normal
+84,2007,41.5,Mild Stress
+108,711,69.2,Moderate Stress
+95,2455,38.3,Mild Stress
+92,1977,34.2,Mild Stress
+118,1300,67.0,Moderate Stress
+145,1117,78.8,High Stress
+117,1586,58.3,Moderate Stress
+70,3962,12.3,Relaxed
+151,492,83.9,High Stress
+79,2738,35.9,Normal
+137,720,83.6,High Stress
+76,1701,47.9,Normal
+157,112,96.7,High Stress
+62,3324,14.4,Relaxed
+75,2884,28.0,Normal
+103,1256,55.3,Moderate Stress
+78,2252,33.7,Normal
+62,3704,12.6,Relaxed
+144,564,88.0,High Stress
+70,2887,17.6,Normal
+94,1848,47.5,Mild Stress
+75,2808,23.7,Normal
+134,153,79.6,High Stress
+92,1671,43.5,Mild Stress
+81,2211,32.6,Normal
+91,3006,29.6,Normal
+137,774,77.6,High Stress
+150,594,91.5,High Stress
+104,1123,56.3,Moderate Stress
+59,3240,14.6,Relaxed
+105,781,65.8,Moderate Stress
+92,2198,44.9,Mild Stress
+74,3378,20.9,Normal
+138,394,85.1,High Stress
+71,2683,24.8,Normal
+100,886,63.3,Moderate Stress
+138,267,84.1,High Stress
+105,1479,61.8,Moderate Stress
+64,3529,20.2,Relaxed
+122,686,72.6,High Stress
+73,2049,36.6,Normal
+130,869,73.1,High Stress
+101,1293,52.9,Moderate Stress
+65,4095,11.8,Relaxed
+80,2609,39.0,Normal
+138,1020,80.3,High Stress
+108,1018,62.4,Moderate Stress
+109,898,62.9,Moderate Stress
+103,1193,56.8,Moderate Stress
+54,3467,9.5,Relaxed
+60,3160,15.6,Relaxed
+68,2626,25.9,Normal
+55,3901,12.6,Relaxed
+77,2574,34.3,Normal
+122,1425,62.7,Moderate Stress
+132,951,80.0,High Stress
+114,1335,62.5,Moderate Stress
+78,2987,30.5,Normal
+113,1087,60.4,Moderate Stress
+106,1284,63.3,Moderate Stress
+93,1653,38.3,Mild Stress
+113,1303,61.8,Moderate Stress
+54,3780,5.9,Relaxed
+130,699,81.9,High Stress
+110,1335,60.1,Moderate Stress
+60,3398,17.0,Relaxed
+78,2034,37.8,Normal
+62,3145,16.3,Relaxed
+103,1374,52.5,Moderate Stress
+95,1551,48.2,Mild Stress
+135,548,84.9,High Stress
+75,3242,21.7,Normal
+77,2523,34.1,Normal
+95,2038,44.5,Mild Stress
+104,1218,54.3,Moderate Stress
+129,756,78.2,High Stress
+144,665,89.0,High Stress
+116,1364,58.2,Moderate Stress
+133,511,83.4,High Stress
+115,767,65.8,Moderate Stress
+152,586,89.3,High Stress
+133,863,77.4,High Stress
+88,1535,40.0,Mild Stress
+74,2488,28.9,Normal
+116,1079,65.5,Moderate Stress
+75,3027,25.3,Normal
+68,2451,24.2,Normal
+76,2866,25.4,Normal
+108,815,59.2,Moderate Stress
+72,1829,36.2,Normal
+71,2855,30.1,Normal
+130,556,77.4,High Stress
+57,3848,17.3,Relaxed
+106,1205,63.2,Moderate Stress
+92,1493,49.7,Mild Stress
+143,952,86.1,High Stress
+84,2530,31.5,Mild Stress
+90,1948,45.2,Mild Stress
+110,1623,52.7,Moderate Stress
+75,2466,24.7,Normal
+61,3218,13.0,Relaxed
+89,1636,47.7,Mild Stress
+88,1641,45.5,Mild Stress
+134,612,85.1,High Stress
+109,842,70.1,Moderate Stress
+75,2419,28.6,Normal
+138,298,79.6,High Stress
+85,2922,28.4,Normal
+103,1304,57.1,Moderate Stress
+81,1997,37.6,Normal
+116,943,66.7,Moderate Stress
+80,2512,31.9,Normal
+90,1900,48.3,Mild Stress
+83,3030,29.7,Normal
+112,503,74.4,Moderate Stress
+69,2817,23.5,Relaxed
+110,1089,64.7,Moderate Stress
+77,3075,27.9,Normal
+66,2520,20.5,Normal
+83,2746,24.5,Normal
+66,3189,14.5,Relaxed
+59,3453,10.3,Relaxed
+63,3193,16.6,Relaxed
+62,3409,11.4,Relaxed
+71,3467,24.3,Relaxed
+63,3078,20.3,Relaxed
+62,3110,17.6,Relaxed
+129,484,76.2,High Stress
+89,1827,40.6,Mild Stress
+88,2121,42.7,Mild Stress
+140,533,80.3,High Stress
+133,682,73.5,High Stress
+135,641,80.8,High Stress
+104,1162,58.4,Moderate Stress
+85,1489,40.6,Mild Stress
+57,2799,11.3,Relaxed
+105,1341,62.6,Moderate Stress
+80,2103,38.8,Normal
+120,1125,71.6,Moderate Stress
+66,3488,15.2,Relaxed
+91,1884,48.0,Mild Stress
+90,2014,49.9,Mild Stress
+145,856,85.4,High Stress
+81,2298,36.0,Mild Stress
+106,814,66.5,Moderate Stress
+61,3675,8.0,Relaxed
+94,1782,45.1,Mild Stress
+113,1098,63.8,Moderate Stress
+65,3032,19.6,Relaxed
+141,684,80.9,High Stress
+103,867,48.3,Moderate Stress
+59,3751,10.1,Relaxed
+74,2772,18.6,Normal
+92,1774,46.4,Mild Stress
+79,2116,39.8,Normal
+85,1892,38.8,Mild Stress
+72,2867,22.0,Normal
+111,1333,58.3,Moderate Stress
+116,1026,71.2,Moderate Stress
+102,2057,49.4,Mild Stress
+78,2337,28.3,Normal
+68,3397,14.2,Relaxed
+91,1756,44.2,Mild Stress
+100,834,59.8,Moderate Stress
+87,2355,41.3,Mild Stress
+93,1591,45.7,Mild Stress
+100,1067,63.3,Moderate Stress
+93,1856,45.9,Mild Stress
+111,1544,57.5,Moderate Stress
+62,3485,20.5,Relaxed
+78,2107,32.3,Normal
+81,2327,33.7,Normal
+88,1827,45.1,Mild Stress
+87,1726,42.0,Mild Stress
+65,3021,18.0,Relaxed
+134,528,79.9,High Stress
+111,556,63.8,Moderate Stress
+80,1748,36.1,Mild Stress
+86,2792,39.2,Normal
+117,944,68.7,Moderate Stress
+68,3324,20.7,Relaxed
+119,1236,62.3,Moderate Stress
+74,2811,23.5,Normal
+140,921,89.4,High Stress
+59,3071,12.7,Relaxed
+67,2304,25.1,Normal
+117,1387,66.9,Moderate Stress
+58,3185,15.8,Relaxed
+79,2161,30.7,Normal
+80,3316,26.8,Normal
+58,3362,17.3,Relaxed
+85,2017,30.6,Normal
+101,706,66.3,Moderate Stress
+138,926,80.8,High Stress
+107,1204,57.9,Moderate Stress
+107,1076,61.9,Moderate Stress
+60,3367,6.4,Relaxed
+116,1251,73.6,Moderate Stress
+70,2924,25.9,Normal
+128,568,74.6,High Stress
+100,1509,50.0,Moderate Stress
+75,2903,24.7,Normal
+90,1193,47.7,Mild Stress
+77,2604,23.7,Normal
+74,3010,24.6,Normal
+76,3092,29.4,Normal
+79,2310,28.6,Normal
+71,2667,24.3,Normal
+126,1019,69.7,Moderate Stress
+74,2677,27.1,Normal
+111,1041,63.9,Moderate Stress
+60,3629,1.4,Relaxed
+127,960,67.9,High Stress
+69,3551,15.2,Relaxed
+129,697,81.0,High Stress
+115,1146,65.1,Moderate Stress
+130,506,83.4,High Stress
+132,197,91.7,High Stress
+107,808,64.5,Moderate Stress
+105,770,62.6,Moderate Stress
+77,2802,31.5,Normal
+81,1432,40.7,Mild Stress
+75,1446,36.1,Normal
+60,3448,6.9,Relaxed
+83,2789,25.8,Normal
+64,3827,10.6,Relaxed
+83,2720,29.0,Normal
+98,1600,53.1,Mild Stress
+118,1329,69.4,Moderate Stress
+74,2618,27.8,Normal
+62,3275,17.4,Relaxed
+73,2411,28.2,Normal
+115,1555,56.4,Moderate Stress
+133,536,81.8,High Stress
+64,3299,6.9,Relaxed
+89,1692,43.6,Mild Stress
+143,776,87.1,High Stress
+72,2922,22.4,Normal
+59,3294,12.0,Relaxed
+73,2536,24.1,Normal
+78,1351,41.8,Mild Stress
+110,1224,59.3,Moderate Stress
+72,3101,20.8,Normal
+138,806,74.3,High Stress
+82,1816,41.6,Mild Stress
+82,2128,33.9,Mild Stress
+79,2715,26.9,Normal
+82,2307,30.8,Normal
+59,3061,13.3,Relaxed
+144,736,80.7,High Stress
+112,1415,52.8,Moderate Stress
+82,2618,35.2,Normal
+90,1844,36.2,Mild Stress
+83,2098,34.5,Mild Stress
+64,3347,10.6,Relaxed
+66,3739,4.5,Relaxed
+79,3032,35.8,Normal
+77,2653,32.6,Normal
+135,730,80.5,High Stress
+82,2454,30.5,Normal
+134,800,75.8,High Stress
+125,801,71.7,High Stress
+108,1371,61.3,Moderate Stress
+100,1880,50.8,Mild Stress
+135,1360,81.4,High Stress
+71,3034,21.3,Normal
+98,2514,48.6,Mild Stress
+125,140,82.3,High Stress
+65,3244,13.8,Relaxed
+110,717,65.7,Moderate Stress
+77,2199,27.2,Normal
+139,521,79.0,High Stress
+62,3229,7.7,Relaxed
+113,1291,57.7,Moderate Stress
+103,1637,55.8,Moderate Stress
+102,1605,47.6,Moderate Stress
+107,1785,52.5,Moderate Stress
+63,3699,16.8,Relaxed
+111,1416,58.3,Moderate Stress
+79,2650,30.0,Normal
+69,2855,19.7,Normal
+143,670,85.3,High Stress
+75,2438,25.8,Normal
+72,2982,22.9,Normal
+79,3511,18.3,Normal
+85,1673,44.5,Mild Stress
+89,1398,44.5,Mild Stress
+93,2567,28.8,Mild Stress
+133,637,84.2,High Stress
+77,2571,29.1,Normal
+79,2942,23.7,Normal
+89,1768,46.9,Mild Stress
+130,637,68.6,High Stress
+52,3285,4.6,Relaxed
+118,1085,64.2,High Stress
+133,385,87.1,High Stress
+137,0,88.4,High Stress
+74,3212,25.6,Normal
+101,902,58.6,Moderate Stress
+112,1307,66.2,Moderate Stress
+73,3487,15.9,Normal
+55,3581,9.7,Relaxed
+140,707,74.5,High Stress
+69,2627,23.8,Normal
+69,3088,17.0,Normal
+81,2876,30.9,Normal
+92,1210,48.6,Mild Stress
+63,3730,10.3,Relaxed
+67,3595,12.2,Relaxed
+119,757,77.2,Moderate Stress
+91,1934,47.6,Mild Stress
+89,2210,38.2,Mild Stress
+58,3063,18.7,Relaxed
+57,3533,11.2,Relaxed
+73,2689,33.4,Normal
+77,3167,22.3,Normal
+92,1854,42.3,Mild Stress
+142,453,84.3,High Stress
+110,1616,56.7,Moderate Stress
+87,1517,40.3,Mild Stress
+64,3339,20.0,Relaxed
+102,971,59.3,Moderate Stress
+127,919,74.3,High Stress
+58,3335,18.3,Relaxed
+99,1038,63.3,Moderate Stress
+98,2321,42.3,Mild Stress
+125,492,79.3,High Stress
+65,3296,13.5,Relaxed
+116,1604,62.1,Moderate Stress
+128,134,79.9,High Stress
+58,3534,6.0,Relaxed
+79,3669,18.1,Normal
+71,3107,18.7,Normal
+102,2117,49.1,Mild Stress
+141,825,91.1,High Stress
+109,948,64.5,Moderate Stress
+93,1899,51.9,Mild Stress
+87,1640,44.5,Mild Stress
+72,3812,19.2,Relaxed
+98,1162,52.6,Moderate Stress
+84,1988,40.4,Mild Stress
+150,260,92.1,High Stress
+59,3331,10.8,Relaxed
+128,796,75.2,High Stress
+140,396,86.0,High Stress
+99,1208,59.7,Mild Stress
+90,921,59.5,Mild Stress
+110,1210,62.6,Moderate Stress
+128,0,83.9,High Stress
+132,710,77.9,High Stress
+97,2411,42.2,Mild Stress
+58,2905,11.5,Relaxed
+141,827,73.0,High Stress
+66,2963,20.5,Relaxed
+80,3021,29.8,Normal
+65,3626,18.9,Relaxed
+124,456,73.1,High Stress
+107,1485,57.3,Moderate Stress
+114,853,76.3,Moderate Stress
+78,1870,36.0,Normal
+81,1249,43.8,Mild Stress
+74,2739,23.8,Normal
+106,999,58.4,Moderate Stress
+124,632,76.6,High Stress
+85,2394,45.7,Normal
+110,975,64.9,Moderate Stress
+81,2218,38.0,Normal
+89,1721,50.1,Mild Stress
+56,3866,0.0,Relaxed
+108,726,59.0,Moderate Stress
+78,2813,31.2,Normal
+90,1332,49.1,Mild Stress
+67,3778,19.4,Relaxed
+82,1349,46.0,Mild Stress
+108,943,63.5,Moderate Stress
+130,827,83.6,High Stress
+109,1854,56.0,Moderate Stress
+115,894,68.7,Moderate Stress
+62,3549,10.8,Relaxed
+84,1522,46.4,Mild Stress
+131,389,82.9,High Stress
+84,2696,34.7,Normal
+57,3641,13.4,Relaxed
+84,2302,36.0,Normal
+87,2124,42.2,Mild Stress
+114,663,72.3,Moderate Stress
+62,3708,8.0,Relaxed
+66,3487,17.4,Relaxed
+75,2021,41.1,Normal
+134,1045,77.3,High Stress
+89,722,51.7,Mild Stress
+56,3437,7.7,Relaxed
+150,1283,85.0,High Stress
+58,3476,10.1,Relaxed
+76,2663,33.8,Normal
+92,2075,48.6,Mild Stress
+127,657,77.7,High Stress
+93,2308,47.6,Mild Stress
+67,3583,21.5,Relaxed
+64,3565,16.9,Relaxed
+143,659,81.0,High Stress
+145,685,86.9,High Stress
+73,3606,15.7,Normal
+68,3307,19.9,Relaxed
+92,1955,45.4,Mild Stress
+65,3341,16.9,Relaxed
+104,1957,50.1,Mild Stress
+79,2745,29.7,Normal
+57,2884,17.0,Relaxed
+56,3647,6.8,Relaxed
+132,762,74.0,High Stress
+73,2766,29.9,Normal
+94,1244,48.9,Moderate Stress
+109,1159,57.1,Moderate Stress
+141,530,83.1,High Stress
+102,1433,56.9,Moderate Stress
+111,1620,55.7,Moderate Stress
+110,1221,58.3,Moderate Stress
+114,1593,65.7,Moderate Stress
+63,3505,5.2,Relaxed
+53,3056,8.0,Relaxed
+59,3570,7.7,Relaxed
+68,2744,26.7,Relaxed
+95,1537,51.5,Moderate Stress
+59,3268,12.5,Relaxed
+137,211,79.5,High Stress
+64,3209,11.7,Relaxed
+107,1496,55.2,Moderate Stress
+129,459,80.6,High Stress
+64,3065,19.1,Relaxed
+108,1411,64.9,Moderate Stress
+60,3748,10.8,Relaxed
+119,1177,65.6,Moderate Stress
+89,1863,40.0,Mild Stress
+98,884,61.9,Moderate Stress
+53,3230,7.9,Relaxed
+139,651,82.8,High Stress
+148,264,91.4,High Stress
+73,2840,18.8,Normal
+66,2792,23.0,Normal
+113,1254,58.8,Moderate Stress
+113,589,67.8,Moderate Stress
+67,2990,27.6,Relaxed
+78,2850,27.2,Normal
+90,1248,43.7,Mild Stress
+107,1217,63.9,Moderate Stress
+102,2148,52.8,Mild Stress
+124,414,74.2,High Stress
+75,2449,26.3,Normal
+57,3180,19.6,Relaxed
+120,591,69.8,High Stress
+65,2924,23.0,Relaxed
+134,905,75.5,High Stress
+130,708,70.9,High Stress
+72,3329,21.4,Normal
+65,2911,19.5,Relaxed
+128,593,79.8,High Stress
+64,2933,25.6,Relaxed
+111,1084,58.2,Moderate Stress
+55,3244,11.7,Relaxed
+94,1863,45.3,Mild Stress
+116,1021,63.1,Moderate Stress
+64,3228,21.9,Relaxed
+102,1608,45.8,Mild Stress
+99,1094,56.2,Moderate Stress
+87,1694,43.6,Mild Stress
+116,951,69.4,Moderate Stress
+113,828,67.9,Moderate Stress
+84,1381,45.0,Mild Stress
+94,1465,54.8,Mild Stress
+71,2823,17.9,Normal
+80,3061,27.3,Normal
+131,1026,68.6,High Stress
+91,2166,39.1,Mild Stress
+61,3621,10.1,Relaxed
+104,1462,53.9,Moderate Stress
+141,806,79.8,High Stress
+73,3151,21.9,Normal
+60,2771,24.3,Relaxed
+132,741,76.1,High Stress
+95,1789,45.8,Mild Stress
+125,371,73.8,High Stress
+68,2742,23.4,Normal
+103,258,66.5,Moderate Stress
+60,2275,21.4,Relaxed
+75,2570,30.6,Normal
+108,1286,56.7,Moderate Stress
+100,1073,52.8,Mild Stress
+146,786,90.2,High Stress
+104,1203,49.6,Moderate Stress
+73,2179,28.6,Normal
+111,948,60.7,Moderate Stress
+65,3610,11.1,Relaxed
+62,3147,15.6,Relaxed
+76,2893,28.5,Normal
+106,879,62.9,Moderate Stress
+90,1317,52.7,Mild Stress
+106,1622,52.7,Mild Stress
+137,794,76.0,High Stress
+115,1379,62.5,Moderate Stress
+116,1214,70.4,Moderate Stress
+82,2158,39.1,Normal
+64,4095,3.6,Relaxed
+136,521,79.3,High Stress
+133,935,70.6,High Stress
+145,100,93.0,High Stress
+83,3060,25.9,Normal
+98,2106,45.4,Mild Stress
+62,3186,15.6,Relaxed
+69,3464,21.5,Relaxed
+107,896,60.9,Moderate Stress
+83,2681,33.8,Normal
+67,3169,18.0,Relaxed
+72,3319,24.5,Relaxed
+78,2662,28.1,Normal
+123,876,75.4,High Stress
+144,399,84.7,High Stress
+94,2108,41.7,Mild Stress
+70,2729,23.3,Normal
+133,278,80.0,High Stress
+98,1183,57.6,Moderate Stress
+127,804,72.7,High Stress
+128,348,74.0,High Stress
+100,1019,54.8,Moderate Stress
+81,2803,23.9,Normal
+83,2244,32.2,Normal
+84,2294,44.2,Normal
+135,759,77.7,High Stress
+94,2188,38.5,Mild Stress
+92,2205,45.2,Mild Stress
+117,1125,74.9,Moderate Stress
+55,3957,5.8,Relaxed
+130,641,81.0,High Stress
+82,2242,34.8,Mild Stress
+63,3661,6.0,Relaxed
+71,2912,26.1,Normal
+111,852,62.8,Moderate Stress
+81,2773,24.3,Normal
+123,977,70.1,High Stress
+59,2819,20.1,Relaxed
+93,1692,45.8,Mild Stress
+95,1808,47.0,Mild Stress
+129,762,77.4,High Stress
+77,2634,36.6,Normal
+70,2354,30.8,Normal
+62,2922,23.0,Relaxed
+65,3946,6.2,Relaxed
+125,494,76.2,High Stress
+139,973,75.6,High Stress
+87,1918,35.2,Mild Stress
+71,1885,28.8,Normal
+97,1269,52.0,Moderate Stress
+112,440,69.0,High Stress
+139,1016,73.9,High Stress
+71,3132,26.2,Normal
+81,2482,31.7,Normal
+63,3337,12.3,Relaxed
+63,3241,13.8,Relaxed
+132,1269,62.1,High Stress
+76,3587,12.0,Normal
+128,228,77.1,High Stress
+84,2170,33.4,Normal
+109,818,63.6,Moderate Stress
+116,987,63.6,Moderate Stress
+141,706,76.1,High Stress
+111,1304,57.3,Moderate Stress
+84,2717,37.2,Normal
+74,2382,27.7,Normal
+142,959,81.1,High Stress
+120,270,85.2,High Stress
+60,4024,0.0,Relaxed
+65,2915,21.8,Relaxed
+107,1529,50.1,Mild Stress
+69,3480,16.6,Relaxed
+115,863,62.4,Moderate Stress
+100,2267,37.9,Mild Stress
+137,619,82.2,High Stress
+66,2291,23.9,Normal
+117,855,68.8,Moderate Stress
+107,1466,61.2,Moderate Stress
+59,3365,20.0,Relaxed
+70,2406,27.8,Normal
+107,1214,53.4,Moderate Stress
+133,443,77.9,High Stress
+145,642,86.8,High Stress
+76,2597,25.7,Normal
+140,508,82.9,High Stress
+105,2407,48.2,Mild Stress
+65,3014,16.6,Relaxed
+129,152,76.3,High Stress
+111,991,59.2,Moderate Stress
+137,613,81.2,High Stress
+104,1536,55.2,Moderate Stress
+140,355,80.4,High Stress
+65,3254,17.7,Relaxed
+131,959,82.1,High Stress
+66,2923,21.5,Relaxed
+74,2768,21.6,Normal
+114,1095,58.4,Moderate Stress
+133,428,79.7,High Stress
+99,1921,52.2,Mild Stress
+89,1602,45.5,Mild Stress
+98,1858,51.5,Mild Stress
+92,1532,42.5,Mild Stress
+134,450,81.8,High Stress
+56,2747,14.8,Relaxed
+109,1250,59.7,Moderate Stress
+65,2994,14.0,Normal
+95,1578,45.8,Mild Stress
+99,1920,40.9,Mild Stress
+59,3287,0.8,Relaxed
+110,977,57.5,Moderate Stress
+121,590,77.0,High Stress
+67,3265,9.0,Relaxed
+136,595,84.9,High Stress
+61,3134,17.3,Relaxed
+56,3685,11.4,Relaxed
+110,549,65.3,Moderate Stress
+96,2262,46.1,Mild Stress
+85,2077,39.7,Mild Stress
+110,726,65.3,Moderate Stress
+68,3302,12.0,Relaxed
+61,3096,16.9,Relaxed
+91,2133,44.0,Mild Stress
+70,3395,15.7,Relaxed
+80,2283,30.9,Mild Stress
+63,3080,19.7,Relaxed
+107,1113,67.1,Moderate Stress
+110,1479,64.2,Moderate Stress
+94,1501,45.5,Mild Stress
+107,1035,61.3,Moderate Stress
+114,892,63.4,Moderate Stress
+87,2847,29.1,Normal
+63,3157,13.2,Relaxed
+139,449,82.1,High Stress
+90,2107,40.3,Mild Stress
+81,1928,33.3,Normal
+59,3435,6.8,Relaxed
+61,3072,11.5,Relaxed
+91,1741,39.5,Mild Stress
+81,2032,37.0,Normal
+89,1740,44.6,Mild Stress
+70,2858,17.2,Relaxed
+81,2928,25.9,Normal
+59,3545,9.4,Relaxed
+105,1027,58.0,Moderate Stress
+106,834,65.7,Moderate Stress
+63,3540,10.0,Relaxed
+117,1351,65.4,Moderate Stress
+93,1437,47.7,Mild Stress
+76,2425,30.6,Normal
+69,2398,28.9,Normal
+56,3862,1.5,Relaxed
+82,1770,35.9,Mild Stress
+89,1439,47.9,Mild Stress
+58,3502,9.2,Relaxed
+122,1643,57.4,Moderate Stress
+109,1272,61.4,Moderate Stress
+110,1531,64.0,Moderate Stress
+58,3361,13.2,Relaxed
+93,1932,41.1,Mild Stress
+134,396,86.5,High Stress
+106,936,58.2,Moderate Stress
+80,2616,31.1,Normal
+125,10,81.4,High Stress
+71,2814,22.0,Normal
+73,3528,11.8,Normal
+67,3304,14.7,Normal
+64,3326,11.8,Relaxed
+84,2627,34.8,Normal
+93,2155,42.0,Mild Stress
+66,3007,16.2,Relaxed
+113,1469,58.2,Moderate Stress
+95,1785,46.4,Mild Stress
+84,2308,37.1,Mild Stress
+130,831,75.9,High Stress
+94,2218,41.7,Mild Stress
+97,1417,48.6,Mild Stress
+68,2609,26.4,Relaxed
+91,1840,37.9,Mild Stress
+86,2242,32.9,Normal
+107,1340,58.3,Moderate Stress
+131,128,88.9,High Stress
+60,3617,0.0,Relaxed
+130,223,78.9,High Stress
+102,402,61.9,Moderate Stress
+134,799,84.4,High Stress
+88,2067,38.3,Mild Stress
+132,444,75.3,High Stress
+57,2390,21.5,Relaxed
+74,1679,34.3,Normal
+93,3605,30.0,Normal
+120,1531,63.1,Moderate Stress
+92,1956,46.3,Mild Stress
+130,835,67.6,High Stress
+91,1916,45.7,Mild Stress
+76,2880,24.7,Normal
+93,1625,41.0,Mild Stress
+84,1390,47.7,Mild Stress
+94,1629,49.0,Mild Stress
+97,2323,44.3,Mild Stress
+102,1401,55.2,Moderate Stress
+91,1571,52.0,Mild Stress
+104,1506,57.3,Moderate Stress
+110,828,65.7,Moderate Stress
+85,2731,34.1,Normal
+109,578,59.1,Moderate Stress
+132,716,74.7,High Stress
+147,759,78.2,High Stress
+83,1189,45.3,Mild Stress
+81,2904,27.1,Normal
+129,749,75.1,High Stress
+80,2728,28.7,Normal
+76,2631,27.4,Normal
+147,860,81.5,High Stress
+85,2041,42.3,Mild Stress
+93,2336,44.3,Mild Stress
+133,369,72.3,High Stress
+96,1932,50.5,Mild Stress
+140,393,87.1,High Stress
+113,1709,61.5,Moderate Stress
+72,2785,27.7,Normal
+105,1230,57.0,Moderate Stress
+66,3527,8.8,Relaxed
+67,3034,16.2,Relaxed
+111,1613,59.7,Moderate Stress
+70,2887,18.6,Normal
+120,1026,71.2,Moderate Stress
+63,2868,20.6,Relaxed
+64,4095,4.8,Relaxed
+69,3472,19.5,Relaxed
+135,507,88.7,High Stress
+79,2878,31.4,Normal
+72,1841,32.4,Normal
+98,2540,40.5,Mild Stress
+53,2784,12.4,Relaxed
+60,3290,17.0,Relaxed
+100,1319,57.8,Moderate Stress
+62,3599,12.5,Relaxed
+115,1125,63.5,Moderate Stress
+146,462,84.2,High Stress
+71,2509,24.7,Normal
+106,1718,55.8,Moderate Stress
+78,2221,29.4,Normal
+63,3663,4.2,Relaxed
+85,2818,32.1,Normal
+112,1222,62.2,Moderate Stress
+59,3596,11.6,Relaxed
+76,2936,29.1,Normal
+90,1870,44.5,Mild Stress
+108,1050,71.1,Moderate Stress
+136,1155,76.1,High Stress
+135,562,90.8,High Stress
+96,1774,41.0,Mild Stress
+139,730,75.3,High Stress
+138,865,86.0,High Stress
+75,2975,27.7,Normal
+84,2853,37.0,Normal
+88,2712,31.9,Normal
+81,3098,17.4,Normal
+67,3013,26.9,Relaxed
+139,864,83.3,High Stress
+106,702,69.0,Moderate Stress
+83,1372,42.9,Mild Stress
+67,3144,21.6,Relaxed
+111,1457,48.8,Moderate Stress
+63,2805,23.2,Relaxed
+65,3183,19.3,Relaxed
+65,3318,12.6,Relaxed
+94,2325,40.9,Mild Stress
+117,1418,67.1,Moderate Stress
+88,1973,43.1,Mild Stress
+60,3447,9.6,Relaxed
+94,2031,43.2,Mild Stress
+87,1736,45.6,Mild Stress
+116,1084,71.4,Moderate Stress
+72,2538,28.8,Normal
+68,2640,25.8,Normal
+73,2713,27.7,Normal
+78,2769,25.0,Normal
+141,453,90.8,High Stress
+84,2798,29.8,Normal
+96,2798,38.6,Mild Stress
+119,1159,63.3,Moderate Stress
+139,294,91.8,High Stress
+65,3388,13.9,Relaxed
+76,2844,38.8,Normal
+78,3180,23.9,Normal
+88,2207,33.5,Mild Stress
+88,1446,46.6,Mild Stress
+87,1558,41.7,Mild Stress
+141,902,86.3,High Stress
+141,476,79.5,High Stress
+60,3356,12.5,Relaxed
+151,271,97.6,High Stress
+103,1602,51.8,Moderate Stress
+107,1126,57.2,Moderate Stress
+78,2884,18.4,Normal
+112,1839,60.1,Moderate Stress
+117,21,79.9,High Stress
+65,3288,5.1,Relaxed
+102,951,56.8,Moderate Stress
+82,2845,28.2,Normal
+83,2646,36.7,Normal
+59,3890,3.9,Relaxed
+97,559,62.5,Mild Stress
+134,744,83.4,High Stress
+86,1770,40.8,Mild Stress
+78,2708,26.2,Normal
+79,2560,40.1,Normal
+60,3758,2.3,Relaxed
+113,1486,70.3,Moderate Stress
+79,3064,25.9,Normal
+109,402,62.7,Moderate Stress
+82,3115,24.0,Normal
+63,3390,13.7,Relaxed
+119,753,67.5,High Stress
+107,1208,62.2,Moderate Stress
+111,1623,60.3,Moderate Stress
+95,1021,59.0,Mild Stress
+130,816,78.6,High Stress
+130,242,81.0,High Stress
+91,1630,50.7,Mild Stress
+104,1270,56.7,Moderate Stress
+65,3523,9.5,Relaxed
+104,1091,56.2,Moderate Stress
+112,812,64.8,Moderate Stress
+61,3717,10.5,Relaxed
+90,2187,46.5,Mild Stress
+149,548,81.8,High Stress
+96,1964,50.6,Mild Stress
+55,3440,10.1,Relaxed
+53,3583,2.6,Relaxed
+59,3295,13.1,Relaxed
+136,672,86.5,High Stress
+66,3302,22.4,Relaxed
+128,345,79.7,High Stress
+87,1506,48.6,Mild Stress
+141,361,84.5,High Stress
+68,2967,24.7,Normal
+108,1612,58.1,Moderate Stress
+100,2188,41.6,Mild Stress
+88,2802,37.4,Mild Stress
+138,945,79.8,High Stress
+59,3357,9.5,Relaxed
+120,884,67.1,Moderate Stress
+133,890,75.7,High Stress
+98,1671,55.2,Mild Stress
+56,2802,20.7,Relaxed
+89,1222,51.8,Mild Stress
+72,2953,24.2,Normal
+75,2260,30.9,Normal
+103,1150,58.1,Moderate Stress
+56,3510,7.0,Relaxed
+63,2947,22.6,Relaxed
+59,3472,6.4,Relaxed
+57,3070,20.3,Relaxed
+61,3190,12.4,Relaxed
+65,3255,15.5,Relaxed
+95,2025,50.4,Mild Stress
+64,4095,6.7,Relaxed
+110,1178,64.8,Moderate Stress
+63,3611,10.5,Relaxed
+137,1027,81.0,High Stress
+70,2141,29.1,Normal
+132,1054,75.8,High Stress
+117,1438,58.1,Moderate Stress
+72,2700,28.7,Normal
+138,727,85.4,High Stress
+73,2544,32.4,Normal
+58,3861,2.1,Relaxed
+56,3413,9.4,Relaxed
+85,1838,32.5,Mild Stress
+58,3461,12.3,Relaxed
+109,956,67.4,Moderate Stress
+69,3630,21.1,Relaxed
+61,3288,12.6,Relaxed
+107,776,63.2,Moderate Stress
+97,1950,54.0,Mild Stress
+77,2650,32.2,Normal
+75,3248,16.3,Normal
+126,1104,66.6,High Stress
+59,3366,11.3,Relaxed
+110,881,64.9,Moderate Stress
+89,2258,42.3,Mild Stress
+105,1517,54.2,Moderate Stress
+67,2604,21.0,Relaxed
+105,1125,60.0,Moderate Stress
+84,2213,32.5,Normal
+113,1246,58.4,Moderate Stress
+92,2220,41.5,Mild Stress
+113,1236,59.9,Moderate Stress
+56,3376,10.2,Relaxed
+64,2956,23.2,Relaxed
+127,236,78.0,High Stress
+57,3618,7.8,Relaxed
+102,987,62.7,Moderate Stress
+88,2511,39.5,Mild Stress
+69,1695,26.4,Normal
+92,1976,36.9,Mild Stress
+132,439,80.6,High Stress
+74,2595,26.0,Normal
+97,2300,46.3,Mild Stress
+91,1680,43.2,Mild Stress
+101,524,56.9,Moderate Stress
+100,1279,48.1,Moderate Stress
+71,2311,28.1,Normal
+139,491,85.0,High Stress
+147,781,84.2,High Stress
+73,3234,23.4,Relaxed
+140,431,90.0,High Stress
+75,2990,25.6,Normal
+59,3485,11.6,Relaxed
+112,1072,62.4,Moderate Stress
+64,4095,11.1,Relaxed
+91,1763,43.1,Mild Stress
+148,920,82.1,High Stress
+136,385,81.7,High Stress
+102,1881,46.9,Mild Stress
+129,868,76.4,High Stress
+62,3109,20.2,Relaxed
+69,2915,26.9,Relaxed
+65,3079,15.5,Normal
+140,352,85.0,High Stress
+88,2062,39.1,Mild Stress
+58,3713,8.5,Relaxed
+115,1066,67.3,Moderate Stress
+62,3321,12.3,Relaxed
+66,3349,19.6,Relaxed
+58,3458,3.2,Relaxed
+123,1019,67.5,High Stress
+121,228,70.6,High Stress
+107,981,63.2,Moderate Stress
+76,2300,32.4,Normal
+55,2931,11.2,Relaxed
+63,3684,7.8,Relaxed
+76,2374,32.5,Normal
+105,1391,63.3,Moderate Stress
+111,1186,62.9,Moderate Stress
+60,3525,11.0,Relaxed
+73,3337,19.8,Normal
+147,0,91.5,High Stress
+111,1470,65.0,Moderate Stress
+110,1019,64.9,Moderate Stress
+127,700,69.4,High Stress
+75,3273,21.5,Normal
+90,1687,47.3,Mild Stress
+101,1490,48.1,Moderate Stress
+80,3121,22.2,Normal
+130,731,80.8,High Stress
+115,1169,67.7,Moderate Stress
+87,1846,45.9,Mild Stress
+80,2913,27.0,Normal
+74,3091,22.7,Normal
+130,582,76.2,High Stress
+145,989,84.9,High Stress
+72,2945,20.6,Normal
+64,3161,16.8,Relaxed
+65,3734,12.8,Relaxed
+111,635,64.6,Moderate Stress
+76,2726,29.3,Normal
+60,3366,9.5,Relaxed
+80,2454,29.4,Normal
+99,1232,56.2,Moderate Stress
+115,1030,63.1,Moderate Stress
+135,335,79.9,High Stress
+109,1509,61.8,Moderate Stress
+92,1689,48.3,Mild Stress
+115,1187,65.8,Moderate Stress
+128,980,72.9,High Stress
+90,1690,52.5,Mild Stress
+85,1860,42.6,Mild Stress
+98,2039,47.4,Mild Stress
+60,2283,19.5,Relaxed
+97,1363,48.5,Moderate Stress
+77,2029,30.8,Normal
+58,3395,10.9,Relaxed
+63,2928,21.0,Relaxed
+129,936,74.5,High Stress
+107,1638,52.4,Moderate Stress
+130,307,84.3,High Stress
+145,868,85.1,High Stress
+136,887,75.3,High Stress
+112,748,62.5,Moderate Stress
+137,369,87.5,High Stress
+123,152,84.5,High Stress
+60,3567,14.0,Relaxed
+77,1913,35.6,Normal
+141,229,86.2,High Stress
+80,2731,31.7,Normal
+131,894,74.7,High Stress
+97,2309,47.0,Mild Stress
+91,1697,50.3,Mild Stress
+74,3122,19.2,Normal
+121,1193,55.4,Moderate Stress
+63,2834,20.3,Relaxed
+83,1178,60.0,Mild Stress
+58,3167,20.3,Relaxed
+134,983,77.4,High Stress
+129,466,75.8,High Stress
+103,1266,61.4,Moderate Stress
+130,0,82.6,High Stress
+113,1161,58.3,Moderate Stress
+100,1424,49.9,Moderate Stress
+73,2918,20.1,Normal
+102,604,65.0,Moderate Stress
+135,482,81.8,High Stress
+58,2351,28.4,Relaxed
+106,583,68.5,Moderate Stress
+74,2527,30.8,Normal
+118,481,71.7,High Stress
+103,1179,51.7,Moderate Stress
+129,109,86.3,High Stress
+65,3032,23.9,Relaxed
+63,3631,8.6,Relaxed
+100,1383,52.0,Mild Stress
+93,2112,47.3,Mild Stress
+111,1311,59.3,Moderate Stress
+63,2598,17.4,Relaxed
+80,2729,34.5,Normal
+146,635,86.8,High Stress
+90,1572,44.8,Mild Stress
+92,1499,47.7,Mild Stress
+64,2953,13.1,Relaxed
+134,370,85.4,High Stress
+78,1854,38.4,Mild Stress
+111,484,70.4,Moderate Stress
+107,2533,47.1,Mild Stress
+89,2515,38.9,Normal
+64,3855,9.6,Relaxed
+59,3512,11.4,Relaxed
+125,608,74.4,High Stress
+131,514,86.8,High Stress
+110,777,65.5,Moderate Stress
+57,3602,8.5,Relaxed
+98,2151,46.3,Mild Stress
+112,678,61.5,Moderate Stress
+73,2375,34.8,Normal
+81,2862,26.8,Normal
+120,667,62.1,High Stress
+60,3412,15.0,Relaxed
+76,3174,25.0,Normal
+122,1693,70.0,Moderate Stress
+127,734,77.7,High Stress
+67,3468,19.8,Relaxed
+113,1028,54.2,Moderate Stress
+111,638,68.5,Moderate Stress
+97,2246,49.7,Mild Stress
+131,469,79.8,High Stress
+79,3032,23.1,Normal
+88,1363,45.2,Mild Stress
+60,3495,14.0,Relaxed
+89,1445,47.3,Mild Stress
+97,2118,44.1,Mild Stress
+73,2908,26.9,Normal
+96,2388,44.8,Mild Stress
+69,3209,24.1,Relaxed
+71,3494,12.3,Relaxed
+63,3219,20.6,Relaxed
+138,923,80.9,High Stress
+107,1041,58.2,Moderate Stress
+101,2106,39.0,Mild Stress
+126,934,74.5,High Stress
+108,982,64.5,Moderate Stress
+67,2295,23.1,Normal
+58,3169,12.6,Relaxed
+80,3078,24.7,Normal
+101,1186,59.7,Moderate Stress
+101,1532,56.3,Moderate Stress
+82,2252,35.4,Normal
+109,1381,46.9,Moderate Stress
+144,693,80.1,High Stress
+99,1673,55.9,Mild Stress
+65,3886,7.4,Relaxed
+73,2339,27.5,Normal
+92,2152,39.8,Mild Stress
+91,1975,47.6,Mild Stress
+111,327,69.6,Moderate Stress
+88,2016,42.8,Mild Stress
+50,3646,1.9,Relaxed
+118,940,67.7,Moderate Stress
+123,644,73.9,High Stress
+100,1102,63.1,Mild Stress
+109,724,51.6,Moderate Stress
+85,2130,38.0,Mild Stress
+62,3708,15.9,Relaxed
+143,994,77.6,High Stress
+98,1989,42.0,Mild Stress
+77,1836,31.3,Mild Stress
+114,1154,62.6,Moderate Stress
+72,2103,30.2,Normal
+75,2766,23.9,Normal
+139,528,90.5,High Stress
+115,1023,64.4,Moderate Stress
+83,2127,36.2,Normal
+53,3884,3.8,Relaxed
+102,1939,50.8,Mild Stress
+54,3724,6.5,Relaxed
+89,2369,43.0,Mild Stress
+116,1253,72.3,Moderate Stress
+99,766,63.3,Moderate Stress
+101,2092,47.6,Mild Stress
+64,2731,18.8,Relaxed
+128,412,81.6,High Stress
+117,588,71.2,High Stress
+105,1172,58.4,Mild Stress
+89,1543,39.8,Mild Stress
+110,904,63.9,Moderate Stress
+91,2099,36.7,Mild Stress
+64,3450,13.8,Relaxed
+72,2931,25.6,Normal
+77,2076,28.4,Normal
+143,674,76.2,High Stress
+126,254,79.1,High Stress
+106,1387,51.2,Moderate Stress
+80,2321,32.8,Normal
+104,1726,50.1,Mild Stress
+138,1137,76.8,High Stress
+105,1622,52.3,Moderate Stress
+63,3259,9.2,Relaxed
+137,261,91.0,High Stress
+80,2795,29.4,Normal
+52,3260,13.1,Relaxed
+141,332,82.9,High Stress
+92,1482,45.9,Mild Stress
+77,2529,24.2,Normal
+143,902,85.6,High Stress
+104,899,60.0,Moderate Stress
+129,584,79.7,High Stress
+56,3532,9.4,Relaxed
+131,1092,74.6,High Stress
+115,1017,62.7,Moderate Stress
+59,3380,10.7,Relaxed
+110,1250,60.6,Moderate Stress
+73,2089,41.1,Normal
+141,337,86.1,High Stress
+103,1354,54.0,Mild Stress
+98,1247,53.7,Moderate Stress
+58,2644,17.5,Relaxed
+64,3175,19.0,Relaxed
+141,820,77.8,High Stress
+86,2571,31.5,Normal
+135,1221,70.3,High Stress
+62,2667,23.2,Relaxed
+106,1424,49.4,Moderate Stress
+105,826,57.9,Moderate Stress
+127,786,76.4,High Stress
+111,820,63.7,Moderate Stress
+90,2471,46.5,Mild Stress
+128,695,70.8,High Stress
+65,3037,16.6,Relaxed
+65,3507,17.3,Relaxed
+94,1900,43.3,Mild Stress
+89,1227,47.3,Mild Stress
+62,3177,14.8,Relaxed
+72,3218,20.4,Relaxed
+145,756,86.7,High Stress
+72,3347,24.3,Relaxed
+101,2474,39.9,Mild Stress
+58,3784,6.0,Relaxed
+66,3655,19.3,Relaxed
+85,3480,22.6,Normal
+66,3893,7.4,Relaxed
+89,1592,47.1,Mild Stress
+135,386,79.1,High Stress
+137,441,81.5,High Stress
+79,1951,41.7,Normal
+112,1032,67.4,Moderate Stress
+76,2339,41.5,Normal
+136,859,78.5,High Stress
+147,494,86.0,High Stress
+111,917,69.1,Moderate Stress
+76,2724,33.0,Normal
+128,1097,64.3,High Stress
+147,481,95.6,High Stress
+107,900,58.3,Moderate Stress
+135,481,80.5,High Stress
+134,453,79.6,High Stress
+112,1722,57.9,Moderate Stress
+121,1179,66.7,Moderate Stress
+135,157,78.1,High Stress
+110,1111,65.5,Moderate Stress
+66,3247,15.5,Relaxed
+80,2543,25.0,Normal
+93,1757,51.4,Mild Stress
+90,2412,38.7,Mild Stress
+83,2323,41.3,Mild Stress
+73,2702,24.9,Normal
+147,967,85.8,High Stress
+66,3784,12.7,Relaxed
+57,3631,14.6,Relaxed
+99,838,64.8,Moderate Stress
+123,805,70.8,High Stress
+109,944,60.7,Moderate Stress
+79,2213,32.2,Normal
+152,641,94.2,High Stress
+114,1421,55.1,Moderate Stress
+130,594,77.7,High Stress
+88,1713,37.9,Mild Stress
+112,912,61.5,Moderate Stress
+88,2254,40.1,Mild Stress
+76,2242,22.2,Normal
+64,2764,22.4,Normal
+61,3284,13.0,Relaxed
+62,3304,15.5,Relaxed
+112,1076,65.6,Moderate Stress
+122,1356,69.2,Moderate Stress
+67,3104,13.6,Relaxed
+103,1620,50.4,Mild Stress
+108,1129,56.7,Moderate Stress
+86,3315,32.3,Normal
+109,694,58.7,Moderate Stress
+144,605,89.5,High Stress
+55,3429,9.6,Relaxed
+84,2071,37.4,Normal
+112,1097,70.4,Moderate Stress
+97,1829,51.3,Mild Stress
+82,2627,33.7,Normal
+66,3478,15.1,Relaxed
+95,2437,39.5,Mild Stress
+56,3409,4.5,Relaxed
+109,645,63.2,Moderate Stress
+112,750,67.4,Moderate Stress
+87,2985,25.4,Normal
+85,1723,37.7,Mild Stress
+59,3340,10.2,Relaxed
+126,367,78.1,High Stress
+114,1018,66.9,Moderate Stress
+102,1071,57.7,Moderate Stress
+117,860,72.6,Moderate Stress
+53,2831,15.8,Relaxed
+118,902,65.3,High Stress
+67,3220,22.3,Relaxed
+137,635,81.9,High Stress
+90,2679,36.3,Mild Stress
+92,2262,41.4,Mild Stress
+99,1795,54.5,Mild Stress
+114,1323,60.9,Moderate Stress
+56,3556,4.3,Relaxed
+64,3739,14.2,Relaxed
+132,832,78.8,High Stress
+132,513,77.3,High Stress
+91,1985,42.2,Mild Stress
+62,3448,22.5,Relaxed
+117,1350,66.1,Moderate Stress
+77,2938,29.4,Normal
+125,283,73.5,High Stress
+67,2968,15.9,Relaxed
+88,1718,33.9,Mild Stress
+82,2729,37.5,Normal
+74,2617,25.7,Normal
+77,2993,25.4,Normal
+96,2007,41.4,Mild Stress
+63,3298,16.6,Relaxed
+112,1333,63.3,Moderate Stress
+56,2793,12.7,Relaxed
+65,3396,18.0,Relaxed
+108,1244,50.8,Moderate Stress
+80,3192,25.4,Normal
+59,3636,7.0,Relaxed
+59,3228,14.8,Relaxed
+132,697,79.4,High Stress
+79,2414,30.7,Normal
+104,1244,45.3,Moderate Stress
+102,1554,50.0,Mild Stress
+94,1966,43.5,Mild Stress
+60,3256,10.1,Relaxed
+75,2657,20.5,Normal
+57,3699,9.2,Relaxed
+72,3022,20.6,Relaxed
+95,1845,50.2,Mild Stress
+130,231,83.5,High Stress
+76,3037,25.8,Normal
+107,787,61.7,Moderate Stress
+136,496,81.7,High Stress
+83,2262,39.0,Normal
+69,1810,34.8,Normal
+60,3902,0.0,Relaxed
+128,971,76.0,High Stress
+133,627,83.2,High Stress
+134,173,86.2,High Stress
+74,3323,24.2,Relaxed
+70,3785,10.3,Relaxed
+144,417,89.1,High Stress
+63,3677,4.6,Relaxed
+87,2040,45.8,Mild Stress
+96,1506,43.0,Moderate Stress
+87,1865,38.6,Mild Stress
+132,384,82.7,High Stress
+124,928,66.5,High Stress
+142,687,92.0,High Stress
+126,429,72.7,High Stress
+63,3402,10.8,Relaxed
+101,1445,52.5,Moderate Stress
+137,543,79.2,High Stress
+131,78,75.8,High Stress
+58,3477,14.3,Relaxed
+100,1625,60.2,Mild Stress
+129,471,81.7,High Stress
+111,1575,56.5,Moderate Stress
+57,3386,8.3,Relaxed
+107,849,70.6,Moderate Stress
+135,670,81.3,High Stress
+97,1584,52.8,Mild Stress
+114,585,67.8,Moderate Stress
+65,3147,16.7,Relaxed
+111,1153,64.0,Moderate Stress
+85,2951,31.3,Normal
+99,827,58.0,Moderate Stress
+111,1383,62.1,Moderate Stress
+100,1595,57.4,Mild Stress
+139,853,76.6,High Stress
+75,3122,17.6,Normal
+141,713,82.0,High Stress
+85,2852,24.2,Mild Stress
+109,1397,56.1,Moderate Stress
+74,2399,33.0,Normal
+71,3296,12.3,Normal
+112,1215,59.9,Moderate Stress
+111,851,69.6,Moderate Stress
+102,1901,50.3,Mild Stress
+78,2604,31.0,Normal
+112,1005,61.0,Moderate Stress
+115,739,63.1,Moderate Stress
+118,1311,71.2,Moderate Stress
+106,1394,50.6,Moderate Stress
+114,1082,57.6,Moderate Stress
+68,3017,15.6,Relaxed
+108,1083,57.7,Moderate Stress
+130,817,75.7,High Stress
+58,3403,6.4,Relaxed
+121,1350,64.8,Moderate Stress
+95,2147,43.4,Mild Stress
+117,992,68.4,Moderate Stress
+101,2389,42.7,Mild Stress
+60,3791,8.2,Relaxed
+79,1517,41.9,Normal
+62,3631,4.5,Relaxed
+110,1131,60.3,Moderate Stress
+141,784,80.9,High Stress
+92,1750,48.5,Mild Stress
+122,336,80.0,High Stress
+97,2125,39.6,Mild Stress
+62,3339,7.8,Relaxed
+88,2346,42.9,Mild Stress
+63,2777,24.4,Relaxed
+67,3203,25.3,Relaxed
+99,1508,51.8,Moderate Stress
+131,579,82.8,High Stress
+135,714,80.1,High Stress
+112,755,70.1,Moderate Stress
+133,137,91.2,High Stress
+97,2463,37.5,Mild Stress
+72,1885,34.3,Normal
+56,3532,5.1,Relaxed
+141,1421,76.1,High Stress
+97,1556,49.1,Mild Stress
+60,3553,14.9,Relaxed
+114,1106,64.5,Moderate Stress
+111,2220,53.7,Mild Stress
+91,1870,40.4,Mild Stress
+126,485,77.5,High Stress
+122,686,78.4,High Stress
+99,990,56.0,Moderate Stress
+83,2039,30.1,Mild Stress
+88,1775,42.5,Mild Stress
+73,1976,30.8,Normal
+80,3029,24.7,Normal
+102,1656,44.3,Mild Stress
+97,1624,55.1,Mild Stress
+96,1837,43.3,Mild Stress
+61,2676,24.7,Relaxed
+118,1214,71.1,Moderate Stress
+75,2406,24.6,Normal
+89,1481,51.0,Mild Stress
+86,1239,45.9,Mild Stress
+62,3475,7.3,Relaxed
+63,2922,17.8,Relaxed
+79,2743,25.8,Normal
+63,3444,19.3,Relaxed
+92,2278,48.6,Mild Stress
+78,2255,33.8,Normal
+94,2235,40.8,Mild Stress
+125,710,74.9,High Stress
+75,3261,25.7,Normal
+121,941,66.1,Moderate Stress
+140,514,82.4,High Stress
+87,2109,37.4,Mild Stress
+100,1072,45.6,Moderate Stress
+75,3895,10.7,Normal
+134,909,70.1,High Stress
+99,818,62.0,Moderate Stress
+78,2847,30.7,Normal
+88,1821,42.7,Mild Stress
+100,1763,45.4,Mild Stress
+61,3713,10.0,Relaxed
+98,1905,50.0,Mild Stress
+111,1054,56.0,Moderate Stress
+109,1415,68.5,Moderate Stress
+83,2711,30.7,Normal
+76,2109,26.4,Normal
+91,1531,42.1,Mild Stress
+94,1760,48.1,Mild Stress
+98,1621,46.7,Mild Stress
+79,2396,31.6,Normal
+143,433,89.0,High Stress
+93,1673,49.9,Mild Stress
+61,3147,20.1,Relaxed
+92,1380,45.2,Mild Stress
+75,2486,26.7,Normal
+139,654,88.6,High Stress
+56,3189,3.8,Relaxed
+106,890,63.7,Moderate Stress
+118,467,70.9,High Stress
+95,1688,41.9,Mild Stress
+119,1515,64.5,Moderate Stress
+90,1313,47.4,Mild Stress
+134,894,80.0,High Stress
+90,1703,40.5,Mild Stress
+114,1612,54.3,Moderate Stress
+59,3224,19.2,Relaxed
+80,2757,36.1,Normal
+139,722,76.3,High Stress
+141,739,85.8,High Stress
+154,590,87.9,High Stress
+81,2213,37.0,Normal
+82,2468,27.0,Normal
+119,1203,64.4,Moderate Stress
+111,847,61.7,Moderate Stress
+133,768,81.5,High Stress
+107,1881,56.5,Mild Stress
+67,2387,29.4,Normal
+127,663,76.6,High Stress
+139,566,90.4,High Stress
+94,2012,38.9,Mild Stress
+72,3429,11.7,Normal
+62,3317,15.9,Relaxed
+81,2607,30.8,Normal
+108,573,67.2,Moderate Stress
+92,2387,40.0,Mild Stress
+100,1241,49.8,Mild Stress
+81,2227,46.5,Normal
+58,3492,12.0,Relaxed
+136,335,88.2,High Stress
+96,1576,58.7,Mild Stress
+60,3180,12.7,Relaxed
+113,1653,61.7,Moderate Stress
+98,1958,42.5,Mild Stress
+80,2499,24.5,Normal
+83,3019,29.2,Normal
+78,2416,30.2,Normal
+129,690,77.5,High Stress
+145,635,82.3,High Stress
+60,3232,11.3,Relaxed
+65,3512,19.8,Relaxed
+133,799,74.7,High Stress
+66,3305,18.6,Normal
+94,1490,44.7,Mild Stress
+63,3740,8.2,Relaxed
+98,2521,38.6,Mild Stress
+92,1959,39.8,Mild Stress
+57,3277,7.8,Relaxed
+61,3447,9.2,Relaxed
+69,3071,19.1,Relaxed
+155,357,88.6,High Stress
+65,3435,14.8,Relaxed
+61,3435,13.3,Relaxed
+63,3132,21.7,Relaxed
+99,1618,50.1,Mild Stress
+74,2777,20.6,Normal
+91,1553,53.0,Mild Stress
+64,3093,25.3,Relaxed
+74,2655,28.2,Normal
+94,2384,44.9,Mild Stress
+109,180,70.0,Moderate Stress
+85,1899,41.2,Mild Stress
+117,1531,64.7,Moderate Stress
+111,1269,63.3,Moderate Stress
+100,2155,47.1,Mild Stress
+73,2548,28.5,Normal
+138,657,86.0,High Stress
+89,2016,41.8,Mild Stress
+90,1542,43.3,Mild Stress
+124,453,77.0,High Stress
+87,2847,29.2,Normal
+107,1047,64.7,Moderate Stress
+112,1119,61.8,Moderate Stress
+147,520,96.3,High Stress
+89,2220,34.3,Mild Stress
+78,2100,32.2,Normal
+111,1199,61.4,Moderate Stress
+77,2917,28.3,Normal
+86,2065,33.5,Mild Stress
+152,1045,86.2,High Stress
+93,1417,47.0,Mild Stress
+134,512,75.5,High Stress
+74,2466,37.3,Normal
+141,1374,71.5,High Stress
+93,1550,50.1,Mild Stress
+75,2365,26.0,Normal
+138,713,84.8,High Stress
+62,3266,6.8,Relaxed
+62,2844,9.0,Relaxed
+77,3174,27.6,Normal
+114,1219,61.6,Moderate Stress
+104,1299,50.2,Moderate Stress
+72,2896,25.9,Relaxed
+85,2227,37.7,Normal
+80,3201,31.7,Normal
+151,475,88.6,High Stress
+133,443,76.6,High Stress
+88,2289,39.0,Mild Stress
+122,859,71.8,Moderate Stress
+141,690,81.9,High Stress
+109,947,61.1,Moderate Stress
+137,665,88.2,High Stress
+101,1738,54.4,Mild Stress
+60,3238,14.2,Relaxed
+78,2092,32.4,Normal
+65,3716,9.4,Relaxed
+112,1152,57.1,Moderate Stress
+88,1173,52.8,Mild Stress
+132,593,76.5,High Stress
+54,3678,8.2,Relaxed
+66,3062,15.5,Relaxed
+56,4019,0.0,Relaxed
+65,3236,15.0,Relaxed
+104,2759,46.6,Mild Stress
+83,2410,28.6,Normal
+100,1245,57.0,Mild Stress
+108,913,64.8,Moderate Stress
+147,603,86.8,High Stress
+90,1646,48.0,Mild Stress
+124,447,70.7,High Stress
+86,2226,38.5,Mild Stress
+96,1854,53.9,Mild Stress
+87,1561,52.8,Mild Stress
+75,2487,23.9,Normal
+87,2532,36.8,Normal
+132,716,81.3,High Stress
+114,1280,62.1,Moderate Stress
+88,1729,42.5,Mild Stress
+65,2961,18.0,Relaxed
+115,872,69.5,Moderate Stress
+114,1359,64.3,Moderate Stress
+135,283,91.4,High Stress
+83,3231,24.1,Normal
+53,3169,13.0,Relaxed
+123,814,64.0,High Stress
+61,2947,20.6,Relaxed
+138,404,80.3,High Stress
+76,3293,18.7,Normal
+108,1022,62.8,Moderate Stress
+63,3344,7.5,Relaxed
+76,2694,20.2,Normal
+97,2131,45.6,Mild Stress
+58,3194,14.3,Relaxed
+144,372,80.4,High Stress
+59,3871,9.6,Relaxed
+84,2451,33.9,Normal
+134,1034,80.9,High Stress
+107,1261,63.7,Moderate Stress
+127,752,65.1,High Stress
+103,1148,58.2,Moderate Stress
+136,639,81.2,High Stress
+89,1814,44.1,Mild Stress
+147,373,85.1,High Stress
+108,1433,59.9,Moderate Stress
+107,1069,57.8,Moderate Stress
+86,2074,37.4,Mild Stress
+98,1000,51.8,Moderate Stress
+61,2867,24.2,Relaxed
+97,1960,33.5,Mild Stress
+88,1917,41.3,Mild Stress
+106,1314,61.4,Moderate Stress
+139,36,86.8,High Stress
+134,579,79.8,High Stress
+127,632,71.0,High Stress
+69,2188,28.0,Normal
+93,1551,45.3,Mild Stress
+87,1654,51.7,Mild Stress
+79,2886,20.4,Normal
+81,2489,25.6,Normal
+102,2090,49.8,Mild Stress
+88,1682,46.0,Mild Stress
+106,1239,57.3,Moderate Stress
+80,2733,27.8,Normal
+107,1191,61.2,Moderate Stress
+105,1193,53.9,Moderate Stress
+84,1891,41.3,Mild Stress
+76,2425,26.8,Normal
+118,1056,68.5,Moderate Stress
+66,3308,20.0,Relaxed
+65,3871,13.3,Relaxed
+80,1847,42.5,Normal
+78,2875,33.6,Normal
+131,383,74.7,High Stress
+114,925,61.1,Moderate Stress
+65,3312,15.0,Relaxed
+89,1809,55.6,Mild Stress
+60,2974,14.2,Relaxed
+64,2752,24.4,Relaxed
+71,2350,24.6,Normal
+108,1152,63.8,Moderate Stress
+94,2285,46.2,Mild Stress
+78,2644,34.2,Normal
+63,3413,16.3,Relaxed
+139,608,80.9,High Stress
+85,1404,40.2,Mild Stress
+122,452,68.4,High Stress
+89,2423,37.1,Mild Stress
+130,381,80.5,High Stress
+85,3125,28.4,Normal
+76,2307,24.7,Normal
+94,1515,47.2,Mild Stress
+86,2124,38.8,Mild Stress
+60,3646,16.5,Relaxed
+59,3557,10.3,Relaxed
+122,825,65.2,High Stress
+88,1543,43.6,Mild Stress
+81,2985,28.9,Normal
+146,448,92.7,High Stress
+106,823,62.8,Moderate Stress
+129,213,86.0,High Stress
+55,3442,8.4,Relaxed
+97,2196,44.6,Mild Stress
+108,791,60.1,Moderate Stress
+74,2624,25.1,Normal
+145,377,93.5,High Stress
+65,3018,11.6,Relaxed
+96,2515,40.9,Mild Stress
+64,3110,21.0,Relaxed
+75,3349,22.9,Normal
+72,3190,15.9,Normal
+60,2874,18.8,Relaxed
+122,319,76.2,High Stress
+84,2256,40.6,Normal
+93,1835,40.9,Mild Stress
+67,4023,10.3,Relaxed
+132,593,83.1,High Stress
+85,1569,41.4,Mild Stress
+119,1214,63.1,Moderate Stress
+134,496,82.7,High Stress
+91,1520,46.8,Mild Stress
+59,2292,22.7,Relaxed
+87,1566,42.1,Mild Stress
+133,630,81.5,High Stress
+137,328,78.8,High Stress
+79,1597,40.7,Normal
+69,3120,15.0,Relaxed
+113,1688,63.1,Moderate Stress
+61,3434,13.0,Relaxed
+88,2110,37.7,Mild Stress
+91,2762,30.7,Mild Stress
+77,1980,40.0,Normal
+61,3716,14.0,Relaxed
+84,2198,39.6,Mild Stress
+118,917,69.5,Moderate Stress
+118,792,68.3,Moderate Stress
+80,2289,35.0,Normal
+116,897,69.5,Moderate Stress
+137,741,80.2,High Stress
+97,1438,51.6,Moderate Stress
+73,2315,28.3,Normal
+115,1121,61.8,Moderate Stress
+80,3080,22.4,Normal
+132,369,78.6,High Stress
+128,329,86.1,High Stress
+111,1186,59.1,Moderate Stress
+92,2326,36.2,Mild Stress
+132,882,72.6,High Stress
+83,2862,32.5,Normal
+125,768,75.5,High Stress
+98,1714,41.5,Mild Stress
+64,3456,16.2,Relaxed
+69,3682,20.7,Relaxed
+60,3069,9.9,Relaxed
+132,877,77.0,High Stress
+86,3028,27.1,Normal
+81,2668,32.3,Normal
+59,3237,8.9,Relaxed
+139,619,74.4,High Stress
+67,2934,25.2,Normal
+100,1446,48.7,Moderate Stress
+83,2629,30.5,Normal
+83,2407,37.9,Normal
+68,3266,19.9,Relaxed
+58,2681,24.1,Relaxed
+141,471,83.1,High Stress
+103,983,58.9,Moderate Stress
+138,139,91.8,High Stress
+127,551,78.1,High Stress
+115,582,64.9,Moderate Stress
+131,561,79.3,High Stress
+111,893,60.1,Moderate Stress
+64,3594,6.9,Relaxed
+138,390,86.0,High Stress
+87,1854,40.0,Mild Stress
+88,2301,37.8,Mild Stress
+72,2952,27.6,Normal
+109,1077,52.1,Moderate Stress
+108,1375,64.1,Moderate Stress
+79,2969,27.0,Normal
+69,2563,25.3,Normal
+83,2344,35.9,Normal
+128,761,73.6,High Stress
+63,2897,20.7,Relaxed
+71,2557,22.7,Normal
+56,3504,10.4,Relaxed
+140,378,86.4,High Stress
+70,2998,12.7,Normal
+81,2708,25.1,Normal
+106,1210,65.7,Moderate Stress
+92,1739,52.4,Mild Stress
+113,1498,54.5,Moderate Stress
+79,2233,40.8,Normal
+74,2457,27.1,Normal
+93,1568,48.5,Mild Stress
+98,2167,37.8,Mild Stress
+81,2755,29.8,Normal
+81,1921,43.0,Normal
+115,856,67.2,Moderate Stress
+101,1204,57.9,Moderate Stress
+86,1741,45.2,Mild Stress
+68,3068,25.9,Relaxed
+127,392,79.5,High Stress
+64,3290,17.8,Relaxed
+71,2860,24.1,Normal
+121,1180,60.1,Moderate Stress
+90,1824,43.6,Mild Stress
+91,2258,41.0,Mild Stress
+77,2269,31.2,Normal
+98,1906,41.6,Mild Stress
+78,2551,29.8,Normal
+115,531,70.0,Moderate Stress
+109,912,63.1,Moderate Stress
+90,2373,40.5,Mild Stress
+135,789,78.2,High Stress
+109,1096,56.8,Moderate Stress
+63,3341,15.4,Relaxed
+114,1006,67.0,Moderate Stress
+92,1887,49.2,Mild Stress
+63,3364,17.8,Relaxed
+71,2538,25.6,Normal
+94,2113,50.9,Mild Stress
+147,556,89.4,High Stress
+137,886,84.6,High Stress
+60,3362,6.8,Relaxed
+126,825,74.5,High Stress
+126,544,73.3,High Stress
+87,3489,20.1,Normal
+126,760,70.2,High Stress
+60,2944,7.7,Relaxed
+104,1403,54.1,Moderate Stress
+98,1731,48.7,Mild Stress
+89,2262,38.5,Mild Stress
+115,244,72.3,Moderate Stress
+99,1054,56.4,Moderate Stress
+109,1357,59.5,Moderate Stress
+126,709,80.0,High Stress
+146,979,80.2,High Stress
+96,1261,50.9,Mild Stress
+84,2530,31.7,Normal
+140,733,84.6,High Stress
+79,3033,25.2,Normal
+97,1887,49.7,Mild Stress
+92,1716,47.3,Mild Stress
+98,1616,44.9,Mild Stress
+102,937,58.6,Moderate Stress
+58,3184,5.4,Relaxed
+90,2423,40.1,Mild Stress
+113,1384,66.4,Moderate Stress
+60,3426,9.0,Relaxed
+55,3457,4.5,Relaxed
+108,799,61.1,Moderate Stress
+73,2483,30.3,Normal
+69,3452,23.5,Relaxed
+98,1112,58.6,Moderate Stress
+119,859,66.6,Moderate Stress
+62,3402,10.4,Relaxed
+61,3350,16.2,Relaxed
+63,3391,15.3,Relaxed
+114,1044,66.3,Moderate Stress
+72,3154,20.8,Normal
+140,442,92.2,High Stress
+150,1210,84.6,High Stress
+88,2315,40.2,Mild Stress
+136,618,78.2,High Stress
+99,1577,49.2,Mild Stress
+67,2656,22.7,Relaxed
+83,1854,40.2,Mild Stress
+105,1292,46.5,Moderate Stress
+111,980,62.7,Moderate Stress
+151,804,89.1,High Stress
+96,1226,53.9,Mild Stress
+134,806,77.5,High Stress
+86,2725,33.1,Normal
+114,1315,59.2,Moderate Stress
+110,1524,56.9,Moderate Stress
+108,1923,58.8,Mild Stress
+144,602,84.5,High Stress
+78,3230,24.8,Normal
+100,1440,49.6,Mild Stress
+109,1095,63.2,Moderate Stress
+132,626,76.3,High Stress
+78,2269,31.1,Normal
+60,3918,10.5,Relaxed
+114,1256,63.5,Moderate Stress
+65,3167,33.0,Relaxed
+128,207,85.4,High Stress
+61,3179,17.2,Relaxed
+91,1723,47.9,Mild Stress
+121,735,71.4,Moderate Stress
+80,2273,26.2,Normal
+82,2418,31.8,Normal
+81,1647,39.7,Mild Stress
+74,2434,32.8,Normal
+99,2132,43.0,Mild Stress
+102,678,57.6,Moderate Stress
+120,1448,63.6,Moderate Stress
+135,42,88.3,High Stress
+95,2272,46.1,Mild Stress
+139,318,85.1,High Stress
+126,791,77.3,High Stress
+78,1484,43.6,Normal
+94,1726,41.7,Mild Stress
+93,1620,46.8,Mild Stress
+93,1716,45.5,Mild Stress
+139,587,81.9,High Stress
+116,718,72.2,Moderate Stress
+92,1988,40.6,Mild Stress
+109,924,67.5,Moderate Stress
+142,785,91.7,High Stress
+137,981,74.7,High Stress
+113,1299,61.9,Moderate Stress
+86,1984,48.5,Mild Stress
+109,1032,66.5,Moderate Stress
+77,2750,25.9,Normal
+132,207,85.9,High Stress
+107,1104,61.7,Moderate Stress
+85,1892,44.1,Mild Stress
+64,3367,16.2,Relaxed
+77,2779,33.6,Normal
+140,670,82.1,High Stress
+112,859,65.5,Moderate Stress
+147,937,82.6,High Stress
+103,888,54.9,Moderate Stress
+60,3202,17.9,Relaxed
+87,1735,45.9,Mild Stress
+61,3046,18.4,Relaxed
+78,2370,32.7,Normal
+83,2937,27.4,Normal
+71,2256,29.5,Normal
+85,1773,38.6,Normal
+81,2625,40.4,Normal
+89,1753,49.8,Mild Stress
+62,4095,5.6,Relaxed
+54,3260,12.0,Relaxed
+133,399,81.7,High Stress
+118,996,64.2,Moderate Stress
+56,3545,1.8,Relaxed
+65,3665,11.6,Relaxed
+131,430,77.7,High Stress
+153,576,85.7,High Stress
+55,3156,16.2,Relaxed
+132,929,71.9,High Stress
+140,610,78.1,High Stress
+137,571,84.9,High Stress
+53,3561,9.3,Relaxed
+60,3100,11.4,Relaxed
+61,3541,3.8,Relaxed
+103,1341,49.1,Moderate Stress
+113,1066,68.2,Moderate Stress
+97,2330,52.1,Mild Stress
+87,1579,40.9,Mild Stress
+106,905,59.5,Moderate Stress
+76,2634,26.7,Normal
+76,2444,33.3,Normal
+118,1418,60.9,Moderate Stress
+66,3460,25.4,Relaxed
+99,1751,45.3,Moderate Stress
+112,1602,56.8,Moderate Stress
+143,687,79.5,High Stress
+67,3619,14.8,Relaxed
+93,2764,44.4,Normal
+86,2135,44.5,Mild Stress
+75,2531,26.9,Normal
+59,2268,22.5,Relaxed
+91,1460,45.8,Mild Stress
+130,666,68.3,High Stress
+111,1538,53.0,Moderate Stress
+87,1399,53.0,Mild Stress
+140,448,86.3,High Stress
+137,904,81.5,High Stress
+85,1354,46.8,Mild Stress
+59,3167,17.7,Relaxed
+86,1482,48.1,Mild Stress
+73,2680,21.6,Normal
+60,3111,18.7,Relaxed
+87,1999,37.2,Mild Stress
+132,418,85.4,High Stress
+107,1089,62.5,Moderate Stress
+65,3326,13.7,Relaxed
+147,328,86.8,High Stress
+87,3000,35.4,Normal
+96,1107,61.1,Mild Stress
+63,3872,4.2,Relaxed
+116,1395,62.1,Moderate Stress
+89,2331,43.5,Normal
+92,1456,49.5,Mild Stress
+136,742,79.0,High Stress
+103,1051,65.2,Moderate Stress
+88,1850,35.1,Mild Stress
+82,2646,35.6,Normal
+60,3112,14.1,Relaxed
+75,3178,19.3,Normal
+90,1521,47.3,Mild Stress
+59,3033,19.7,Relaxed
+111,1365,56.6,Moderate Stress
+116,1299,66.0,Moderate Stress
+128,627,81.0,High Stress
+92,1962,40.1,Mild Stress
+66,2957,20.9,Relaxed
+91,1618,52.4,Mild Stress
+60,3334,6.5,Relaxed
+76,2651,25.7,Normal
+61,3360,18.5,Relaxed
+144,1176,84.0,High Stress
+59,3340,9.9,Relaxed
+133,522,82.6,High Stress
+59,3644,5.3,Relaxed
+111,1466,59.7,Moderate Stress
+146,671,79.8,High Stress
+79,2949,25.8,Normal
+96,1247,53.0,Mild Stress
+144,525,84.9,High Stress
+80,3071,27.5,Normal
+98,1824,41.4,Mild Stress
+101,1904,47.4,Mild Stress
+82,2929,31.5,Normal
+57,3069,12.8,Relaxed
+96,1900,48.2,Moderate Stress
+133,221,75.2,High Stress
+55,2985,16.8,Relaxed
+113,1280,63.7,Moderate Stress
+132,428,82.7,High Stress
+64,3375,10.2,Relaxed
+67,3252,22.8,Relaxed
+97,1358,55.3,Moderate Stress
+106,1630,57.7,Mild Stress
+66,2449,21.1,Relaxed
+110,695,65.2,Moderate Stress
+82,2860,25.3,Normal
+67,2483,29.3,Normal
+105,1382,54.9,Moderate Stress
+131,435,78.9,High Stress
+62,3089,12.6,Relaxed
+119,436,73.4,High Stress
+95,1264,49.7,Mild Stress
+139,400,83.7,High Stress
+133,805,70.8,High Stress
+140,789,83.3,High Stress
+73,2779,23.3,Normal
+87,2955,31.4,Normal
+99,1096,59.6,Moderate Stress
+79,2480,30.8,Normal
+131,839,68.8,High Stress
+58,2422,16.3,Relaxed
+132,732,73.8,High Stress
+64,2550,26.5,Relaxed
+112,1000,70.1,Moderate Stress
+117,702,69.3,Moderate Stress
+85,2103,33.1,Mild Stress
+110,1057,62.1,Moderate Stress
+137,701,81.6,High Stress
+93,2422,39.2,Mild Stress
+89,1898,27.4,Mild Stress
+62,3618,5.0,Relaxed
+98,1844,56.8,Mild Stress
+112,1335,59.2,Moderate Stress
+67,3428,15.7,Relaxed
+116,1072,63.1,Moderate Stress
+135,747,78.3,High Stress
+71,2345,27.7,Normal
+81,2003,43.1,Normal
+140,425,88.7,High Stress
+134,1178,67.1,High Stress
+111,1383,54.0,Moderate Stress
+74,2854,23.6,Normal
+99,1070,55.2,Moderate Stress
+125,549,78.3,High Stress
+72,3046,18.8,Normal
+80,2486,37.8,Mild Stress
+78,3238,19.6,Normal
+103,1680,56.1,Moderate Stress
+92,1755,46.1,Mild Stress
+139,487,83.7,High Stress
+119,1126,65.9,Moderate Stress
+132,1126,76.0,High Stress
+110,1171,56.1,Moderate Stress
+87,1446,46.4,Mild Stress
+110,1087,50.2,Moderate Stress
+137,75,89.1,High Stress
+68,3063,25.5,Relaxed
+47,3486,10.9,Relaxed
+112,1679,62.4,Moderate Stress
+124,1142,66.3,High Stress
+71,2091,29.4,Normal
+128,774,76.7,High Stress
+145,748,85.4,High Stress
+99,1959,41.8,Mild Stress
+78,2851,35.6,Normal
+94,1504,50.5,Mild Stress
+70,2763,24.0,Relaxed
+70,2593,17.1,Normal
+81,2766,27.6,Normal
+99,2047,43.5,Mild Stress
+107,1306,56.8,Moderate Stress
+56,2913,8.4,Relaxed
+80,2561,28.2,Normal
+78,2739,34.9,Normal
+84,1787,42.4,Mild Stress
+61,3696,12.1,Relaxed
+77,2589,28.3,Normal
+97,2691,41.7,Mild Stress
+107,1599,52.3,Moderate Stress
+140,630,83.6,High Stress
+73,2612,26.2,Normal
+103,1740,49.0,Moderate Stress
+54,3410,12.5,Relaxed
+100,1003,55.7,Moderate Stress
+80,3088,22.3,Normal
+63,3490,13.1,Relaxed
+97,2321,43.7,Mild Stress
+95,1992,44.1,Mild Stress
+134,442,79.0,High Stress
+62,4057,6.8,Relaxed
+142,242,85.2,High Stress
+135,569,83.9,High Stress
+107,744,66.3,Moderate Stress
+67,3340,19.5,Relaxed
+95,861,60.2,Moderate Stress
+78,2839,26.8,Normal
+94,1493,54.0,Mild Stress
+84,2456,35.8,Normal
+97,1258,51.5,Moderate Stress
+68,3647,19.1,Relaxed
+129,879,71.3,High Stress
+130,430,83.1,High Stress
+93,1945,43.9,Mild Stress
+66,3477,17.3,Relaxed
+127,773,73.1,High Stress
+94,2577,42.0,Mild Stress
+110,1563,54.9,Moderate Stress
+75,2859,34.0,Normal
+110,1939,57.1,Moderate Stress
+101,1990,50.2,Moderate Stress
+65,2477,25.8,Normal
+139,650,83.0,High Stress
+71,2709,21.1,Normal
+111,1630,57.7,Moderate Stress
+115,1221,59.6,Moderate Stress
+148,1005,96.2,High Stress
+111,1032,62.7,Moderate Stress
+99,1209,57.3,Moderate Stress
+85,2973,31.9,Normal
+60,3084,11.5,Relaxed
+134,643,77.6,High Stress
+105,581,65.5,Moderate Stress
+139,848,78.2,High Stress
+137,480,84.7,High Stress
+70,2956,28.3,Relaxed
+66,3113,22.4,Normal
+96,1590,53.2,Mild Stress
+142,682,89.5,High Stress
+80,2397,32.4,Normal
+92,1947,39.9,Mild Stress
+113,1716,54.7,Moderate Stress
+97,1049,55.1,Mild Stress
+72,2429,27.8,Normal
+79,2461,25.9,Normal
+144,651,89.3,High Stress
+125,1057,67.6,High Stress
+124,935,68.7,Moderate Stress
+95,1793,46.6,Mild Stress
+109,1191,55.8,Moderate Stress
+82,3166,25.4,Normal
+102,1908,48.8,Mild Stress
+81,2145,36.8,Mild Stress
+113,963,64.3,Moderate Stress
+109,953,62.3,Moderate Stress
+69,2660,21.3,Normal
+75,2555,27.0,Normal
+143,465,88.7,High Stress
+109,1006,60.9,Moderate Stress
+83,2994,30.2,Normal
+87,3162,28.0,Normal
+143,407,87.5,High Stress
+61,3606,11.8,Relaxed
+92,1889,36.0,Mild Stress
+70,2685,27.4,Relaxed
+72,2636,16.7,Normal
+64,3051,23.8,Relaxed
+134,666,75.4,High Stress
+61,2910,15.0,Relaxed
+123,579,76.8,High Stress
+56,3011,12.5,Relaxed
+74,3289,26.1,Normal
+103,766,63.8,Moderate Stress
+95,1993,47.1,Mild Stress
+76,2411,30.6,Normal
+86,2005,42.7,Mild Stress
+87,1935,40.8,Mild Stress
+60,2666,19.0,Relaxed
+108,1217,62.6,Moderate Stress
+84,1480,39.7,Mild Stress
+141,941,74.0,High Stress
+104,892,63.5,Moderate Stress
+124,539,73.7,High Stress
+64,3341,22.2,Relaxed
+107,975,60.8,Moderate Stress
+85,1821,37.8,Mild Stress
+105,1333,52.4,Moderate Stress
+137,223,81.8,High Stress
+133,637,78.4,High Stress
+64,3060,14.0,Relaxed
+87,3320,22.6,Normal
+86,2359,40.2,Mild Stress
+84,1455,44.6,Mild Stress
+93,2261,43.2,Mild Stress
+66,3170,18.8,Relaxed
+113,1409,60.8,Moderate Stress
+90,1601,40.2,Mild Stress
+62,3100,14.3,Relaxed
+58,3936,7.0,Relaxed
+123,611,73.8,High Stress
+101,1023,54.0,Moderate Stress
+135,434,77.7,High Stress
+81,2504,32.6,Normal
+62,2708,21.3,Relaxed
+61,3191,15.0,Relaxed
+69,2457,17.9,Normal
+84,2609,36.2,Normal
+109,1163,67.7,Moderate Stress
+122,642,73.6,High Stress
+118,954,65.9,Moderate Stress
+129,954,66.2,High Stress
+61,3672,10.4,Relaxed
+85,3004,36.2,Normal
+129,867,71.1,High Stress
+66,4095,9.7,Relaxed
+116,970,59.6,High Stress
+83,2266,38.7,Normal
+102,1327,53.3,Moderate Stress
+104,1712,52.1,Mild Stress
+109,853,65.6,Moderate Stress
+75,2080,30.4,Normal
+118,1287,64.8,Moderate Stress
+120,1045,69.8,Moderate Stress
+71,3127,18.0,Normal
+74,2094,36.1,Normal
+115,1012,60.7,Moderate Stress
+66,3128,22.4,Relaxed
+135,435,80.7,High Stress
+55,2835,13.9,Relaxed
+91,2309,38.4,Mild Stress
+83,2092,35.6,Normal
+70,3128,16.6,Normal
+85,1567,44.7,Mild Stress
+96,2186,47.3,Mild Stress
+99,1705,49.3,Mild Stress
+61,3226,16.8,Relaxed
+96,2059,45.6,Mild Stress
+96,1655,47.2,Mild Stress
+65,3233,9.1,Relaxed
+90,1952,43.4,Mild Stress
+89,2054,40.9,Mild Stress
+50,3231,7.0,Relaxed
+117,1174,63.6,Moderate Stress
+101,1232,57.5,Moderate Stress
+107,1296,55.8,Moderate Stress
+68,2628,23.4,Normal
+75,1851,33.4,Normal
+79,2891,31.9,Normal
+138,642,83.5,High Stress
+103,918,59.1,Moderate Stress
+95,1891,39.8,Mild Stress
+55,2958,16.2,Relaxed
+77,2354,22.5,Normal
+53,3161,11.2,Relaxed
+95,1952,44.4,Mild Stress
+100,1817,46.7,Mild Stress
+96,1546,49.6,Mild Stress
+67,3321,17.2,Normal
+69,3022,22.1,Relaxed
+90,2239,38.3,Mild Stress
+133,604,81.3,High Stress
+138,584,88.7,High Stress
+112,1109,62.3,Moderate Stress
+123,495,69.6,High Stress
+73,2458,32.7,Normal
+85,1526,47.1,Mild Stress
+92,1877,44.1,Mild Stress
+70,3490,16.0,Relaxed
+73,2916,18.1,Normal
+55,3409,11.2,Relaxed
+92,2013,46.5,Mild Stress
+110,1422,60.2,Moderate Stress
+118,1296,58.9,Moderate Stress
+129,350,77.9,High Stress
+65,3881,7.2,Relaxed
+103,412,64.6,Moderate Stress
+101,1413,56.3,Moderate Stress
+63,3250,13.2,Relaxed

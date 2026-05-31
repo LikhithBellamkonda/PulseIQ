@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>My PulseIQ — Personal Wellness</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/prop-types@15.8.1/prop-types.min.js"></script>
+<script src="https://unpkg.com/recharts@2.10.3/umd/Recharts.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<style>
+  :root{
+    --bg-0:#070809;
+    --bg-1:#0c0e12;
+    --bg-2:#12151b;
+    --bg-3:#181c24;
+    --line:#1f2530;
+    --text:#e7eef5;
+    --muted:#8893a6;
+    --cyan:#22d3ee;
+    --cyan-soft:rgba(34,211,238,0.12);
+    --red:#ff4d6d;
+    --red-soft:rgba(255,77,109,0.12);
+    --green:#34d399;
+    --yellow:#fbbf24;
+    --yellow-soft:rgba(251,191,36,0.12);
+  }
+  *{box-sizing:border-box}
+  html,body,#root{height:100%}
+  body{
+    margin:0;
+    font-family:'Inter',ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    background:
+      radial-gradient(1200px 600px at 80% -10%, rgba(34,211,238,0.06), transparent 60%),
+      radial-gradient(900px 500px at -10% 110%, rgba(255,77,109,0.05), transparent 60%),
+      var(--bg-0);
+    color:var(--text);
+    -webkit-font-smoothing:antialiased;
+    overflow:hidden;
+  }
+  ::-webkit-scrollbar{width:8px;height:8px}
+  ::-webkit-scrollbar-track{background:transparent}
+  ::-webkit-scrollbar-thumb{background:#1d232e;border-radius:8px}
+  ::-webkit-scrollbar-thumb:hover{background:#283041}
+
+  .glass{
+    background:linear-gradient(180deg, rgba(24,28,36,0.85), rgba(18,21,27,0.85));
+    border:1px solid var(--line);
+    border-radius:16px;
+    backdrop-filter: blur(8px);
+  }
+  .neon-cyan{ box-shadow: 0 0 0 1px rgba(34,211,238,0.25), 0 0 24px rgba(34,211,238,0.18); }
+  .neon-red{ box-shadow: 0 0 0 1px rgba(255,77,109,0.35), 0 0 24px rgba(255,77,109,0.25); }
+  .neon-yellow{ box-shadow: 0 0 0 1px rgba(251,191,36,0.35), 0 0 24px rgba(251,191,36,0.25); }
+
+  .pulse-dot{
+    width:8px;height:8px;border-radius:50%;
+    background:var(--cyan);
+    box-shadow:0 0 10px var(--cyan);
+    animation:pulse 1.4s ease-out infinite;
+  }
+  .pulse-dot.red{ background:var(--red); box-shadow:0 0 10px var(--red); }
+  @keyframes pulse{
+    0%{transform:scale(1);opacity:1}
+    70%{transform:scale(1.6);opacity:0}
+    100%{transform:scale(1);opacity:0}
+  }
+  .heartbeat{ animation:hb 1.1s ease-in-out infinite; transform-origin:center; }
+  @keyframes hb{
+    0%,100%{transform:scale(1)}
+    20%{transform:scale(1.15)}
+    40%{transform:scale(0.95)}
+    60%{transform:scale(1.08)}
+  }
+  .fade-in{ animation:fade .4s ease both; }
+  @keyframes fade{ from{opacity:0; transform: translateY(6px)} to{opacity:1; transform:none} }
+
+  .sidebar-item{
+    display:flex; align-items:center; gap:12px;
+    padding:10px 14px; border-radius:10px; color:var(--muted);
+    cursor:pointer; font-size:14px; transition:all .2s ease;
+    border:1px solid transparent;
+  }
+  .sidebar-item:hover{ color:var(--text); background:rgba(255,255,255,0.03); }
+  .sidebar-item.active{
+    background: linear-gradient(180deg, rgba(34,211,238,0.10), rgba(34,211,238,0.03));
+    color:#cffafe;
+    border-color: rgba(34,211,238,0.25);
+    box-shadow: inset 0 0 0 1px rgba(34,211,238,0.05);
+  }
+  .sidebar-item.active .ico{ color:var(--cyan); }
+  .ico{ width:18px; height:18px; flex:none; }
+
+  .stat-label{ font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+  .stat-value{ font-variant-numeric: tabular-nums; font-weight:700; }
+  .chip{
+    display:inline-flex; align-items:center; gap:6px;
+    padding:3px 9px; border-radius:999px; font-size:11px; font-weight:600;
+    border:1px solid var(--line); color:var(--muted); background:rgba(255,255,255,0.02);
+  }
+  .chip.ok{ color:#a7f3d0; border-color:rgba(52,211,153,0.3); background:rgba(52,211,153,0.08); }
+  .chip.warn{ color:#fde68a; border-color:rgba(251,191,36,0.3); background:rgba(251,191,36,0.08); }
+  .chip.crit{ color:#fecdd3; border-color:rgba(255,77,109,0.35); background:rgba(255,77,109,0.08); }
+  .chip.cyan{ color:#cffafe; border-color:rgba(34,211,238,0.35); background:rgba(34,211,238,0.08); }
+
+  .grid-bg{
+    background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .scroll-area{ overflow-y:auto; }
+
+  .marquee {
+    overflow:hidden; white-space:nowrap;
+  }
+  .marquee > div { display:inline-block; padding-left:100%; animation: marq 26s linear infinite; }
+  @keyframes marq { to { transform: translateX(-100%); } }
+
+  @media (max-width: 1023px){
+    body{ overflow:auto; }
+    .sidebar{ display:none; }
+  }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" data-presets="env,react">
+const { useState, useEffect, useMemo } = React;
+const {
+  LineChart, Line, AreaChart, Area,
+  ResponsiveContainer, XAxis, YAxis, Tooltip, CartesianGrid,
+  RadialBarChart, RadialBar, PolarAngleAxis, ReferenceLine
+} = Recharts;
+
+/* ---------- Icons ---------- */
+const Icon = ({ d, className="ico" }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <path d={d}/>
+  </svg>
+);
+const icons = {
+  pulse:"M3 12h4l2-6 4 12 2-6h6",
+  dash:"M3 13h8V3H3zM13 21h8V11h-8zM3 21h8v-6H3zM13 9h8V3h-8z",
+  heart:"M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z",
+  temp:"M14 4a2 2 0 1 0-4 0v9a4 4 0 1 0 4 0z",
+  device:"M4 7h16v10H4zM8 21h8M12 17v4",
+  bell:"M18 16v-5a6 6 0 1 0-12 0v5l-2 2h16zM10 21a2 2 0 0 0 4 0",
+  user:"M20 21a8 8 0 1 0-16 0M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0z",
+  settings:"M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1A2 2 0 1 1 4.4 17l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.8l-.1-.1A2 2 0 1 1 7 4.4l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1A2 2 0 1 1 19.6 7l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z",
+  logout:"M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9",
+  wifi:"M5 12.55a11 11 0 0 1 14 0M2 8.82a16 16 0 0 1 20 0M8.5 16.43a6 6 0 0 1 7 0M12 20h.01",
+  shield:"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z",
+  search:"M11 4a7 7 0 1 1 0 14 7 7 0 0 1 0-14zM21 21l-4.3-4.3",
+  sun:"M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z",
+  cloud:"M17.5 19C19.9853 19 22 16.9853 22 14.5C22 12.1325 20.177 10.2024 17.8592 10.0191C17.4326 6.64161 14.5614 4 11 4C7.13401 4 4 7.13401 4 11C4 11.2335 4.0114 11.4645 4.03362 11.6924C2.31681 12.3551 1 14.0205 1 16C1 18.2091 2.79086 20 5 20H17.5Z",
+  droplet:"M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z",
+  history:"M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+};
+
+/* ---------- ThingSpeak API Integration ---------- */
+function useSensorStream(){
+  const [series, setSeries] = useState([]);
+  const [latest, setLatest] = useState({ hr: 76, light: 420, signal: 92, battery: 84, deviceId: "MY-ESP32" });
+
+  // === THINGSPEAK CONFIGURATION ===
+  // 1. Enter your ThingSpeak Channel ID here (e.g. "1234567")
+  const CHANNEL_ID = "3397706"; // User's actual ThingSpeak Channel ID
+  const READ_API_KEY = "OMSG4XBQ1WY507SE"; // Provided Read API Key
+  // ================================
+
+  useEffect(() => {
+    let isMounted = true;
+    
+    const fetchData = async () => {
+      // Fallback Simulator if ThingSpeak is not configured yet
+      if (CHANNEL_ID === "YOUR_CHANNEL_ID") {
+         setSeries(prev => {
+            const now = Date.now();
+            const lastHr = prev.length ? prev[prev.length-1].hr : 75;
+            const lastLight = prev.length ? prev[prev.length-1].light : 400;
+            const newPt = {
+               time: new Date(now).toLocaleTimeString([], {hour12:false}),
+               hr: Math.max(50, Math.min(140, lastHr + (Math.random()-0.5)*4)),
+               light: Math.max(0, Math.min(4095, lastLight + (Math.random()-0.5)*150))
+            };
+            const next = [...prev.slice(-59), newPt];
+            setLatest(l => ({ ...l, hr: Math.round(newPt.hr), light: Math.round(newPt.light), signal: Math.max(60, Math.min(100, l.signal + (Math.random()-0.5)*4)) }));
+            return next;
+         });
+         return;
+      }
+      
+      try {
+        // Fetch last 60 records from ThingSpeak
+        const res = await fetch(`https://api.thingspeak.com/channels/${CHANNEL_ID}/feeds.json?api_key=${READ_API_KEY}&results=60`);
+        const data = await res.json();
+        
+        if (data.feeds && data.feeds.length > 0 && isMounted) {
+          const newSeries = data.feeds.map(f => ({
+            time: new Date(f.created_at).toLocaleTimeString([], {hour12:false}),
+            hr: parseInt(f.field1) || 0,
+            light: parseInt(f.field2) || 0
+          }));
+          
+          setSeries(newSeries);
+          const last = newSeries[newSeries.length - 1];
+          setLatest(prev => ({ ...prev, hr: last.hr, light: last.light }));
+        }
+      } catch (err) {
+        console.error("ThingSpeak fetch failed", err);
+      }
+    };
+    
+    // Initial fetch
+    fetchData();
+    
+    // ThingSpeak rate limit is 15 seconds. If simulating, do 1.5s for smooth UI, else 15s.
+    const intervalTime = CHANNEL_ID === "YOUR_CHANNEL_ID" ? 1500 : 15000;
+    const interval = setInterval(fetchData, intervalTime); 
+    
+    return () => { isMounted = false; clearInterval(interval); };
+  }, []);
+
+  return { series, latest };
+}
+
+/* ---------- Weather API Hook ---------- */
+function useWeather(location) {
+  const [weather, setWeather] = useState({ temp: "--", hum: "--" });
+  
+  useEffect(() => {
+    if(!location) return;
+    let isMounted = true;
+    
+    const fetchWeather = async () => {
+      try {
+        const geoRes = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${location}&count=1&format=json`);
+        const geoData = await geoRes.json();
+        
+        if (geoData.results && geoData.results.length > 0) {
+          const { latitude, longitude } = geoData.results[0];
+          const wRes = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,relative_humidity_2m`);
+          const wData = await wRes.json();
+          
+          if (wData.current && isMounted) {
+            setWeather({
+              temp: wData.current.temperature_2m,
+              hum: wData.current.relative_humidity_2m
+            });
+          }
+        }
+      } catch (err) {
+        console.error("Weather fetch failed", err);
+      }
+    };
+    
+    fetchWeather();
+    const interval = setInterval(fetchWeather, 600000); // 10 mins
+    return () => { isMounted = false; clearInterval(interval); };
+  }, [location]);
+  
+  return weather;
+}
+
+/* ---------- Helpers ---------- */
+function classify(metric, v){
+  if (v === "--") return "ok";
+  if (metric==="hr"){
+    if (v<55 || v>115) return "crit";
+    if (v>100 && v<=115) return "warn";
+    if (v>=90 && v<=100) return "warn";
+    return "ok";
+  }
+  if (metric==="light"){
+    if (v<100) return "warn";
+    if (v>3500) return "warn";
+    return "ok";
+  }
+  if (metric==="temp"){
+    if (v>=38 || v<5) return "crit";
+    if (v>=35 || v<10) return "warn";
+    return "ok";
+  }
+  if (metric==="hum"){
+    if (v<20 || v>80) return "warn";
+    return "ok";
+  }
+  return "ok";
+}
+
+/* ---------- Components ---------- */
+const Sidebar = ({ active, setActive }) => {
+  const items = [
+    {k:"dashboard", label:"Dashboard", d:icons.dash},
+    {k:"my_vitals", label:"My Vitals", d:icons.heart},
+    {k:"history", label:"History Stats", d:icons.history},
+    {k:"alerts", label:"Alerts", d:icons.bell},
+  ];
+  
+  const sysItems = [
+    {k:"my_devices", label:"My Devices", d:icons.device},
+    {k:"settings", label:"Settings", d:icons.settings},
+  ];
+
+  return (
+    <aside className="sidebar fixed left-0 top-0 h-screen w-64 px-4 py-5 z-30"
+           style={{background:"linear-gradient(180deg, #0a0c10, #07090c)", borderRight:"1px solid var(--line)"}}>
+      <div className="flex items-center gap-3 px-2 mb-8">
+        <div className="relative w-10 h-10 rounded-xl flex items-center justify-center"
+             style={{background:"radial-gradient(circle at 30% 30%, rgba(34,211,238,0.35), rgba(34,211,238,0.05))",
+                     border:"1px solid rgba(34,211,238,0.3)"}}>
+          <Icon d={icons.pulse} className="ico heartbeat" />
+          <div className="pulse-dot absolute -top-1 -right-1"></div>
+        </div>
+        <div>
+          <div className="font-bold tracking-tight text-[15px]">My PulseIQ</div>
+          <div className="text-[11px]" style={{color:"var(--muted)"}}>Personal Wellness • v2.4</div>
+        </div>
+      </div>
+
+      <div className="text-[10px] tracking-widest uppercase mb-2 px-3" style={{color:"var(--muted)"}}>Monitor</div>
+      <nav className="flex flex-col gap-1 mb-6">
+        {items.map(it=>(
+          <div key={it.k} className={"sidebar-item " + (active===it.k?"active":"")} onClick={()=>setActive(it.k)}>
+            <Icon d={it.d}/> <span>{it.label}</span>
+          </div>
+        ))}
+      </nav>
+
+      <div className="text-[10px] tracking-widest uppercase mb-2 px-3" style={{color:"var(--muted)"}}>System</div>
+      <nav className="flex flex-col gap-1">
+        {sysItems.map(it=>(
+          <div key={it.k} className={"sidebar-item " + (active===it.k?"active":"")} onClick={()=>setActive(it.k)}>
+            <Icon d={it.d}/> <span>{it.label}</span>
+          </div>
+        ))}
+      </nav>
+
+      <div className="absolute left-4 right-4 bottom-4 glass p-3">
+        <div className="flex items-center gap-3">
+          <div className="w-9 h-9 rounded-full flex items-center justify-center font-bold"
+               style={{background:"linear-gradient(135deg, #22d3ee, #0891b2)", color:"#06161a"}}>ME</div>
+          <div className="leading-tight">
+            <div className="text-[13px] font-semibold">User</div>
+            <div className="text-[11px]" style={{color:"var(--muted)"}}>Premium Plan</div>
+          </div>
+          <Icon d={icons.logout} className="ico ml-auto" />
+        </div>
+      </div>
+    </aside>
+  );
+};
+
+const TopBar = ({ latest, online, location, setLocation }) => {
+  const [inp, setInp] = useState("");
+  const time = new Date().toLocaleTimeString([], {hour12:false});
+  
+  const handleLocChange = (e) => {
+    e.preventDefault();
+    if(inp.trim()) {
+      setLocation(inp.trim());
+      setInp("");
+    }
+  };
+
+  return (
+    <header className="sticky top-0 z-20 backdrop-blur"
+            style={{background:"rgba(7,8,10,0.7)", borderBottom:"1px solid var(--line)"}}>
+      <div className="flex items-center gap-4 px-5 py-3">
+        <div className="hidden md:flex items-center gap-2">
+          <span className={"pulse-dot " + (online?"":"red")}></span>
+          <span className="text-[12px] font-semibold tracking-wide">
+            {online ? "LIVE" : "OFFLINE"}
+          </span>
+          <span className="text-[12px]" style={{color:"var(--muted)"}}>• My ESP32 Sensors</span>
+        </div>
+
+        <div className="hidden lg:flex flex-1 max-w-md ml-4 relative">
+          <Icon d={icons.search} className="ico absolute left-3 top-1/2 -translate-y-1/2" />
+          <form onSubmit={handleLocChange} className="w-full">
+            <input 
+              placeholder={`Weather Location (${location})`} 
+              value={inp}
+              onChange={e=>setInp(e.target.value)}
+              className="w-full pl-9 pr-3 py-2 text-[13px] rounded-lg outline-none"
+              style={{background:"var(--bg-2)", border:"1px solid var(--line)", color:"var(--text)"}}
+            />
+          </form>
+        </div>
+
+        <div className="flex-1 lg:hidden"></div>
+
+        <div className="hidden md:flex items-center gap-2">
+          <span className="chip cyan"><span className="pulse-dot"></span> {latest.deviceId}</span>
+          <span className="chip">SIG {Math.round(latest.signal)}%</span>
+        </div>
+
+        <div className="chip">{time}</div>
+      </div>
+
+      <div className="marquee text-[11px] py-1 px-5" style={{color:"var(--muted)", borderTop:"1px solid var(--line)", background:"rgba(255,255,255,0.01)"}}>
+        <div>
+          ⚡ Personal Sensor Stream • Device: ESP32 + Pulse + LDR • Firmware 2.1.0 •
+          &nbsp; Last sync 1.5s ago • Weather synced for {location} • All systems nominal ✓
+        </div>
+      </div>
+    </header>
+  );
+};
+
+const KPI = ({ title, value, unit, color, status, sparkline, icon }) => {
+  const statusClass = status ? `chip ${status}` : "chip ok";
+  const statusText = status==="crit"?"CRITICAL": status==="warn"?"ATTENTION":"NORMAL";
+  
+  let bgSoft = color==="red" ? "var(--red-soft)" : color==="yellow" ? "var(--yellow-soft)" : "var(--cyan-soft)";
+  let colorVar = color==="red" ? "var(--red)" : color==="yellow" ? "var(--yellow)" : "var(--cyan)";
+  let neonClass = status==="crit" ? "neon-red" : status==="warn" && color==="yellow" ? "neon-yellow" : "";
+
+  return (
+    <div className={`glass p-4 fade-in relative overflow-hidden ${neonClass}`}>
+      <div className="flex items-start justify-between">
+        <div className="flex items-center gap-2">
+          <div className="w-8 h-8 rounded-lg flex items-center justify-center"
+               style={{background: bgSoft, color: colorVar}}>
+            <Icon d={icon}/>
+          </div>
+          <div className="stat-label">{title}</div>
+        </div>
+        <span className={statusClass}>{statusText}</span>
+      </div>
+
+      <div className="mt-3 flex items-baseline gap-2">
+        <span className="stat-value text-[34px] leading-none"
+              style={{color: status==="crit"?"var(--red)": color==="red"?"var(--red)":"#e7eef5"}}>{value}</span>
+        <span className="text-[12px]" style={{color:"var(--muted)"}}>{unit}</span>
+      </div>
+
+      <div style={{height:46}} className="mt-2 -mx-1">
+        {sparkline && (
+          <ResponsiveContainer width="100%" height="100%">
+            <AreaChart data={sparkline}>
+              <defs>
+                <linearGradient id={"sg-"+title} x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor={color==="red"?"#ff4d6d":color==="yellow"?"#fbbf24":"#22d3ee"} stopOpacity={0.5}/>
+                  <stop offset="100%" stopColor={color==="red"?"#ff4d6d":color==="yellow"?"#fbbf24":"#22d3ee"} stopOpacity={0}/>
+                </linearGradient>
+              </defs>
+              <Area type="monotone" dataKey="v" stroke={color==="red"?"#ff4d6d":color==="yellow"?"#fbbf24":"#22d3ee"} fill={`url(#sg-${title})`} strokeWidth={2} isAnimationActive={false}/>
+            </AreaChart>
+          </ResponsiveContainer>
+        )}
+      </div>
+    </div>
+  );
+};
+
+const CustomTooltip = ({ active, payload, label, units }) => {
+  if(!active || !payload || !payload.length) return null;
+  return (
+    <div className="glass p-2 px-3" style={{fontSize:12}}>
+      <div style={{color:"var(--muted)"}} className="text-[11px]">{label}</div>
+      {payload.map((p,i)=>(
+        <div key={i} className="flex items-center gap-2 mt-0.5">
+          <span style={{width:8, height:8, borderRadius:99, background:p.color, display:"inline-block"}}></span>
+          <span style={{color:"#cbd5e1"}}>{p.name}</span>
+          <span className="ml-auto font-semibold">{p.value}{units?.[p.dataKey] || ""}</span>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+const HeartRateChart = ({ data }) => (
+  <div className="glass p-5 fade-in flex-1">
+    <div className="flex items-center justify-between mb-3">
+      <div>
+        <div className="flex items-center gap-2">
+          <Icon d={icons.heart} className="ico" />
+          <h3 className="font-semibold text-[15px]">Heart Rate Trend</h3>
+          <span className="chip cyan">BPM</span>
+        </div>
+        <div className="text-[11px] mt-1" style={{color:"var(--muted)"}}>Live ECG/Pulse-derived rate • last 90s</div>
+      </div>
+      <span className="chip ok"><span className="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block"></span> Syncing</span>
+    </div>
+
+    <ResponsiveContainer width="100%" height={250}>
+      <AreaChart data={data} margin={{top:5,right:10,left:-10,bottom:0}}>
+        <defs>
+          <linearGradient id="hrGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#22d3ee" stopOpacity={0.4}/>
+            <stop offset="100%" stopColor="#22d3ee" stopOpacity={0}/>
+          </linearGradient>
+        </defs>
+        <CartesianGrid stroke="#1a1f29" vertical={false}/>
+        <XAxis dataKey="time" tick={{fill:"#6b7689", fontSize:10}} interval={Math.floor(data.length/6)} stroke="#1f2530"/>
+        <YAxis domain={[40,140]} tick={{fill:"#6b7689", fontSize:10}} stroke="#1f2530" width={36}/>
+        <Tooltip content={<CustomTooltip units={{hr:" bpm"}}/>} />
+        <ReferenceLine y={60} stroke="#475569" strokeDasharray="3 3" />
+        <ReferenceLine y={100} stroke="#475569" strokeDasharray="3 3" />
+        <Area type="monotone" name="Heart Rate" dataKey="hr" stroke="#22d3ee" strokeWidth={2.2} fill="url(#hrGrad)" isAnimationActive={false} dot={false}/>
+      </AreaChart>
+    </ResponsiveContainer>
+  </div>
+);
+
+const LightLevelChart = ({ data }) => (
+  <div className="glass p-5 fade-in flex-1">
+    <div className="flex items-center justify-between mb-3">
+      <div>
+        <div className="flex items-center gap-2">
+          <Icon d={icons.sun} />
+          <h3 className="font-semibold text-[15px]">Ambient Light (LDR)</h3>
+          <span className="chip" style={{color:"#fbbf24", borderColor:"rgba(251,191,36,0.3)"}}>ADC Value</span>
+        </div>
+        <div className="text-[11px] mt-1" style={{color:"var(--muted)"}}>Environment illumination feed</div>
+      </div>
+    </div>
+    <ResponsiveContainer width="100%" height={250}>
+      <AreaChart data={data} margin={{top:5,right:10,left:-10,bottom:0}}>
+        <defs>
+          <linearGradient id="lightGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#fbbf24" stopOpacity={0.4}/>
+            <stop offset="100%" stopColor="#fbbf24" stopOpacity={0}/>
+          </linearGradient>
+        </defs>
+        <CartesianGrid stroke="#1a1f29" vertical={false}/>
+        <XAxis dataKey="time" tick={{fill:"#6b7689", fontSize:10}} interval={Math.floor(data.length/6)} stroke="#1f2530"/>
+        <YAxis domain={[0, 4095]} tick={{fill:"#6b7689", fontSize:10}} stroke="#1f2530" width={40}/>
+        <Tooltip content={<CustomTooltip units={{light:""}}/>} />
+        <Area type="monotone" name="Light" dataKey="light" stroke="#fbbf24" strokeWidth={2.2} fill="url(#lightGrad)" dot={false} isAnimationActive={false}/>
+      </AreaChart>
+    </ResponsiveContainer>
+  </div>
+);
+
+const SignalGauge = ({ latest }) => {
+  const data = [{name:"Signal", value: Math.round(latest.signal), fill:"#22d3ee"}];
+  return (
+    <div className="glass p-5 fade-in flex-1 h-full">
+      <div className="flex items-center justify-between">
+        <h3 className="font-semibold text-[15px]">ESP32 Health</h3>
+        <span className="chip cyan">{latest.deviceId}</span>
+      </div>
+      <div className="flex items-center gap-2 mt-4">
+        <div style={{width:140, height:140}}>
+          <ResponsiveContainer>
+            <RadialBarChart innerRadius="70%" outerRadius="100%" data={data} startAngle={220} endAngle={-40}>
+              <PolarAngleAxis type="number" domain={[0,100]} tick={false}/>
+              <RadialBar dataKey="value" cornerRadius={10} background={{fill:"#1a1f29"}} isAnimationActive={false}/>
+            </RadialBarChart>
+          </ResponsiveContainer>
+        </div>
+        <div className="-ml-28 text-center pointer-events-none" style={{width:140}}>
+          <div className="stat-value text-[26px]" style={{color:"var(--cyan)"}}>{Math.round(latest.signal)}%</div>
+          <div className="text-[10px]" style={{color:"var(--muted)"}}>WIFI SIG</div>
+        </div>
+        <div className="flex-1 ml-4 space-y-3">
+          <Bar2 label="Battery" value={latest.battery} color="#34d399"/>
+          <Bar2 label="LDR Sensor" value={98} color="#fbbf24"/>
+          <Bar2 label="Pulse Sensor" value={95} color="#ff4d6d"/>
+          <Bar2 label="Latency" value={80} color="#a78bfa" suffix={"ms"} raw={"24"}/>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Bar2 = ({label, value, color, suffix="%", raw}) => (
+  <div>
+    <div className="flex justify-between text-[11px] mb-1" style={{color:"var(--muted)"}}>
+      <span>{label}</span><span style={{color:"#cbd5e1"}}>{raw ?? Math.round(value)}{suffix}</span>
+    </div>
+    <div className="h-1.5 rounded-full" style={{background:"#11151c"}}>
+      <div className="h-full rounded-full" style={{width: `${Math.min(100, value)}%`, background: color, boxShadow:`0 0 8px ${color}`}}></div>
+    </div>
+  </div>
+);
+
+const RecommendationEngine = ({ latest }) => {
+  const hr = latest.hr || 75;
+  const ldr = latest.light || 2000;
+  
+  // Calculate continuous stress score using the derived ML weights:
+  // Stress Score = Intercept + (w_hr * HR) + (w_light * Light)
+  const intercept = 12.154236778439078;
+  const w_hr = 0.5493432547412623;
+  const w_light = -0.009671112002358886;
+  
+  const rawScore = intercept + (w_hr * hr) + (w_light * ldr);
+  const score = Math.round(Math.max(0, Math.min(100, rawScore)) * 10) / 10;
+  
+  // Classify based on the ML-derived thresholds
+  let category = "";
+  let lvl = "";
+  let glow = "";
+  let msg = "";
+  let barColor = "";
+
+  if (score < 21.56) {
+    category = "Relaxed";
+    lvl = "ok";
+    glow = "neon-cyan";
+    barColor = "var(--cyan)";
+    msg = "Excellent! Your stress score is low. Maintain healthy habits: Prioritize consistent sleep schedules, active recovery, regular hydration, and balanced lifestyle habits to sustain this ideal state of well-being.";
+  } else if (score < 36.81) {
+    category = "Normal";
+    lvl = "ok";
+    glow = "neon-cyan";
+    barColor = "var(--green)";
+    msg = "Your wellness indicators appear stable and balanced. General wellness suggestions: Stay hydrated, continue your daily positive habits, incorporate small walks, and maintain consistent deep, mindful breathing throughout your day.";
+  } else if (score < 52.94) {
+    category = "Mild Stress";
+    lvl = "warn";
+    glow = "neon-yellow";
+    barColor = "var(--yellow)";
+    msg = "A mild level of stress is detected by our ML engine. We suggest taking a quick 5-minute break. Try simple breathing exercises (inhale for 4 seconds, hold for 4, exhale for 4). Stand up to stretch, and let your eyes rest from digital screens.";
+  } else if (score < 70.59) {
+    category = "Moderate Stress";
+    lvl = "warn";
+    glow = "neon-yellow";
+    barColor = "#f97316"; // orange
+    msg = "Moderate stress level detected. Take a structured break: Hydrate immediately, engage in light physical movement or a brief walking session around your workspace, and practice relaxation techniques such as progressive muscle relaxation.";
+  } else {
+    category = "High Stress";
+    lvl = "crit";
+    glow = "neon-red";
+    barColor = "var(--red)";
+    msg = "High stress alert! Immediate calming suggestions are highly recommended. Stop high-strain work, find a quiet space, perform slow deep breathing, and rest. If these elevated stress readings persist, please seek professional health advice.";
+  }
+
+  const quotes = [
+    "Every small step toward wellness creates lasting positive change.",
+    "A calm mind and a healthy body are built through consistent daily habits.",
+    "Pause, breathe, and reset. Your well-being deserves attention.",
+    "Progress is not measured by perfection but by consistency.",
+    "Take a moment to care for yourself today; your future self will thank you.",
+    "Balance is the foundation of sustainable productivity and happiness.",
+    "Wellness is a journey of awareness, not a destination.",
+    "Your health is your greatest asset—invest in it every day.",
+    "Even a brief moment of mindfulness can transform your entire day.",
+    "Listening to your body is the first step toward living healthier and happier."
+  ];
+  const qIdx = (new Date().getDay() + Math.floor(hr/10)) % quotes.length;
+  
+  return (
+    <div className={`glass p-5 fade-in flex-1 flex flex-col justify-between ${glow}`}>
+      <div>
+        <div className="flex items-center gap-2 mb-4">
+          <Icon d={icons.shield}/>
+          <h3 className="font-semibold text-[15px]">Wellness Engine (ML-derived)</h3>
+          <span className={`chip ml-auto ${lvl}`}>{category}</span>
+        </div>
+        
+        {/* ML Stress Score Meter */}
+        <div className="mb-4 bg-black/20 p-3 rounded-xl border border-white/5">
+          <div className="flex justify-between text-[11px] mb-1 text-slate-400">
+            <span>Machine Learning Stress Index</span>
+            <span className="font-bold text-white">{score}%</span>
+          </div>
+          <div className="h-2 rounded-full bg-slate-800 overflow-hidden relative">
+            <div className="h-full rounded-full transition-all duration-500 ease-out" 
+                 style={{width: `${score}%`, background: barColor, boxShadow: `0 0 10px ${barColor}`}}></div>
+          </div>
+          <div className="flex justify-between text-[8px] mt-1 text-slate-500">
+            <span>Relaxed</span>
+            <span>Normal</span>
+            <span>Mild</span>
+            <span>Moderate</span>
+            <span>High</span>
+          </div>
+        </div>
+
+        <p className="text-[13px] leading-relaxed" style={{color:"var(--text)"}}>
+          {msg}
+        </p>
+      </div>
+      <div className="mt-4 pt-4 border-t border-[rgba(255,255,255,0.05)]">
+        <p className="text-[12px] italic text-center font-medium" style={{color:"var(--cyan)"}}>{`"${quotes[qIdx]}"`}</p>
+      </div>
+    </div>
+  );
+};
+
+const HistoryView = ({ series }) => {
+  const avgHr = useMemo(() => {
+    if (!series.length) return 75;
+    const sum = series.reduce((acc, p) => acc + (p.hr || 0), 0);
+    return Math.round(sum / series.length);
+  }, [series]);
+
+  const avgLight = useMemo(() => {
+    if (!series.length) return 2000;
+    const sum = series.reduce((acc, p) => acc + (p.light || 0), 0);
+    return Math.round(sum / series.length);
+  }, [series]);
+
+  const avgScore = useMemo(() => {
+    if (!series.length) return 30;
+    const sum = series.reduce((acc, p) => acc + (p.score || 0), 0);
+    return Math.round((sum / series.length) * 10) / 10;
+  }, [series]);
+
+  const avgCategory = useMemo(() => {
+    if (avgScore < 21.56) return "Relaxed";
+    if (avgScore < 36.81) return "Normal";
+    if (avgScore < 52.94) return "Mild Stress";
+    if (avgScore < 70.59) return "Moderate Stress";
+    return "High Stress";
+  }, [avgScore]);
+
+  return (
+    <div className="p-5 grid-bg fade-in">
+      <h2 className="text-[22px] font-bold tracking-tight mb-5">Historical Data & Stats</h2>
+      <div className="glass p-5 mb-5">
+        <h3 className="font-semibold mb-3">Previous Trends (Live Sync)</h3>
+        <ResponsiveContainer width="100%" height={300}>
+          <LineChart data={series.slice(-40)}>
+            <CartesianGrid stroke="#1a1f29" vertical={false}/>
+            <XAxis dataKey="time" stroke="#1f2530" tick={{fill:"#6b7689", fontSize:10}}/>
+            <YAxis yAxisId="left" domain={[40, 140]} stroke="#1f2530" tick={{fill:"#6b7689", fontSize:10}}/>
+            <YAxis yAxisId="right" orientation="right" domain={[0, 4095]} stroke="#1f2530" tick={{fill:"#6b7689", fontSize:10}}/>
+            <Tooltip content={<CustomTooltip units={{hr:" bpm", light:"", score:"%"}}/>}/>
+            <Line yAxisId="left" type="monotone" name="Heart Rate" dataKey="hr" stroke="#22d3ee" strokeWidth={2} dot={false}/>
+            <Line yAxisId="right" type="monotone" name="Light" dataKey="light" stroke="#fbbf24" strokeWidth={2} dot={false}/>
+            <Line yAxisId="left" type="monotone" name="Stress Score" dataKey="score" stroke="#a78bfa" strokeWidth={1.5} strokeDasharray="3 3" dot={false}/>
+          </LineChart>
+        </ResponsiveContainer>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="glass p-5 flex flex-col items-center justify-center">
+          <h4 className="text-[14px] font-semibold mb-2" style={{color:"var(--muted)"}}>Avg Heart Rate</h4>
+          <div className="text-[32px] font-bold text-[#22d3ee]">{avgHr} <span className="text-[16px] text-gray-500 font-normal">bpm</span></div>
+        </div>
+        <div className="glass p-5 flex flex-col items-center justify-center">
+          <h4 className="text-[14px] font-semibold mb-2" style={{color:"var(--muted)"}}>Avg Ambient Light</h4>
+          <div className="text-[32px] font-bold text-[#fbbf24]">{avgLight} <span className="text-[16px] text-gray-500 font-normal">ADC</span></div>
+        </div>
+        <div className="glass p-5 flex flex-col items-center justify-center">
+          <h4 className="text-[14px] font-semibold mb-2" style={{color:"var(--muted)"}}>Average Stress Index</h4>
+          <div className="text-[32px] font-bold text-[#34d399]">{avgCategory} <span className="text-[16px] text-gray-500 font-normal">({avgScore}%)</span></div>
+        </div>
+      </div>
+    </div>
+  )
+};
+
+const App = () => {
+  const [active, setActive] = useState("dashboard");
+  const [location, setLocation] = useState("London");
+  
+  const { series, latest } = useSensorStream();
+  const weather = useWeather(location);
+
+  // Derive weights and thresholds from the trained ML model
+  const intercept = 12.154236778439078;
+  const w_hr = 0.5493432547412623;
+  const w_light = -0.009671112002358886;
+
+  // Process latest sensor data to compute the ML stress score
+  const calculatedScore = useMemo(() => {
+    const hr = latest.hr || 75;
+    const ldr = latest.light || 2000;
+    const raw = intercept + (w_hr * hr) + (w_light * ldr);
+    return Math.round(Math.max(0, Math.min(100, raw)) * 10) / 10;
+  }, [latest.hr, latest.light]);
+
+  const stressCategory = useMemo(() => {
+    if (calculatedScore < 21.56) return "Relaxed";
+    if (calculatedScore < 36.81) return "Normal";
+    if (calculatedScore < 52.94) return "Mild Stress";
+    if (calculatedScore < 70.59) return "Moderate Stress";
+    return "High Stress";
+  }, [calculatedScore]);
+
+  // Generate sparkline for stress index
+  const seriesWithScore = useMemo(() => {
+    return series.map(p => {
+      const hr = p.hr || 75;
+      const ldr = p.light || 2000;
+      const raw = intercept + (w_hr * hr) + (w_light * ldr);
+      const score = Math.round(Math.max(0, Math.min(100, raw)) * 10) / 10;
+      return { ...p, score };
+    });
+  }, [series]);
+
+  const hrSpark = useMemo(()=>series.slice(-20).map(p=>({v:p.hr})), [series]);
+  const lightSpark = useMemo(()=>series.slice(-20).map(p=>({v:p.light})), [series]);
+  const scoreSpark = useMemo(()=>seriesWithScore.slice(-20).map(p=>({v:p.score})), [seriesWithScore]);
+
+  return (
+    <div className="min-h-screen lg:h-screen flex">
+      <Sidebar active={active} setActive={setActive}/>
+      <main className="flex-1 lg:ml-64 h-screen overflow-y-auto scroll-area">
+        <TopBar latest={latest} online={true} location={location} setLocation={setLocation}/>
+        
+        {active === "history" ? (
+          <HistoryView series={seriesWithScore} />
+        ) : (
+          <div className="p-5 grid-bg">
+            <div className="flex items-end justify-between mb-5 flex-wrap gap-3">
+              <div>
+                <h1 className="text-[22px] font-bold tracking-tight">My Personal Dashboard</h1>
+                <div className="text-[12px]" style={{color:"var(--muted)"}}>
+                  Sensors: <span style={{color:"var(--cyan)"}}>ESP32 (HR + LDR)</span> • Weather: <span style={{color:"#fbbf24"}}>{location}</span>
+                </div>
+              </div>
+            </div>
+
+            {/* 5-Column Grid for KPI Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 mb-5">
+              <KPI title="Heart Rate" value={latest.hr} unit="bpm"
+                   color={classify("hr", latest.hr)==="crit"?"red":"cyan"}
+                   status={classify("hr", latest.hr)}
+                   sparkline={hrSpark} icon={icons.heart}/>
+                   
+              <KPI title="Ambient Light" value={latest.light} unit="ADC"
+                   color="yellow"
+                   status={classify("light", latest.light)}
+                   sparkline={lightSpark} icon={icons.sun}/>
+                   
+              <KPI title="Stress Score" value={calculatedScore} unit="%"
+                   color={stressCategory === "High Stress" || stressCategory === "Moderate Stress" ? "red" : stressCategory === "Mild Stress" ? "yellow" : "cyan"}
+                   status={stressCategory === "High Stress" || stressCategory === "Moderate Stress" ? "crit" : stressCategory === "Mild Stress" ? "warn" : "ok"}
+                   sparkline={scoreSpark} icon={icons.shield}/>
+                   
+              <KPI title="Temperature" value={weather.temp} unit="°C"
+                   color={classify("temp", weather.temp)==="crit"?"red":"cyan"}
+                   status={classify("temp", weather.temp)}
+                   icon={icons.temp}/>
+                   
+              <KPI title="Humidity" value={weather.hum} unit="%"
+                   color="cyan"
+                   status={classify("hum", weather.hum)}
+                   icon={icons.droplet}/>
+            </div>
+
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 mb-5">
+              <HeartRateChart data={series}/>
+              <LightLevelChart data={series}/>
+            </div>
+
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 mb-5">
+              <RecommendationEngine latest={latest} />
+              <SignalGauge latest={latest}/>
+            </div>
+
+            <div className="text-center text-[11px] py-3" style={{color:"var(--muted)"}}>
+              My PulseIQ © {new Date().getFullYear()} • ESP32 + React • Built for Personal Wellness
+            </div>
+          </div>
+        )}
+      </main>
+    </div>
+  );
+};
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+</script>
+</body>
+</html>

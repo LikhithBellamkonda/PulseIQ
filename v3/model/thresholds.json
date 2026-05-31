@@ -1,0 +1,36 @@
+{
+    "model_info": {
+        "description": "Linear regression weights mapping Heart Rate and Light to a continuous 0-100 Stress Score.",
+        "intercept": 12.154236778439078,
+        "weight_heart_rate": 0.5493432547412623,
+        "weight_light": -0.009671112002358886
+    },
+    "thresholds": {
+        "T1_Relaxed_Normal": 21.56102770599247,
+        "T2_Normal_Mild": 36.80791412295299,
+        "T3_Mild_Moderate": 52.941139787953645,
+        "T4_Moderate_High": 70.58564504609241
+    },
+    "categories_meta": {
+        "Relaxed": {
+            "min": 0.0,
+            "max": 21.56102770599247
+        },
+        "Normal": {
+            "min": 21.56102770599247,
+            "max": 36.80791412295299
+        },
+        "Mild Stress": {
+            "min": 36.80791412295299,
+            "max": 52.941139787953645
+        },
+        "Moderate Stress": {
+            "min": 52.941139787953645,
+            "max": 70.58564504609241
+        },
+        "High Stress": {
+            "min": 70.58564504609241,
+            "max": 100.0
+        }
+    }
+}
