@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ML-Based Real-Time Stress Monitoring System Dashboard using ESP32 and ThingSpeak Cloud">
+  <title>PulseIQ - AI Stress Intelligence & Wellness Dashboard</title>
+  
+  <!-- CDNs for Rapid No-Build CDN Execution -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.23.9/babel.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Prop-types and Recharts charts libraries -->
+  <script src="https://unpkg.com/prop-types/prop-types.min.js"></script>
+  <script src="https://unpkg.com/recharts/umd/Recharts.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="grid-bg">
+  <div id="root">
+    <!-- React Mounts Here -->
+    <div class="h-screen w-screen flex flex-col items-center justify-center space-y-4">
+      <div class="w-12 h-12 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
+      <div class="text-slate-400 font-medium text-sm">Synchronizing PulseIQ System...</div>
+    </div>
+  </div>
+
+  <!-- Custom React & Inference Script -->
+  <script type="text/babel" src="script.js"></script>
+</body>
+</html>

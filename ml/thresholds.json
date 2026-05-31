@@ -1,0 +1,36 @@
+{
+    "model_info": {
+        "description": "Linear regression weights derived from Random Forest selection to map HR and Light to a continuous 0-100 Stress Index.",
+        "intercept": 12.591163916709874,
+        "weight_heart_rate": 0.5472341139459247,
+        "weight_light": -0.009763119467582022
+    },
+    "thresholds": {
+        "T1_Relaxed_Normal": 21.552408399524374,
+        "T2_Normal_Mild": 36.87471894101088,
+        "T3_Mild_Moderate": 53.205473929866045,
+        "T4_Moderate_High": 70.91952364267055
+    },
+    "categories_meta": {
+        "Relaxed": {
+            "min": 0.0,
+            "max": 21.552408399524374
+        },
+        "Normal": {
+            "min": 21.552408399524374,
+            "max": 36.87471894101088
+        },
+        "Mild Stress": {
+            "min": 36.87471894101088,
+            "max": 53.205473929866045
+        },
+        "Moderate Stress": {
+            "min": 53.205473929866045,
+            "max": 70.91952364267055
+        },
+        "High Stress": {
+            "min": 70.91952364267055,
+            "max": 100.0
+        }
+    }
+}
